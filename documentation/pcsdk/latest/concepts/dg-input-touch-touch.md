@@ -1,0 +1,8 @@
+---
+title: Button Touch State
+---
+In addition to buttons, Touch controllers can detect whether user fingers are touching some buttons or are in certain positions.
+
+These states are reported as bits in the Touches field, and can be checked through one of the following constants:
+
+ovrTouch\_AUser in touching A button on the right controller.ovrTouch\_BUser in touching B button on the right controller.ovrTouch\_RThumbUser has a finger on the thumb stick of the right controller.ovrTouch\_RThumbRestUser has a finger on the textured thumb rest of the right controller.ovrTouch\_RIndexTriggerUser in touching the index finger trigger on the right controller.ovrTouch\_XUser in touching X button on the left controller.ovrTouch\_YUser in touching Y button on the left controller.ovrTouch\_LThumbUser has a finger on the thumb stick of the left controller.ovrTouch\_LThumbRestUser has a finger on the textured thumb rest of the left controller.ovrTouch\_LIndexTriggerUser in touching the index finger trigger on the left controller.ovrTouch\_RIndexPointingUsers right index finger is pointing forward past the trigger.ovrTouch\_RThumbUpUsers right thumb is up and away from buttons on the controller, a gesture that can be interpreted as right thumbs up.ovrTouch\_LIndexPointingUsers left index finger is pointing forward past the trigger.ovrTouch\_LThumbUpUsers left thumb is up and away from buttons on the controller, a gesture that can be interpreted as left thumbs up.
