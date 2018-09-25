@@ -1,5 +1,5 @@
 ---
-title: Gear VR: Quick Start
+title: "Gear VR: Quick Start"
 ---
 This guide covers everything you need to know to get started developing Unreal applications for Gear VR.
 
@@ -15,8 +15,8 @@ See [ Samsung Gear VR UE4 Quick Start](https://docs.unrealengine.com/en-us/Platf
 
 There are a number of ways that you can obtain the Oculus Unreal distributions:
 
-* A binary distribution is provided through the [Epic Game Launcher](https://www.unrealengine.com/download?sessionInvalidated=true). This Oculus code may be a version or two behind the latest Oculus SDK. We recommend that beginning developers use this binary distribution. It is stable, and does not require pulling the source from GitHub, setting up Visual Studio, and performing a lengthy compilation of the entire Unreal game engine source code. 
-* A source distribution is provided through the [Epic GitHub Repository](https://github.com/EpicGames). This Oculus code may be a version or two behind the latest Oculus SDK. Please see the Epic GitHub Repository table in [Version Compatibility Reference](/documentation/unreal/latest/concepts/unreal-compatibility-matrix/ "This section provides compatibility information for Oculus OVRPlugin and UE4 versions. To access these GitHub repositories, you must be subscribed to the private EpicGames/UnrealEngine repository. If you are not subscribed and logged into your GitHub account, you will get a 404 error. An Unreal license is not required."), in order to choose the specific downloads that best suit your development criteria. 
+* A binary distribution is provided through the [Epic Game Launcher](https://www.unrealengine.com/download?sessionInvalidated=true). This Oculus code may be a version or two behind the latest Oculus SDK. We recommend that beginning developers use this binary distribution. It is stable, and does not require pulling the source from GitHub, setting up Visual Studio, and performing a lengthy compilation of the entire Unreal game engine source code.
+* A source distribution is provided through the [Epic GitHub Repository](https://github.com/EpicGames). This Oculus code may be a version or two behind the latest Oculus SDK. Please see the Epic GitHub Repository table in [Version Compatibility Reference](/documentation/unreal/latest/concepts/unreal-compatibility-matrix/ "This section provides compatibility information for Oculus OVRPlugin and UE4 versions. To access these GitHub repositories, you must be subscribed to the private EpicGames/UnrealEngine repository. If you are not subscribed and logged into your GitHub account, you will get a 404 error. An Unreal license is not required."), in order to choose the specific downloads that best suit your development criteria.
 * A source distribution is provided through the [Oculus GitHub Repository](https://github.com/Oculus-VR/UnrealEngine.git). These distributions are always up to date with the latest Oculus SDKs. We support the current release of UE4 and any preview of the next release of UE4. Please see the Oculus GitHub Repository table in [Version Compatibility Reference](/documentation/unreal/latest/concepts/unreal-compatibility-matrix/ "This section provides compatibility information for Oculus OVRPlugin and UE4 versions. To access these GitHub repositories, you must be subscribed to the private EpicGames/UnrealEngine repository. If you are not subscribed and logged into your GitHub account, you will get a 404 error. An Unreal license is not required."), in order to choose the specific downloads that best suit your development criteria. While new Oculus features ship first to the Oculus GitHub versions, API changes may occur when these branches are merged back into Epic’s version of the engine. We recommend these distributions for professional developers who would like to access the latest Oculus SDK features. In order to build this source, see [Building UE4 from Source](/documentation/unreal/latest/concepts/unreal-building-ue4-from-source/ "The following section describes how to download, compile, and launch UE4 from the Oculus GitHub repository using Visual Studio 2015 or 2017."). ![](/images/documentation-unreal-latest-concepts-unreal-quick-start-guide-gearvr-0.png)  
 
 To access these GitHub repositories, you must be subscribed to the private EpicGames/UnrealEngine repository (see [UE4 of GitHub](https://www.unrealengine.com/ue4-on-github) for details). If you are not subscribed and logged into your GitHub account, you will receive a 404 error. An Unreal license is not required.
@@ -28,9 +28,9 @@ To access these GitHub repositories, you must be subscribed to the private EpicG
 * Install CodeWorks for Android 1R6u1, which can be found in Engine\Extras\Android.
 ## Application Signing: OSIG and Android Distribution Keystore
 
-There are two types of signatures that are required for your Gear VR application: 
+There are two types of signatures that are required for your Gear VR application:
 
-* An Oculus Signature File (OSIG) is required for your application to run on Gear VR. 
+* An Oculus Signature File (OSIG) is required for your application to run on Gear VR.
 * An Android Distribution Keystore is required for submission to the Oculus Store.
 Note: An Oculus Signature File (OSIG) is **not** required for Oculus Go or Oculus Rift.During development, your application must be signed with an Oculus-issued Oculus Signature File (OSIG). This signature comes in the form of a file that you include in your application in order to access protected low-level VR functionality on your mobile device. Each signature file is tied to a specific device, so you will need to generate OSIG files for each device that you use for development. When your application is submitted and approved, Oculus will modify the APK so that it can be used on all devices.
 
@@ -51,7 +51,7 @@ It is important to review [Distribute](/distribute/), which covers Oculus Store 
 
 ## Enabling Unknown Sources
 
-In order to play an in-development application, you will need to enable the Oculus system to run applications from unknown sources by using the Oculus app settings, available through the gear icon in the upper-right. Select **Settings > General** and turn on **Unknown Sources** on to allow this. 
+In order to play an in-development application, you will need to enable the Oculus system to run applications from unknown sources by using the Oculus app settings, available through the gear icon in the upper-right. Select **Settings > General** and turn on **Unknown Sources** on to allow this.
 
 The first time you run an application that you have not downloaded from the Oculus Store, you will need to launch it directly. Once you have run an application from an unknown source at least once, it will then appear in the Library section of Home and the Oculus app, and may be launched normally, as long as **Unknown Sources** is enabled.
 
@@ -59,7 +59,7 @@ The first time you run an application that you have not downloaded from the Ocul
 
 1. Download and setup the Unreal engine that you wish to use. Make sure you are using a compatible set of SDKs, as shown in the [Version Compatibility Reference](/documentation/unreal/latest/concepts/unreal-compatibility-matrix/ "This section provides compatibility information for Oculus OVRPlugin and UE4 versions. To access these GitHub repositories, you must be subscribed to the private EpicGames/UnrealEngine repository. If you are not subscribed and logged into your GitHub account, you will get a 404 error. An Unreal license is not required.").
 2. From the Unreal Engine Launcher, press the Launch button to open the Unreal Project Browser.
-3. From the **New Project** tab of the Unreal Project Browser, create a new Blueprint project, with the following settings: 
+3. From the **New Project** tab of the Unreal Project Browser, create a new Blueprint project, with the following settings:
 	* Blank project
 	* Mobile / Tablet
 	* Scalable 3D / 2D

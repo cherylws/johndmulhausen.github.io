@@ -22,7 +22,10 @@ def fetchMe(url):
         urlToUse = 'https://developer.prod.oculus.com' + url
         r = requests.get(urlToUse)
         soup = BeautifulSoup(r.text, 'html5lib')
-        title = soup.title.string
+        if ":" not in soup.title.string:
+            title = soup.title.string
+        else:
+            title = '"' + soup.title.string + '"'
         #description = soup.description.string
 
         firsth1 = soup.select_one("h1")

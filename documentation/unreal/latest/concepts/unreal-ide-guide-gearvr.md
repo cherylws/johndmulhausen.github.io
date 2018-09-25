@@ -1,5 +1,5 @@
 ---
-title: Gear VR: Getting Started – Additional Tasks
+title: "Gear VR: Getting Started – Additional Tasks"
 ---
 This section provides in-depth information for getting started developing Unreal applications that target Gear VR.
 
@@ -43,7 +43,7 @@ This section describes how to configure any C++ or Blueprints Unreal project tar
 If you do not have a project prepared but would like to try out the process, you may create a scene with starter content such as the C++ First Person project.
 
 1. Select **Edit** > **Plugins**.
-2. Select **Virtual Reality**. 
+2. Select **Virtual Reality**.
 3. Verify that the **Enabled** check box is checked for **OculusVR**. If you need to select it, click **Restart Now** in the lower-right afterward. Close Plugins configuration.
 4. Select **Edit** > **Project Settings**.
 5. Fill in any other desired information in **Project** > **Description**.
@@ -52,14 +52,14 @@ If you do not have a project prepared but would like to try out the process, you
 8. Scroll down to **Advanced APKPackaging**. Then:
 	1. Check **Configure the AndroidManifest for deployment to Gear VR**.
 	2. Verify that **Remove Oculus Signature Files from Distribution APK** is unchecked, unless you are building a package to release.
-	
-9. In **Engine** > **Rendering**, uncheck **Mobile HDR** in the **Mobile** section. Restart project if prompted to do so. 
+
+9. In **Engine** > **Rendering**, uncheck **Mobile HDR** in the **Mobile** section. Restart project if prompted to do so.
 10. Close the **Project Settings** configuration window.
 ## Building and Running Projects
 
 1. Connect your Gear VR headset to your PC via USB.
 2. Open a shell terminal and verify that your device is communicating with your PC using adb devices. Note that depending on the device you are using, you may need to configure your connection for software installation. For more information, see [Adb](/documentation/mobilesdk/latest/concepts/mobile-adb/) in our Mobile SDK Developer Guide.
-3. We recommend using ASTC compression, though ETC2 will also work. Select **File** > **Package Project** > **Android** > **Android (ASTC)**. 
+3. We recommend using ASTC compression, though ETC2 will also work. Select **File** > **Package Project** > **Android** > **Android (ASTC)**.
 4. When prompted, browse to the destination folder where you would like your APK to be installed.
 5. Once the build process is completed, navigate to the destination folder. Run the .bat file beginning with Install\_ to install the application to your phone.
 6. Once the build process is complete, your application will be visible on your device under **Apps**. Note that it will not be visible in Oculus Home.
@@ -68,7 +68,7 @@ Note: You may also set your phone to [Developer Mode](/documentation/mobilesdk/l
 
 You may also directly build and launch an application to your Gear VR phone without saving the APK locally.
 
-1. Connect your device to your PC by USB. 
+1. Connect your device to your PC by USB.
 2. Select the **Launch** menu from the Unreal toolbar and select your phone/headset under Devices. If you do not see your device listed, verify your USB connection, and check if you need to set your connection to **Connected as an Installer**. Note that some Samsung phones default to **Charge Only** connection.
 3. Your application will build and install to your Android device. When the build is complete, you will be prompted to insert the phone into your headset to launch.
 ## Preview Content on a PC
@@ -77,7 +77,7 @@ You may launch the Unreal Engine with a configuration option to use the Gear VR 
 
 Although it is possible to preview mobile applications in the Oculus Rift during development, it is not generally useful to do so, because Rift applications are subject to substantially different performance requirements (see "Performance Targets" in [Oculus Go: Testing and Performance Analysis](/documentation/unreal/latest/concepts/unreal-debug-go/ "This guide describes basic testing and performance analysis for Oculus Go development in Unreal.")). You may find it easiest to use the 2D preview in Unreal, and then either build an APK or use Launch on Device when you need to view the app in VR.Note: Mobile Content Scale Factor is not currently supported for Oculus development.## Blueprints
 
-Oculus provides Blueprints for common Gear VR operations such as querying battery level and headphone connection status. 
+Oculus provides Blueprints for common Gear VR operations such as querying battery level and headphone connection status.
 
 For more information, see [Blueprints Reference](/documentation/unreal/latest/concepts/unreal-blueprints/ "This section serves as a reference guide for the Blueprints in the Online Subsystem Oculus library.").
 
@@ -86,4 +86,3 @@ For more information, see [Blueprints Reference](/documentation/unreal/latest/co
 The Oculus SDK offers advanced mobile rendering feature such as multi-view and hybrid monoscopic rendering. Under some conditions these features can significantly improve performance.
 
 For more information, see [Rendering](/documentation/unreal/latest/concepts/unreal-advanced-rendering/ "This section describes important rendering options and tools that can significantly improve your application.")
-

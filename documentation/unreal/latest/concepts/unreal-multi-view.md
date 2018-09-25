@@ -1,5 +1,5 @@
 ---
-title: Oculus Go and Gear VR: Multi-View
+title: "Oculus Go and Gear VR: Multi-View"
 ---
 Multi-View is an advanced rendering feature for Oculus Go and Gear VR. If your application is CPU-bound, we strongly recommend using Multi-View to improve performance.
 
@@ -7,7 +7,7 @@ In typical OpenGL stereo rendering, each eye buffer must be rendered in sequence
 
 For Gear VR, Multi-View is supported on Note5, S6, S7, S8, and S9 (and later) phones using ARM Exynos processors and running Android M or N. It is also supported on S7, S8, and S9 (and later) phones using Qualcomm processors and running Android N.
 
-Oculus Go and all supported Samsung phones support Multi-View with OpenGL ES 2. 
+Oculus Go and all supported Samsung phones support Multi-View with OpenGL ES 2.
 
 Oculus Go, S8, and S9 phones also support Multi-View with OpenGL ES 3.1.
 

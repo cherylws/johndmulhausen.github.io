@@ -1,5 +1,5 @@
 ---
-title: Oculus Rift:  Mixed Reality Capture
+title: "Oculus Rift:  Mixed Reality Capture"
 ---
 This guide describes how to add and configure mixed reality capture support for your Unreal application. Mixed reality capture is supported for Rift applications only.
 
@@ -12,7 +12,7 @@ Mixed reality capture places real-world people and objects in VR. It allows live
 
 Live video footage may be captured with a stationary or tracked camera. For more information and complete setup instructions, see the [Mixed Reality Capture Setup Guide](/documentation/pcsdk/latest/concepts/mr-intro/).
 
-Once configured to use mixed reality capture, applications can be launched with the feature enabled by running them with the appropriate parameter - see "Command-line Parameter Reference" below for more information. 
+Once configured to use mixed reality capture, applications can be launched with the feature enabled by running them with the appropriate parameter - see "Command-line Parameter Reference" below for more information.
 
 Once an application is configured by developers to use mixed reality capture, users can launch applications with the feature enabled and control several relevant settings with settings controlled by Engine.ini or command-line parameters. See “[Oculus.Settings.MixedReality] in Engine.ini” below for more information.
 
@@ -43,10 +43,10 @@ If you wish to experiment with this feature but do not have a VR application pre
 2. Open the MotionControllerMap in **Content > VirtualRealityBP > Maps**.
 3. Configure the Virtual Reality Blueprint for mixed reality capture.
 	1. (Optional) To be able to use a Touch controller as an input device with the Virtual Reality Blueprint, open the Project Settings menu, select **Engine - Input** and expand **Action Mappings**. Modify the settings as shown below.![](/images/documentation-unreal-latest-concepts-unreal-mrc-2.png)  
-	
+
 	2. (Optional) **Open Edit Preference** in the **General - Miscellaneous** panel and uncheck **Use Less CPU when in Background**. This prevents applications with mixed reality capture enabled from entering a low-FPS mode when switching to the composition software.
 	3. The MotionControllerPawn Blueprint contains a bug which sets the Tracking Origin to "Eye Level" incorrectly. Add a link between "Default" and "Set Tracking Origin (Floor Level) as shown:
-	
+
 ![](/images/documentation-unreal-latest-concepts-unreal-mrc-3.png)  
 ## Add Mixed Reality Capture Support
 
@@ -161,7 +161,7 @@ When CompositionMethod is set to DirectComposition, indicates which physical cam
 
 CastingLatency
 
-When CompositionMethod is set to MultiView, sets the latency of the casting output. This setting may be used to help sync with the camera latency in the external composition application. 
+When CompositionMethod is set to MultiView, sets the latency of the casting output. This setting may be used to help sync with the camera latency in the external composition application.
 
 HandPoseStateLatency
 
@@ -211,7 +211,7 @@ Description
 
 BindToTrackedCameraIndexIfAvailable
 
-Binds the casting camera to the calibrated external camera. 
+Binds the casting camera to the calibrated external camera.
 
 If there is no calibrated external camera, the TrackedCamera parameters must be set up to match CastingCameraActor placement. It provides an easy way to directly place a stationary casting camera in the level.
 
@@ -233,7 +233,7 @@ Toggles the casting window.
 
 HasCastingWindowOpened
 
-Checks if the casting window has already been opened. 
+Checks if the casting window has already been opened.
 
 ## FTrackedCamera
 
@@ -391,4 +391,3 @@ Defines a small range of color distance between the pixel and the green screen i
 mr.CastingLantency <float>
 
 The casting latency in Multi-View mode.
-

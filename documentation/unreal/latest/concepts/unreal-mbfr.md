@@ -1,7 +1,7 @@
 ---
-title: Oculus Rift: Mask-Based Foveated Rendering
+title: "Oculus Rift: Mask-Based Foveated Rendering"
 ---
-Oculus Rift supports Mask-Based Foveated Rendering (MBFR) which enables the edges of the eye buffers to be rendered at a lower resolution than the center portion of the eye buffers, based on a superimposed mask. 
+Oculus Rift supports Mask-Based Foveated Rendering (MBFR) which enables the edges of the eye buffers to be rendered at a lower resolution than the center portion of the eye buffers, based on a superimposed mask.
 
 ## Overview
 
@@ -112,5 +112,5 @@ Of course, the overall GPU performance is also heavily dependent on the FOVs of 
 * MBFR is relatively stable, temporally and spatially. It can be combined with existing AA techniques, including MSAA and TAA.
 * However, MBFR results in extra performance cost, due to reconstructing the dropped pixels. Most VR projects do not use heavy post processing. But for projects which use heavy post processing with little world rendering, MBFR may not bring any performance benefit.
 * MBFR may not work effectively on Mobile GPUs with tiled on-chip memory.
-* The perceptual visual quality of MBFR can vary significantly, depending on the style of the content. The perceptual quality can be quite good when rendering low-contrast, low-frequency contents, but is generally less optimal when there are a lot of high frequency details in the content. 
+* The perceptual visual quality of MBFR can vary significantly, depending on the style of the content. The perceptual quality can be quite good when rendering low-contrast, low-frequency contents, but is generally less optimal when there are a lot of high frequency details in the content.
 * Tweaking the radius of the foveation density rings may be necessary to balance the performance and perceptual visual quality according to the content being rendered.

@@ -19,15 +19,15 @@ Follow the instructions in the [Gear VR Device Setup](/documentation/mobilesdk/l
 
 The Android SDK is required for mobile development with Unity. For setup instructions, [Android Development Software Setup](/documentation/mobilesdk/latest/concepts/mobile-studio-setup-android/) in our Mobile SDK Developer Guide. Most Unity developers do not need to install Android Studio or NDK.
 
-Once you have installed the Standalone Android SDK tools, you may continue with this guide. 
+Once you have installed the Standalone Android SDK tools, you may continue with this guide.
 
 Once you have installed the Android SDK, you may wish to familiarize yourself with adb (Android Debug Bridge), a useful tool used for communicating with your Android phone. For more information, see [Adb](/documentation/mobilesdk/latest/concepts/mobile-adb/) in our Mobile Developer Guide.
 
 ## Sign your App with an Oculus Signature File
 
-All Gear VR applications must be signed with an Oculus Signature File (osig) during development to access low-level VR functionality on your mobile device. This signature comes in the form of an Oculus-issued file that you include in your application. 
+All Gear VR applications must be signed with an Oculus Signature File (osig) during development to access low-level VR functionality on your mobile device. This signature comes in the form of an Oculus-issued file that you include in your application.
 
-Each signature file is associated with a specific mobile device, so you will need an osig file for each device that you use for development. 
+Each signature file is associated with a specific mobile device, so you will need an osig file for each device that you use for development.
 
 Please see our osig self-service portal for more information and instructions on how to request an osig for development: <https://dashboard.oculus.com/tools/osig-generator/>
 
@@ -57,7 +57,7 @@ You may find it useful to preview mobile applications using the Oculus Rift duri
 
 ## Designing Apps for Both Rift and Mobile
 
-When developing for both Rift and mobile platforms, keep in mind that their requirements differ substantially. If you would like to generate builds for both PC and mobile from a single project, it is important to follow the more stringent mobile development best practices, as well as meeting the required 90 FPS required by the Rift. This approach is not often taken in practice. 
+When developing for both Rift and mobile platforms, keep in mind that their requirements differ substantially. If you would like to generate builds for both PC and mobile from a single project, it is important to follow the more stringent mobile development best practices, as well as meeting the required 90 FPS required by the Rift. This approach is not often taken in practice.
 
 ## Additional Sources of Information
 
@@ -67,5 +67,4 @@ For information on core VR development concepts, see the [Intro to VR](/document
 
 Most Unity developers do not need to install the Oculus Mobile SDK. However, advanced developers may find it useful to review our Mobile SDK Developer Guide for insight into the underlying logic. Developers interested in the Android lifecycle and rendering path of Oculus mobile applications should review our documentation on [VrApi](/documentation/mobilesdk/latest/concepts/mobile-vrapi/). [Mobile Best Practices](/documentation/game-engines/latest/concepts/unity-mobile-performance-intro/#unity-mobile-performance-intro) and [General Recommendations](/documentation/game-engines/latest/concepts/unity-mobile-performance-intro/#unity-mobile-best-practices) may also be of interest.
 
-If you are interested in submitting an application to the Oculus Store, please see our [Distribute Guide](/distribute/). We recommend doing so before beginning development in earnest so you have a realistic sense of our guidelines and requirements. 
-
+If you are interested in submitting an application to the Oculus Store, please see our [Distribute Guide](/distribute/). We recommend doing so before beginning development in earnest so you have a realistic sense of our guidelines and requirements.

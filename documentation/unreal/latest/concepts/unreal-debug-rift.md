@@ -1,7 +1,7 @@
 ---
-title: Oculus Rift: Testing and Performance Analysis
+title: "Oculus Rift: Testing and Performance Analysis"
 ---
-This guide describes basic testing and performance analysis for Oculus Rift development in Unreal. 
+This guide describes basic testing and performance analysis for Oculus Rift development in Unreal.
 
 VR application debugging is a matter of getting insight into how the application is structured and executed, gathering data to evaluate actual performance, evaluating it against expectation, then methodically isolating and eliminating problems.
 
@@ -28,7 +28,7 @@ For more information, see:
 * Oculus Store Submission Requirements
 	+ [Oculus Rift App Requirements](/documentation/publish/latest/concepts/publish-mobile-req/)
 	+ [Rift Virtual Reality Check (VRC) Guidelines](/distribute/latest/concepts/publish-rift-app-submission/)
-	
+
 ## Rift Performance HUD
 
 The Oculus Performance Heads-Up Display (HUD) is an important, easy-to-use tool for viewing timings for render, latency, and performance headroom in real-time as you run an application in the Oculus Rift. The HUD is easily accessible through the Oculus Debug Tool provided with the PC SDK. You may activate it in the Viewport by pressing the ~ key.
@@ -60,7 +60,7 @@ Note that because there are no swap buffers in VR, Gear VR does not currently su
 
 **ETW and GPUView**
 
-[Event Tracing for Windows](https://msdn.microsoft.com/en-us/library/windows/desktop/bb968803%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) (ETW) is a trace utility provided by Windows for performance analysis. [GPUView](https://msdn.microsoft.com/en-us/library/windows/desktop/jj585574%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) view provides a window into both GPU and CPU performance with DirectX applications. It is precise, has low overhead, and covers the whole Windows system. 
+[Event Tracing for Windows](https://msdn.microsoft.com/en-us/library/windows/desktop/bb968803%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) (ETW) is a trace utility provided by Windows for performance analysis. [GPUView](https://msdn.microsoft.com/en-us/library/windows/desktop/jj585574%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) view provides a window into both GPU and CPU performance with DirectX applications. It is precise, has low overhead, and covers the whole Windows system.
 
 In some cases ETW and GPUView may be useful for debugging problems such as system-level contention with background processes. For a detailed description of how to use ETW with our native Rift SDK, see [VR Performance Optimization Guide](/documentation/pcsdk/latest/concepts/dg-performance-opt-guide/) in our PC SDK Developer Guide. Not all of the content will be relevant to the Unreal developer, but it contains a lot of applicable conceptual material that may be very useful.
 
@@ -93,4 +93,3 @@ For detailed information about Oculus development, go to:
 Visit our developer support forums at [https://developer.oculus.com](/).
 
 Our Support Center can be accessed at [https://support.oculus.com](https://support.oculus.com/).
-

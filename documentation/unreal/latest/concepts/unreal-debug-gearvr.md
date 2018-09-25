@@ -1,7 +1,7 @@
 ---
-title: Gear VR: Testing and Performance Analysis
+title: "Gear VR: Testing and Performance Analysis"
 ---
-This guide describes basic testing and performance analysis for Gear VR development in Unreal. 
+This guide describes basic testing and performance analysis for Gear VR development in Unreal.
 
 VR application debugging is a matter of getting insight into how the application is structured and executed, gathering data to evaluate actual performance, evaluating it against expectation, then methodically isolating and eliminating problems.
 
@@ -27,7 +27,7 @@ Below you will find some general guidelines for establishing your baselines, giv
 * [Mobile Virtual Reality Check (VRC) Guidelines](/documentation/publish/latest/concepts/publish-mobile-req/)
 ## Debug Console
 
-If your phone is set to Developer Mode, you may bring up a debug console for VR applications by pressing the screen with four fingers simultaneously while the application is running. 
+If your phone is set to Developer Mode, you may bring up a debug console for VR applications by pressing the screen with four fingers simultaneously while the application is running.
 
 Enter stat unit in the console for information about your application frame rate and CPU performance.
 
@@ -39,12 +39,12 @@ The Oculus Remote Monitor client connects to VR applications running on remote m
 Oculus Remote Monitor is available from our [Downloads](/downloads/unreal-engine/) page. For more information about setup, features, and use, see [Oculus Remote Monitor](/documentation/mobilesdk/latest/concepts/mobile-remote-monitor/) in our Mobile SDK guide.
 
 * The Frame Buffer Viewer provides a mechanism for inspecting the frame buffer as the data is received in real-time, which is particularly useful for monitoring play test sessions. When enabled, the Capture library will stream a downscaled pre-distortion eye buffer across the network.
-* The Performance Data Viewer provides real-time and offline inspection of the following on a single, contiguous timeline: 
+* The Performance Data Viewer provides real-time and offline inspection of the following on a single, contiguous timeline:
 	+ CPU/GPU events
 	+ Sensor readings
 	+ Console messages, warnings, and errors
 	+ Frame buffer captures
-	
+
 * The Logging Viewer provides raw access to various messages and errors tracked by thread IDs.
 * Nearly any constant in your code may be turned into a knob that can be updated in real-time during a play test.
 ## OVR Metrics Tool
@@ -80,11 +80,11 @@ Oculus branches of Unreal add support for debugging mobile sessions using ndk-gd
 
 Using ndk-gdb from the command line adds convenient features to your debugging workflow by allowing, for example, adding breakpoints, stepping through code, and inspecting variables with a command line interface.
 
-To use ndk-gdb for debugging: 
+To use ndk-gdb for debugging:
 
 1. Enable remote port forwarding to link your target mobile port to a PC port: adb forward tcp:$port tcp:$port
 2. Set your device to Developer Mode (as described in our Mobile Developer Guide [here](/documentation/mobilesdk/latest/concepts/mobile-troublesh-device-run-app-outside/)).
-3. Launch the application you wish to debug. 
+3. Launch the application you wish to debug.
 4. Start gdbserver on the mobile device with the following Unreal console command: gdbserver $port where $port is your port number. You application should freeze, and will now be ready for debugging.
 5. Launch the ndk-gdb client from the command line on your computer with the command gdb.exe. When it launches, type target remote :$port in the GDB command line to attach to your mobile device.
 For more information on using GDB for debugging, see the [GNU GDB documentation](https://www.gnu.org/software/gdb/documentation/).
@@ -119,4 +119,3 @@ For detailed information about Oculus development, go to:
 Visit our developer support forums at [https://developer.oculus.com](/).
 
 Our Support Center can be accessed at [https://support.oculus.com](https://support.oculus.com/).
-

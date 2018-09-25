@@ -1,7 +1,7 @@
 ---
-title: Oculus Go: Switching Display Refresh Rate
+title: "Oculus Go: Switching Display Refresh Rate"
 ---
-With Oculus Go, you can switch the frame rate between 60 Hz and 72 Hz. 
+With Oculus Go, you can switch the frame rate between 60 Hz and 72 Hz.
 
 ## Overview
 
@@ -11,7 +11,7 @@ Three Blueprints are provided to help you mange the display frequency:
 
 **Get Available Display Frequencies**
 
-This Blueprint retrieves an array of floats that represent the available display frequencies. 
+This Blueprint retrieves an array of floats that represent the available display frequencies.
 
 ![](/images/documentation-unreal-latest-concepts-unreal-switching-display-refresh-rate-go-0.png)  
 For Oculus Go, the return values may be:

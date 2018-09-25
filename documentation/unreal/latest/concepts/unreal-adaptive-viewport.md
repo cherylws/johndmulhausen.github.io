@@ -1,11 +1,11 @@
 ---
-title: Oculus Rift: Adaptive Pixel Density
+title: "Oculus Rift: Adaptive Pixel Density"
 ---
-Adaptive Pixel Density allows applications to scale down the application viewport as GPU resources exceed 85% utilization, and to scale up as they become more available. This feature is currently available for Rift development only. 
+Adaptive Pixel Density allows applications to scale down the application viewport as GPU resources exceed 85% utilization, and to scale up as they become more available. This feature is currently available for Rift development only.
 
 For CPU-bound applications, this feature has the potential to improve visual quality.
 
-The following charts illustrate pixel density (gold) and frames per second (blue) on a demo application with Adaptive Pixel Density off and on, respectively. 
+The following charts illustrate pixel density (gold) and frames per second (blue) on a demo application with Adaptive Pixel Density off and on, respectively.
 
 ![](/images/documentation-unreal-latest-concepts-unreal-adaptive-viewport-0.png)  
 ![](/images/documentation-unreal-latest-concepts-unreal-adaptive-viewport-1.png)  

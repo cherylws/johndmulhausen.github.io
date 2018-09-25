@@ -1,5 +1,5 @@
 ---
-title: Tutorial: Optimizing a Sample Application
+title: "Tutorial: Optimizing a Sample Application"
 ---
 This section is a tutorial that provides a detailed hands-on guide to VR performance optimization.
 
@@ -62,7 +62,7 @@ In this sample, the shader routine is contained in:
 
 <Oculus SDK Folder>\Samples\OculusRoomTiny\_Advanced\Common\Win32\_DirectXAppUtil.h
 
-Open this header file in Visual Studio, and add the following code to defaultPixelShaderSrc: 
+Open this header file in Visual Studio, and add the following code to defaultPixelShaderSrc:
 
 // Artificially overload the GPU with too much work, mimicking an expensive shader routine
 
@@ -119,7 +119,7 @@ It is easy to see that the problem is with the GPU load. Again, this is a very e
 
 ## Using Lost Frame Capture Tool
 
-Next, we will look at the frames that are dropped by this application, using the Lost Frame Capture tool. 
+Next, we will look at the frames that are dropped by this application, using the Lost Frame Capture tool.
 
 **1. Click the Lost Frame Capture button in the Oculus Debug Tool:**
 
@@ -146,12 +146,12 @@ If you see that certain objects tend to come into view when frames are lost, you
 
 ## Using ovrlog
 
-We are now going to capture low-level events using Event Tracing for Windows (ETW). This will make it possible to analyze the behavior of the application at a much finer level of detail. We will do this by running the ovrlog utility (which provides a convenient way to start and stop ETW sessions). The events are captured into an Event Trace Log (.etl) file. We will analyze the event stream using two tools: Windows Performance Analyzer (WPA) and GPUView. You can think of WPA as providing a higher-level view of the event stream. Essentially WPA provides charts and graphs that *summarize* the performance-related characteristics of the event stream. GPUView, on the other hand, displays a highly-granular view of the events, themselves. So, with GPUView, you can drill down into the fine details of the interactions between the CPU and GPU workloads, and fine tune your application in order to optimize the timing and content of those workloads. 
+We are now going to capture low-level events using Event Tracing for Windows (ETW). This will make it possible to analyze the behavior of the application at a much finer level of detail. We will do this by running the ovrlog utility (which provides a convenient way to start and stop ETW sessions). The events are captured into an Event Trace Log (.etl) file. We will analyze the event stream using two tools: Windows Performance Analyzer (WPA) and GPUView. You can think of WPA as providing a higher-level view of the event stream. Essentially WPA provides charts and graphs that *summarize* the performance-related characteristics of the event stream. GPUView, on the other hand, displays a highly-granular view of the events, themselves. So, with GPUView, you can drill down into the fine details of the interactions between the CPU and GPU workloads, and fine tune your application in order to optimize the timing and content of those workloads.
 
 **1. Start a Windows CMD window *with admin privileges*.**
 
 ![](/images/documentation-pcsdk-latest-concepts-dg-performance-tutorial-12.png)  
-During the rest of this tutorial, you will run the ovrlog\_win10 script or the ovrlog script – depending on whether you are running Windows 10 or an earlier version of Windows, respectively. This script calls the xperf utility which starts an ETW trace session that captures the events that occur while the VR application is running. 
+During the rest of this tutorial, you will run the ovrlog\_win10 script or the ovrlog script – depending on whether you are running Windows 10 or an earlier version of Windows, respectively. This script calls the xperf utility which starts an ETW trace session that captures the events that occur while the VR application is running.
 
 *You must run the **ovrlog\_win10** (or **ovrlog**) script with admin privileges*. Elevated privileges are required in order to perform kernel-level event tracing, which is necessary in order to capture all the events that are relevant to Oculus applications.
 
@@ -239,9 +239,9 @@ In this example, the application was actively running at the time ovrlog\_win10 
 
 **9. Select a small portion of the graph where both the application and the Compositor are executing, by dragging the mouse horizontally over the area. Then, use Ctrl-ScrollWheel (on the mouse) to zoom in so that you can see 100ths of a second.**
 
-Note: This time scale is close to the frame rate, which is 90 frames per second.In the loop that we created within the shader routine, you can experiment by setting the loop variable so that it loops through 100, 500, 1000, or more cycles per pixel. The exact behavior that the application will exhibit -- given different values for the loop variable -- depends on the characteristics of the computer that you are using, and how heavily loaded it is during the event capture period. 
+Note: This time scale is close to the frame rate, which is 90 frames per second.In the loop that we created within the shader routine, you can experiment by setting the loop variable so that it loops through 100, 500, 1000, or more cycles per pixel. The exact behavior that the application will exhibit -- given different values for the loop variable -- depends on the characteristics of the computer that you are using, and how heavily loaded it is during the event capture period.
 
-When the loop variable is set to a relatively low value, and you zoom in to 100ths of a second, you should see a result similar to the following: 
+When the loop variable is set to a relatively low value, and you zoom in to 100ths of a second, you should see a result similar to the following:
 
 ![](/images/documentation-pcsdk-latest-concepts-dg-performance-tutorial-20.png)  
 Here you can see clearly see the frame cycles. The application (shown in green) consumes a fairly large amount of the GPU resource during each frame, and the Compositor (shown in light brown) consumes a smaller amount of the GPU resource for the same frame.
@@ -272,15 +272,15 @@ The table disappears and only the graph is visible::
 In the Series box on the left, open the hierarchies under z.Buffered.Haptics.exe and OVRServer\_x64.exe, and select Render under z.Buffered.Haptics.exe:
 
 ![](/images/documentation-pcsdk-latest-concepts-dg-performance-tutorial-26.png)  
-The space above the z.Buffered Haptics.exe process that is involved in rendering is filled in. As you can see, by far most of the time is being used for rendering within z.Buffered Haptics.exe. (This is, of course, the result we expect, given the loop the we inserted into the shader routine.) 
+The space above the z.Buffered Haptics.exe process that is involved in rendering is filled in. As you can see, by far most of the time is being used for rendering within z.Buffered Haptics.exe. (This is, of course, the result we expect, given the loop the we inserted into the shader routine.)
 
 ![](/images/documentation-pcsdk-latest-concepts-dg-performance-tutorial-27.png)  
-WPA does not provide a detailed view of what the application is actually doing with the GPU, but we know there are two major phases to the GPU activity: a rendering phase and a BLT phase (a buffer copy at the end of the cycle). If you select BLT, you will find that very little time is spent on that phase. 
+WPA does not provide a detailed view of what the application is actually doing with the GPU, but we know there are two major phases to the GPU activity: a rendering phase and a BLT phase (a buffer copy at the end of the cycle). If you select BLT, you will find that very little time is spent on that phase.
 
 **12. In the Series box on the left, select Render under OVRServer\_x64.exe. You can see that all of the GPU time used by the server is applied toward rendering:**
 
 ![](/images/documentation-pcsdk-latest-concepts-dg-performance-tutorial-28.png)  
-If you hold down the mouse and drag from one point in the cycle to the identical point in the next cycle, you can see that the duration is about 11.1 microseconds, which is a 90th of a second. This is the frame rate for the Rift. So, we can see in this example that frame rate is being met. 
+If you hold down the mouse and drag from one point in the cycle to the identical point in the next cycle, you can see that the duration is about 11.1 microseconds, which is a 90th of a second. This is the frame rate for the Rift. So, we can see in this example that frame rate is being met.
 
 ![](/images/documentation-pcsdk-latest-concepts-dg-performance-tutorial-29.png)  
 It is not possible to actually display the VSync events in WPA. But, you can usually identify the frame cycles, as in the example above.
@@ -330,18 +330,18 @@ An expanded view is shown (below). In this example, the headset was stationary a
 Select a frame and look at the time scale shown at the top of the screen. The time scale increments are 10 ms. To hit the required frame rate of 90 frames per second, the frame cycle must be completed within about 11.1 ms. You can see that the frame is taking longer than that, and in fact the subsequent frame is delayed, as indicated by the blank space between the frames. So, in this example, every other frame is being dropped on the right-hand side of the timeline:
 
 ![](/images/documentation-pcsdk-latest-concepts-dg-performance-tutorial-38.png)  
-At this zoom level, you can see stacks of colored rectangles, which are called packets. A packet is the minimum indivisible unit of work that the application schedules to run on the CPU or GPU. A *fence* is a synchronization primitive that assures that one operation completes before the next operation begins. 
+At this zoom level, you can see stacks of colored rectangles, which are called packets. A packet is the minimum indivisible unit of work that the application schedules to run on the CPU or GPU. A *fence* is a synchronization primitive that assures that one operation completes before the next operation begins.
 
 The fences appear as the pink boxes above.
 
-The dark blue packets are collections of graphics commands that resolve to GPU work. 
+The dark blue packets are collections of graphics commands that resolve to GPU work.
 
 **8. Click on a packet. You can now see the exact life cycle for that packet, as well as detailed information about it:**
 
 ![](/images/documentation-pcsdk-latest-concepts-dg-performance-tutorial-39.png)  
 In GPUView, the packets are arranged in stacks, with time progressing along the horizontal axis. The packet at the bottom is the item that is currently being worked on. The further up the stack you go, the further back in line the packet is. The height of the stack shrinks as work is finished, and grows as more work is added to the queue. By clicking on a packet, you can see its life cycle, as well as the dependencies between packets.
 
-In WPA, we could have zoomed in and determined the exact frame index for a frame that we are interested in examining. We could then use that frame index to locate the same frame within GPUView. This is helpful because GPUView does not provide a contextual top-down view. 
+In WPA, we could have zoomed in and determined the exact frame index for a frame that we are interested in examining. We could then use that frame index to locate the same frame within GPUView. This is helpful because GPUView does not provide a contextual top-down view.
 
 In the above example, the application called the DirectX driver, and requested that it render a primitive. That driver call created GPU work. So, the 3D pipe is processing that work in the highlighted selection.
 
@@ -364,4 +364,3 @@ NVIDIA-VR-DirectMode VsyncDPC
  There are similar events for AMD.
 
  Open the trace in GPUView, click Tools > Event Viewer, and then enable NVIDIA-VR-DirectMode, and vertical red lines should appear in your trace diagram.
-
