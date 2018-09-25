@@ -21,12 +21,13 @@ def fetchMe(url):
     if "http" not in url:
         urlToUse = 'https://developer.prod.oculus.com' + url
         r = requests.get(urlToUse)
-        asciidata=r.text.encode("ascii","ignore")
-        soup = BeautifulSoup(asciidata, 'html5lib')
+        soup = BeautifulSoup(r.text, 'html5lib')
         title = soup.title.string
         #description = soup.description.string
 
-        soup.select_one("h1").decompose()
+        firsth1 = soup.select_one("h1")
+        if firsth1:
+            soup.select_one("h1").decompose()
         imgs = soup.findAll("img")
         imageNumber = 0
         for img in imgs:
@@ -57,7 +58,7 @@ def fetchMe(url):
         bodyMDFixedImages = re.sub(r'(?:!\[(.*?)\]\((.*?)\))',r'\1\n',bodyMD)
         output += bodyMD
         outputFileName = os.getcwd().replace('\\','/') + url[:-1] + '.md'
-        print(outputFileName)
+        #print(outputFileName)
         # if file exists, delete it. otherwise, forge the path and write
         if os.path.isfile(outputFileName):
             os.remove(outputFileName)
@@ -66,9 +67,9 @@ def fetchMe(url):
             if not os.path.exists(dirname):
                 os.makedirs(dirname)
         f = open(outputFileName, 'w')
-        f.write(output)
+        f.write(output.encode('utf-8'))
         f.close
-        print(output)
+        print(output.encode('utf-8'))
 
 def parseTree(tree):
     global paths
