@@ -8,44 +8,66 @@ import os
 import urllib
 import urllib2
 from slugify import slugify
+from urlparse import urlparse
+from os.path import splitext
+
+def get_ext(url):
+    """Return the filename extension from url, or ''."""
+    parsed = urlparse(url)
+    root, ext = splitext(parsed.path)
+    return ext  # or ext[1:] if you don't want the leading '.'
 
 def fetchMe(url):
     if "http" not in url:
         urlToUse = 'https://developer.prod.oculus.com' + url
-        if urlToUse=='https://developer.prod.oculus.com/documentation/pcsdk/latest/concepts/pcsdk-intro/':
-            r = requests.get(urlToUse)
-            asciidata=r.text.encode("ascii","ignore")
-            soup = BeautifulSoup(asciidata, 'html5lib')
-            title = soup.title.string
-            #description = soup.description.string
+        r = requests.get(urlToUse)
+        asciidata=r.text.encode("ascii","ignore")
+        soup = BeautifulSoup(asciidata, 'html5lib')
+        title = soup.title.string
+        #description = soup.description.string
 
-            soup.select_one("h1").decompose()
-            imgs = soup.findAll("img")
-            imageNumber = 0
-            for img in imgs:
-                if 'https://www.facebook.com/tr?i' not in img['src']:
-                    print img['src']
-                    newFilename = '/images/' + slugify(url) + '-' + str(imageNumber)
-                    print newFilename
-                    #urllib.urlretrieve(img['src'], os.path.basename(newFilename))
-                    imageNumber = imageNumber + 1
-            bodyHTML = str(soup.find(class_='documentation-content'))
-            output = '---\n'
-            output += 'title: ' + title + '\n'
-            #output += 'description: ' + description + '\n'
-            output += '---\n'
-            bodyMD = md(bodyHTML, heading_style='ATX')
-            bodyMDFixedImages = re.sub(r'(?:!\[(.*?)\]\((.*?)\))',r'\1\n',bodyMD)
-            output += bodyMD
-            outputFileName = os.getcwd() + url[:-1].replace('/','\\') + '.md'
-            print(outputFileName)
-            try:
-                f = open(outputFileName, 'r')
-            except IOError:
-                f = open(outputFileName, 'w')
-            f.write(output)
-            f.close
-            print(output)
+        soup.select_one("h1").decompose()
+        imgs = soup.findAll("img")
+        imageNumber = 0
+        for img in imgs:
+            if 'https://www.facebook.com/tr?i' not in img['src']:
+                print img['src']
+                extension = get_ext(img['src'])
+                newFileStub = '/images/' + slugify(url) + '-' + str(imageNumber) + extension
+                newFilename = os.getcwd().replace('\\','/') + newFileStub
+                print newFilename
+                if os.path.isfile(newFilename):
+                    os.remove(newFilename)
+                urllib.urlretrieve(img['src'], newFilename)
+                imageNumber = imageNumber + 1
+                img['src'] = newFileStub
+                br = soup.new_tag('br')
+                img.append(br)
+                img.append(br)
+                img.append(br)
+        links = soup.findAll("a")
+        for link in links:
+            link['href'] = link['href'].replace('https://developer.oculus.com','')
+        bodyHTML = str(soup.find(class_='documentation-content'))
+        output = '---\n'
+        output += 'title: ' + title + '\n'
+        #output += 'description: ' + description + '\n'
+        output += '---\n'
+        bodyMD = md(bodyHTML, heading_style='ATX')
+        bodyMDFixedImages = re.sub(r'(?:!\[(.*?)\]\((.*?)\))',r'\1\n',bodyMD)
+        output += bodyMD
+        outputFileName = os.getcwd().replace('\\','/') + url[:-1] + '.md'
+        print(outputFileName)
+        # if file exists, delete it. otherwise, forge the path and write
+        if os.path.isfile(outputFileName):
+            os.remove(outputFileName)
+        else:
+            dirname = os.path.dirname(outputFileName)
+            os.makedirs(dirname)
+        f = open(outputFileName, 'w')
+        f.write(output)
+        f.close
+        print(output)
 
 def parseTree(tree):
     global paths
@@ -82,20 +104,3 @@ with open("_data/nav.yaml", 'r') as stream:
         print(exc)
 
 print('All done! Paths found: ' + str(paths))
-
-"""
-r = requests.get('https://developer.oculus.com/documentation/pcsdk/latest/concepts/pcsdk-intro/')
-asciidata=r.text.encode("ascii","ignore")
-soup = BeautifulSoup(asciidata, 'html5lib')
-title = soup.title.string
-#description = soup.description.string
-bodyHTML = str(soup.find(class_='documentation-content'))
-output = '---\n'
-output += 'title: ' + title + '\n'
-#output += 'description: ' + description + '\n'
-output += '---\n'
-bodyMD = md(bodyHTML, heading_style='ATX')
-bodyMDFixedImages = re.sub(r'(?:!\[(.*?)\]\((.*?)\))',r'\1\n',bodyMD)
-output += bodyMD
-print(output)
-"""
