@@ -63,7 +63,8 @@ def fetchMe(url):
             os.remove(outputFileName)
         else:
             dirname = os.path.dirname(outputFileName)
-            os.makedirs(dirname)
+            if not os.path.exists(dirname):
+                os.makedirs(dirname)
         f = open(outputFileName, 'w')
         f.write(output)
         f.close
