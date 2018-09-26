@@ -156,7 +156,7 @@ leftnav:
       path: /documentation/
       section:
       - title: PC SDK
-        path: /documentation/pcsdk/latest
+        path: /documentation/pcsdk/latest/
         section:
         - path: /documentation/pcsdk/latest/concepts/pcsdk-intro/
           title: Introduction to the PC SDK
@@ -234,6 +234,7 @@ leftnav:
             - path: /documentation/pcsdk/latest/concepts/dg-sdk-setup/
               title: Oculus Rift SDK Setup
             - path: /documentation/pcsdk/latest/concepts/gsg-intro-oneworld/
+              title: Getting Started with the Demos
             - path: /documentation/pcsdk/latest/concepts/gsg-third-party-apps/
               title: Launching Third-Party Applications
           - path: /documentation/pcsdk/latest/concepts/book-dg/
@@ -246,6 +247,8 @@ leftnav:
             - path: /documentation/pcsdk/latest/concepts/dg-render/
               title: Rendering to the Oculus Rift
             - path: /documentation/pcsdk/latest/concepts/dg-render-advanced/
+              title: Advanced Rendering Configuration
+            - path: /documentation/pcsdk/latest/concepts/dg-dash/
               title: Oculus Dash
             - path: /documentation/pcsdk/latest/concepts/dg-vr-focus/
               title: VR Focus Management
@@ -317,7 +320,7 @@ leftnav:
               title: Troubleshooting
             - path: /documentation/pcsdk/latest/concepts/pcsdk-archive/
               title: PC-SDK Documentation Archive
-      - path: /documentation/mobilesdk/latest
+      - path: /documentation/mobilesdk/latest/
         title: Mobile SDK
         section:
         - path: /documentation/mobilesdk/latest/concepts/book-intro/
@@ -522,7 +525,7 @@ leftnav:
           title: Reference Content
         - path: /documentation/mobilesdk/latest/concepts/mobilesdk-archive/
           title: Mobile SDK Documentation Archive
-      - path: /documentation/unity/latest
+      - path: /documentation/unity/latest/
         title: Unity
         section:
         - path: /documentation/unity/latest/concepts/book-unity-gsg/
@@ -731,7 +734,7 @@ leftnav:
               title: Getting Started FAQ
           - path: /documentation/unity/latest/concepts/unity-archive/
             title: Oculus Unity Documentation Archive
-      - path: /documentation/unreal/latest
+      - path: /documentation/unreal/latest/
         title: Unreal
         section:
         - path: /documentation/unreal/latest/concepts/unreal-engine/
@@ -938,7 +941,7 @@ leftnav:
               title: Oculus Unreal Engine 4 Integration 1.3 Release Notes
           - path: /documentation/unreal/latest/concepts/unreal-archive/
             title: Documentation Archive
-      - path: /documentation/audiosdk/latest
+      - path: /documentation/audiosdk/latest/
         title: Audio SDK
         section:
         - path: /documentation/audiosdk/latest/concepts/book-audio-intro/
@@ -1124,7 +1127,7 @@ leftnav:
           title: Audio SDK Developer Reference
         - path: /documentation/audiosdk/latest/concepts/audio-archive/
           title: Audio Documentation Archive
-      - path: /documentation/platform/latest
+      - path: /documentation/platform/latest/
         title: Platform SDK
         section:
         - path: /documentation/platform/latest/concepts/book-plat-sdk-intro/
@@ -1209,7 +1212,7 @@ leftnav:
           title: Reference Content
         - path: /documentation/platform/latest/concepts/platformsdk-archive/
           title: Platform SDK Documentation Archive
-      - path: /documentation/avatarsdk/latest
+      - path: /documentation/avatarsdk/latest/
         title: Avatar SDK
         section:
         - path: /documentation/avatarsdk/latest/concepts/avatars-sdk-intro/
@@ -1255,7 +1258,7 @@ leftnav:
               title: Unity Social Starter Example
             - path: /documentation/avatarsdk/latest/concepts/legacy-avatars-sdk-native-intro/
               title: Adding C++ Avatar Support
-      - path: /documentation/vrweb/latest
+      - path: /documentation/vrweb/latest/
         title: VR Web
         section:
         - path: /documentation/vrweb/latest/concepts/vrweb-intro/
@@ -1294,7 +1297,7 @@ leftnav:
           title: Command Line Utility (CLI)
         - path: https://dashboard.oculus.com/tools/rooms-and-matchmaking-debugger
           title: Rooms and Matchmaking Debugger
-  - path: /distribute/latest
+  - path: /distribute/latest/
     title: Distribute
     section:
     - path: /distribute/latest/concepts/book-publish-account-management/
