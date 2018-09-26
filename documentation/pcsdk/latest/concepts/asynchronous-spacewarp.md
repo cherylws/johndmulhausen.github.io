@@ -1,6 +1,7 @@
 ---
 title: Asynchronous SpaceWarp
 ---
+
 Asynchronous Spacewarp (ASW) is a frame-rate smoothing technique that almost halves the CPU/GPU time required to produce nearly the same output from the same content.
 
 ## Overview
@@ -21,16 +22,30 @@ ASW requires the following:
 * Windows 8 or later
 * For NVIDIA, driver 373.06 or later
 * For AMD, driver 16.40.2311 or later
+
+
 Until the minimum specification is released, we recommend the following GPU versions for ASW testing:
 
-ManufacturerSeriesMinimum RAMMinimum ModelNVIDIAPascal3GB1060NVIDIAMaxwell4GB960AMDPolaris4GB470## Testing ASW
+| Manufacturer | Series | Minimum RAM | Minimum Model |
+|--------------|---------|-------------|---------------|
+|    NVIDIA    | Pascal |     3GB     |     1060     |
+|    NVIDIA    | Maxwell |     4GB     |      960      |
+|     AMD     | Polaris |     4GB     |      470      |
+
+## Testing ASW
 
 To test ASW, start the Oculus Debug Tool, which is located here:
 
-C:\Program Files\Oculus\Support\oculus-diagnostics\OculusDebugToolSet the Asynchronous Spacewarp option to one of the following values (or run tests using various different options):
+```
+C:\Program Files\Oculus\Support\oculus-diagnostics\OculusDebugTool
+```
+
+Set the Asynchronous Spacewarp option to one of the following values (or run tests using various different options):
 
 * Auto enables ASW, so that it is applied automatically when needed.
 * Disabled disables ASW.
 * Force 45fps, ASW disabled causes the refresh rate to be 45hz with ASW disabled.
 * Force 45fps, ASW enabled causes the refresh rate to be 45hz with ASW enabled 
-![](/images/documentation-pcsdk-latest-concepts-asynchronous-spacewarp-0.png)  
+
+
+![](/images/documentationpcsdklatestconceptsasynchronous-spacewarp-0.png)

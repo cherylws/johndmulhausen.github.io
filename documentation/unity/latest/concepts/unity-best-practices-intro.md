@@ -1,6 +1,7 @@
 ---
 title: Best Practices for Rift and Mobile
 ---
+
 This section describes performance targets and offers recommendations for developers. 
 
 ## General Best Practices
@@ -17,7 +18,8 @@ This section describes performance targets and offers recommendations for develo
 * Avoid large textures or using a lot of prefabs in startup scenes (for bootstrap optimization). When using large textures, compress them when possible.
 * Avoid realtime global illumination.
 * Disable shadows when approaching the geometry or draw call limits.
-* Avoid excessive pixel lights (>1 on Gear VR; >3 on Rift).
-* Avoid excessive render scale (>1.2).
-* Avoid excessive shader passes (>2).
+* Avoid excessive pixel lights (&gt;1 on Gear VR; &gt;3 on Rift).
+* Avoid excessive render scale (&gt;1.2).
+* Avoid excessive shader passes (&gt;2).
 * Be cautious using Unity WWW and avoid for large file downloads. It may be acceptable for very small files.
+

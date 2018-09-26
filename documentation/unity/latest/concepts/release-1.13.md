@@ -1,6 +1,9 @@
 ---
 title: 1.13 Oculus Utilities for Unity 5 Release Notes
 ---
+
+
+
 ## Oculus Utilities for Unity 5 version 1.13.0
 
 This document provides an overview of new features, improvements, and fixes included in the latest version of the Oculus Utilities for Unity 5. For information on first-party changes to Unity VR support for Oculus, see the Unity Release Notes for the appropriate version. You will find a scripting reference for the included C# scripts in our [Unity Reference Content](/documentation/unity/latest/concepts/book-unity-reference/).
@@ -10,6 +13,8 @@ Unity 5.6.0f3 is the only supported version of 5.6 at this time. Earlier version
 ## New Features
 
 * Added android:installLocation="auto" to store-compatible AndroidManifest.xml.
+
+
 ## Bug Fixes
 
 * Fixed double-counting of orientation when recentering OVRPlayerController.
@@ -19,6 +24,8 @@ Unity 5.6.0f3 is the only supported version of 5.6 at this time. Earlier version
 * Fixed incorrect overlay states for ATW splash.
 * Fixed VRAPI crash: "Invalid parms passed to vrapi\_SubmitFrame".
 * Fixed crashes in OVR::D3DUtil::Blitter::Blt due to inconsistent overlay lifetimes.
+
+
 ## Known Issues
 
 * Unity 5.6.0f3 is the only supported version of 5.6 at this time. Gear VR applications built with Unity 5.6.0f2 crash immediately upon launch, and Gear VR applications built with 5.6.0p1 may crash when Multi-View is enabled.
@@ -42,3 +49,4 @@ Unity 5.6.0f3 is the only supported version of 5.6 at this time. Earlier version
 * Mobile App Submission to Oculus Store 
 	+ All mobile applications using Utilities 1.9 and 1.10 will fail Oculus Store submission due to a bug affecting reserved interaction handling for the Universal Menu. Please remove previously-imported project files as described in [Importing the Oculus Utilities Package](/documentation/unity/latest/concepts/unity-import/ "Oculus Utilities for Unity is an optional Unity Package that includes scripts, prefabs, and other resources to assist with development.") and import the latest Utilities version, and update your Unity editor to a [compatible version](/documentation/unity/latest/concepts/unity-req/ "This guide describes Unity Editor version recommendations and system requirements.") if necessary. 
 	
+

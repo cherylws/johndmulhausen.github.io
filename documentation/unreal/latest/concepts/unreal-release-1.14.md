@@ -1,6 +1,7 @@
 ---
 title: Oculus Unreal Engine 4 Integration 1.14 Release Notes
 ---
+
 These release notes describe changes to Oculus's Unreal Engine 4.14, 4.15, and 4.16 available from the Oculus GitHub repository.
 
 ## 1.14.0
@@ -19,6 +20,8 @@ Preview releases containing the unified OculusVR plugin are available here:
 
 * [Unreal 4.15 Unified](https://github.com/Oculus-VR/UnrealEngine/tree/4.15-unified)
 * [Unreal 4.16 Unified](https://github.com/Oculus-VR/UnrealEngine/tree/4.16-unified)
+
+
 Access requires a GitHub account subscribed to the private EpicGames/UnrealEngine repository (instructions [here](https://www.unrealengine.com/ue4-on-github)). If you are not logged into a subscribed account, you will get a 404 error from GitHub.
 
 Please let us know if you have any questions, suggestions, or problems in our [Unreal Developer Forum](https://forums.oculus.com/developer/categories/unreal) .
@@ -29,9 +32,12 @@ New Features
 	+ Added a warning if the message task that handles popping OVR messages does not run in four seconds (it should run every tick).
 	+ If the initial NetDriver connection times out, it now retries until the amount of time specified by InitialConnectTimeout in DefaultEngine.ini passes.
 	
+
+
 Known Issues
 
-* A significant drop in frame rate occurs when UE4 is not in focus in VR preview mode. To avoid this issue, uncheck the Use Less CPU when in **Background** in **Edit** > **Editor Preferences** > **General** (left sidebar) > **Miscellaneous** (left sidebar) > **Performance**.
+* A significant drop in frame rate occurs when UE4 is not in focus in VR preview mode. To avoid this issue, uncheck the Use Less CPU when in **Background** in **Edit** &gt; **Editor Preferences** &gt; **General** (left sidebar) &gt; **Miscellaneous** (left sidebar) &gt; **Performance**.
 * Exclusive Mode issues: Setting the mirror window to full-screen exclusive mode will not work correctly if the monitor and HMD are connected to different GPUs.
-* Stereo Layer Depth Ordering: Doesn’t support head-locked layers, only world-locked and tracker-locked.
+* Stereo Layer Depth Ordering: Doesnâ€™t support head-locked layers, only world-locked and tracker-locked.
 * Oculus Blueprints not visible in Level Blueprint in Epic launcher and Epic source versions when Gear VR Plugin is enabled. Workaround for source version: open the file GearVR.uplugin and replace "WhitelistPlatforms" : ["Android"] with "WhitelistPlatforms" : [ "Android", "Win64", "Win32" ]. This does not affect source shipped through the Oculus Unreal GitHub repository.
+

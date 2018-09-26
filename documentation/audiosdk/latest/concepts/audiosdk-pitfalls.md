@@ -1,6 +1,7 @@
 ---
 title: Pitfalls and Workarounds
 ---
+
 Spatialization and room effects greatly contribute to realism, but they come at a cost.
 
 ## Performance
@@ -22,4 +23,3 @@ High system latency becomes an issue as the relative speed between an audio sour
 ## Compatibility between VR and Non-VR Games
 
 Few developers have the luxury of targeting VR headsets exclusively, and must support traditional, non-VR games using external speakers and without the benefit of positional tracking. Weighing quality versus compatibility can be difficult and incur development time.
-

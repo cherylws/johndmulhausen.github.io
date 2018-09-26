@@ -1,9 +1,10 @@
 ---
 title: Overview
 ---
+
 This document introduces fundamental concepts in audio development for virtual reality (VR) with an emphasis on key factors that deserve development attention. 
 
-We hope to establish that audio is crucial for creating a persuasive VR experience. Because of the key role that audio cues play in our cognitive perception of existing in space, any effort that development teams devote to getting it right will pay off in spades, as it will contribute powerfully to the user's sense of immersion. This is as true for small- or mid-sized teams as it is for design houses â€” perhaps even more so.
+We hope to establish that audio is crucial for creating a persuasive VR experience. Because of the key role that audio cues play in our cognitive perception of existing in space, any effort that development teams devote to getting it right will pay off in spades, as it will contribute powerfully to the user's sense of immersion. This is as true for small- or mid-sized teams as it is for design houses — perhaps even more so.
 
 Audio has been a crucial part of the computer and video gaming experience since the advent of the first coin-op games, which filled arcades with bleeps, bloops, and digital explosions. Over time, the state of computer audio has steadily improved, from simple wave generators (SID, 1983) to FM synthesis (AdLib, 1987), evolving on to 8-bit mono samples (Amiga OCS, 1985; SoundBlaster, 1989) and 16-bit stereo samples (SoundBlaster Pro), culminating in today's 5.1 surround sound systems on modern gaming consoles (Xbox, 2001).
 
@@ -20,3 +21,4 @@ If you are interested in learning about these details in greater depth, we recom
 * Head-Related Impulse Response
 * Head-Related Transfer Function
 * Sound Localization
+

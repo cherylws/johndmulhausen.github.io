@@ -1,32 +1,43 @@
 ---
 title: 1.3 Oculus Utilities for Unity 5 Release Notes
 ---
+
+
+
 ## Oculus Utilities for Unity 5 version 1.3.2
 
 This document provides an overview of new features, improvements, and fixes included in the latest version of the Oculus Utilities for Unity 5. For information on first-party changes to Unity VR support for Oculus, see the Unity Release Notes for the appropriate version. You will find an updated scripting reference for the included C# scripts in our [Unity Developer Reference](/documentation/game-engines/latest/concepts/book-unity-reference/).
 
 ## Unity Versions and OVRPlugin
 
-Oculus Utilities for Unity 5 version 1.3.2 is for use with Unity 5.3 or Unity 5.4. It may only be used with **Unity 5.3.3p3 or later, or 5.4.0b11 or later**. You **must** download and install our OVRPlugin for Unity 1.3.2, available from our Downloads Page, to use these versions. For more information, see [Utilities 1.3.2 and OVRPlugin](/documentation/unity/latest/concepts/release-archive-unity-ovrplugin-132/ "Some versions of Unity require special handling to enable built-in VR support. This will not be required in future versions of Unity.").
+Oculus Utilities for Unity 5 version 1.3.2 is for use with Unity 5.3 or Unity 5.4. It may only be used with **Unity 5.3.3p3 or later, or 5.4.0b11 or later**. You **must** download and install our OVRPlugin for Unity 1.3.2, available from our Downloads Page, to use these versions. For more information, see [Utilities 1.3.2 and OVRPlugin](/documentation/unity/latest/concepts/release-archive-unity-ovrplugin-132/).
 
 ## New Features
 
 * OVRInput may now be used without an OVRManager instance in the scene.
+
+
 ## API Changes
 
 * Restored OVRVolumeControl.
+
+
 ## Bug Fixes
 
 * OVRManager.instance.usePositionTracking now toggles the head model on Gear VR.
 * Fixed incorrect fog interaction with transparent UI shader.
 * Fixed crash on start with Unity 5.4.0b14 and b15 on Gear VR.
 * Restored OVRVolumeControl, which was accidentally removed in 1.3.0.
+
+
 ## Known Issues
 
 * **Utilities 1.3.0**: Volume control will be missing on mobile applications until the release of Mobile SDK 1.0.2. OVRVolumeControl is available with Utilities v 0.1.3.0 and earlier. It was also restored in Utilities v 1.3.2.
+
+
 ## Oculus Utilities for Unity 5 version 1.3.0
 
-Note: Oculus Utilities for Unity 5 version 1.3.0 is for use with **Unity 5.3.4p1 only**. To use Unity 5.3.4p1 with the Oculus Rift or Samsung Gear VR, **you must download and install our OVRPlugin for Unity 1.3.0**, available from our [Downloads page](/downloads/). For more information, see [Unity 5.3.4p1 and OVRPlugin 1.3.0](/documentation/unity/latest/concepts/release-archive-unity-ovrplugin-132/ "Some versions of Unity require special handling to enable built-in VR support. This will not be required in future versions of Unity.").## Overview of Major Changes
+## Overview of Major Changes
 
 This public release incorporates all changes from Utilities private releases 0.2.0 through 1.3.0. 
 
@@ -36,7 +47,7 @@ We no longer include the deprecated InputManager.asset file.
 
 OVR Manager now includes Tracking Origin Type, which defaults to Eye Level (i.e., tracking origin is handled as in previous releases). When set to Floor Level, tracking origin will be calculated relative to the user’s standing height as specified during Rift setup or with the Oculus app.
 
-Note: Floor-level tracking will often be used with standing experiences, but there may be situations in which eye-level tracking is a better fit for a standing experience, or floor-level tracking is a better fit for a seated experience.Any application running Unity should now be able to pull the correct height information.
+Any application running Unity should now be able to pull the correct height information.
 
 ## New Features
 
@@ -59,6 +70,8 @@ Note: Floor-level tracking will often be used with standing experiences, but the
 * Improved performance by reducing lock contention.
 * Exposed power management (CPU and GPU levels) on Android.
 * Exposed queue-ahead on Android to trade latency for CPU-GPU parallelism.
+
+
 ## API Changes
 
 * OVRTracker.GetPose() no longer takes a prediction time. It now takes an optional index specifying the tracker whose pose you want.
@@ -77,6 +90,8 @@ Note: Floor-level tracking will often be used with standing experiences, but the
 * OVRManager.cpuLevel controls CPU power-saving vs performance trade-off on Gear VR.
 * OVRManager.gpuLevel controls GPU power-saving vs performance trade-off on Gear VR.
 * Added ability to hold a named mutex throughout runtime.
+
+
 ## Bug Fixes
 
 * Removed redundant axial deadzone handling from Xbox gamepad input.
@@ -100,10 +115,15 @@ Note: Floor-level tracking will often be used with standing experiences, but the
 * Gear VR logs now report VRAPI loader version, not SystemActivites version.
 * Statically linking MSVC runtime to avoid missing DLL dependencies.
 * Fixed black screen when HMD was reconnected: notifying Unity of display lost.
+
+
 ## Known Issues
 
 * Volume control will be missing on mobile applications until the release of Mobile SDK 1.0.2. To restore OVRVolumeControl, please use an older copy of the Utilities.
+
+
 * **[Utilities 1.3.2 and OVRPlugin](/documentation/unity/latest/concepts/release-archive-unity-ovrplugin-132/)**  
 Some versions of Unity require special handling to enable built-in VR support. This will not be required in future versions of Unity.
 * **[Utilities 1.3.0 and OVRPlugin](/documentation/unity/latest/concepts/release-archive-unity-ovrplugin-130/)**  
+
 

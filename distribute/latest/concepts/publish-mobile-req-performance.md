@@ -1,6 +1,7 @@
 ---
 title: Mobile Performance VRCs
 ---
+
 These requirements ensure your app is responsive, performant, and able to render graphics at the quality expected for an Oculus Store app.
 
 ## Mobile Performance VRCs
@@ -17,3 +18,4 @@ The app renders without convergence errors or unusual distortion.
 The app renders without visible z-fighting or depth conflict artifacts.
 * **[VRC.Mobile.Performance.6](/distribute/latest/concepts/vrc-mobile-performance-6/)**  
 The app must either display head-tracked graphics in the headset within 4 seconds of launch or provide a loading indicator in VR.
+

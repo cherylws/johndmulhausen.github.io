@@ -10,6 +10,18 @@ import urllib2
 from slugify import slugify
 from urlparse import urlparse
 from os.path import splitext
+import shutil
+import dashtable
+#import pypandoc
+
+directoriesToKill = ['_site','audio','blog','bugs','contact','documentation','downloads','design','develop','distribute','faqs','hardware-report','mobile','oculus-start','pc','platform','reference','rift','santacruz','support','unity','unreal','webvr']
+for i in range(len(directoriesToKill)):
+    shutil.rmtree(directoriesToKill[i], ignore_errors=True)
+
+filesToKill = ['audio.md','hardware-report.md','design.md','develop.md','documentation.md','mobile.md','pc.md','platform.md','unity.md','unreal.md','webvr.md','rift.md','santacruz.md']
+for i in range(len(filesToKill)):
+    if os.path.isfile(filesToKill[i]):
+        os.remove(filesToKill[i])
 
 def get_ext(url):
     """Return the filename extension from url, or ''."""
@@ -19,6 +31,7 @@ def get_ext(url):
 
 def fetchMe(url):
     if "http" not in url:
+        print(url)
         urlToUse = 'https://developer.prod.oculus.com' + url
         r = requests.get(urlToUse)
         soup = BeautifulSoup(r.text, 'html5lib')
@@ -37,18 +50,47 @@ def fetchMe(url):
             if 'https://www.facebook.com/tr?i' not in img['src']:
                 print img['src']
                 extension = get_ext(img['src'])
-                newFileStub = '/images/' + slugify(url) + '-' + str(imageNumber) + extension
+                newFileStub = '/images/' + slugify(url.decode('utf-8')) + '-' + str(imageNumber) + extension
                 newFilename = os.getcwd().replace('\\','/') + newFileStub
                 print newFilename
+                """
                 if os.path.isfile(newFilename):
                     os.remove(newFilename)
                 urllib.urlretrieve(img['src'], newFilename)
+                """
                 imageNumber = imageNumber + 1
                 img['src'] = newFileStub
-                br = soup.new_tag('br')
-                img.append(br)
-                img.append(br)
-                img.append(br)
+                imgMD = md(str(img))
+                img.name = "p"
+                img.string = imgMD
+        uls = soup.findAll("ul")
+        for ul in uls:
+            ul.string = md(str(ul))
+            ul.name = 'p'
+        ols = soup.findAll("ol")
+        for ol in ols:
+            ol.string = md(str(ol))
+            ol.name = 'p'
+        brs = soup.findAll("br")
+        for br in brs:
+            br.replaceWith('\n')
+        preS = soup.findAll("pre")
+        for pre in preS:
+            code = soup.new_tag('code')
+            tmp = pre.string
+            pre.string = ''
+            code.string = tmp
+            pre.append(code)
+        samps = soup.findAll("samp")
+        for samp in samps:
+            samp.name = "code"
+        tables = soup.findAll("table")
+        for table in tables:
+            print(table)
+            tableMD = dashtable.html2md(unicode(table).encode('ascii','ignore'))
+            print(tableMD)
+            table.string = tableMD
+            table.name = "p"
         links = soup.findAll("a")
         for link in links:
             link['href'] = link['href'].replace('https://developer.oculus.com','')
@@ -57,10 +99,16 @@ def fetchMe(url):
         output += 'title: ' + title + '\n'
         #output += 'description: ' + description + '\n'
         output += '---\n'
-        bodyMD = md(bodyHTML, heading_style='ATX')
-        bodyMDFixedImages = re.sub(r'(?:!\[(.*?)\]\((.*?)\))',r'\1\n',bodyMD)
-        output += bodyMD
-        outputFileName = os.getcwd().replace('\\','/') + url[:-1] + '.md'
+        #bodyMD = md(bodyHTML, heading_style='ATX')
+        bodyMD = str(tomd.convert(str(bodyHTML)))
+        #bodyMD = pypandoc.convert_text(bodyHTML, 'gfm', format='html')
+        #print(bodyMD)
+        output += bodyMD.decode('utf-8')
+        if url[-1:] == '/':
+            linkToUse = url[:-1]
+        else:
+            linkToUse = url
+        outputFileName = os.getcwd().replace('\\','/') + linkToUse + '.md'
         #print(outputFileName)
         # if file exists, delete it. otherwise, forge the path and write
         if os.path.isfile(outputFileName):

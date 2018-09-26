@@ -1,18 +1,23 @@
 ---
 title: 1.18 Oculus Utilities for Unity Release Notes
 ---
+
+
+
 ## Oculus Utilities for Unity version 1.18.1
 
 Bug Fixes
 
 * Fixed bug causing VR Compositor Layers to persist after changing scenes in a multi-scene game.
+
+
 ## Oculus Utilities for Unity version 1.18.0
 
 Unity versions 5.1 and later provide built-in VR support for Rift, Oculus Go, and Samsung Gear VR. The optional Utilities unitypackage includes prefabs, C# scripts, sample scenes, and more to assist with development. For more information, see our Oculus Unity Developer Guide.
 
 The Utilities package includes the most recent version of the Oculus OVRPlugin that is also included in the Unity Editor. When you import the Utilities package into a project, if the OVRPlugin included with Utilities is greater than the version in your Editor, a pop-up dialog will give you the option to update it. We recommend always using the latest-available OVRPlugin version.
 
-Note: The latest OVRPlugin version number may be a version or two behind the Utilities version number.For information on which versions of the Unity Editor are compatible with which versions of Utilities for Unity, please see Compatibility and Version Requirements.
+For information on which versions of the Unity Editor are compatible with which versions of Utilities for Unity, please see Compatibility and Version Requirements.
 
 Be sure to review our Downloads page for other useful tools to assist development, such as the Unity Sample Framework. For more information on Oculus resources for Unity developers, please see Other Oculus Resources for Unity Developers.
 
@@ -42,12 +47,16 @@ In our Developer Blog article [Introducing Stereo Shader Reprojection for Unity]
 * OVRManager
 	+ Added input focus and system overlay support. When input focus or system overlay status changes, applications may implement appropriate handling, such as pausing and muting applications when a system overlay is present, and hiding tracked controllers when input focus is lost. For an illustration of typical use, see the Input Focus System Overlay sample in our Unity Sample Framework. For additional documentation, see OVRManager in our [Unity Scripting Reference](/documentation/unity/latest/concepts/unity-reference-scripting/ "The Unity Scripting Reference contains detailed information about the data structures and files included with the Utilities and Legacy Integration packages.").
 	
+
+
 ## Bug Fixes
 
 * Fixed Gear VR black screen issue affecting Utilities 1.16.0-beta.
 * Fixed “Mobile/Bumped detail diffuse” shader error when using Single-Pass Stereo Rendering with some Unity versions.
 * Fixed quad layer failure to render with Unity 5.4 and 5.6.
 * Fixed issue limiting mipmap textures passed to OVROverlay to mip level 0.
+
+
 ## Known Issues
 
 * Unity 2017
@@ -79,3 +88,4 @@ In our Developer Blog article [Introducing Stereo Shader Reprojection for Unity]
 	+ When Single Pass is enabled, building mobile projects will fail with the error message “Shader error in 'Mobile/Bumped Detail Diffuse'” in certain cases. For more information, see “Known Issues” in [Single Pass Stereo Rendering (Preview, Mobile Only)](/documentation/unity/latest/concepts/unity-single-pass/ "Single Pass stereo rendering is a preview rendering feature for Oculus Go and Gear VR available in Unity 5.6. If your application is CPU-bound or draw call bound, we strongly recommend using Single Pass rendering to improve performance.").
 	+ Two graphics driver issues affect mobile applications with Single Pass enabled using some S8 or S8+ phones with Unity 5.6.0p2-3. They can occur when Standard Shader Quality is set to low, or when you are using tree objects. For more information and workarounds, see “Known Issues” in [Single Pass Stereo Rendering (Preview, Mobile Only)](/documentation/unity/latest/concepts/unity-single-pass/ "Single Pass stereo rendering is a preview rendering feature for Oculus Go and Gear VR available in Unity 5.6. If your application is CPU-bound or draw call bound, we strongly recommend using Single Pass rendering to improve performance.").
 	
+

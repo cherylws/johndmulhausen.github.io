@@ -1,6 +1,7 @@
 ---
 title: User Input
 ---
+
 This section offers information about how users should interact with the virtual world.
 
 Every Oculus VR device is accompanied by a default controller or input method. We strongly recommend designing your VR application or experience to be designed to use these input devices. There are two categories that ship with our VR devices, the controllers that ship with the mobile devices, like Gear VR and Go, and those that ship with positional tracking, like Rift.
@@ -74,4 +75,3 @@ We recommend that you **avoid having users pick up objects off the floor**. Sens
 **Throwing** objects reliably with tracked controllers is harder than it looks. Different objects afford throwing in different ways. For example, a frisbee is thrown using a completely different motion than the way a paper airplane is thrown. Making both of these actions believable requires building per-object physics rules to govern throwing. When designing your control scheme for throwing objects, use caution if you use the grip button for hold/release. Consider using the trigger button for throw interactions that require force. Users have been known to throw the Touch controller in the real world if the grip button is used.
 
 Use **haptics** to indicate when a user has interacted with an object. This simple addition makes the interaction with objects more believable. 
-

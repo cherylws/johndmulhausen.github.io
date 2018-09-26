@@ -1,6 +1,7 @@
 ---
 title: Unity Audio
 ---
+
 This guide describes guidelines and resources for creating a compelling VR audio experience in Unity.
 
 If you’re unfamiliar with Unity’s audio handling, we recommend starting with the [Unity Audio guide](http://docs.unity3d.com/Manual/Audio.html).
@@ -11,6 +12,8 @@ If you’re unfamiliar with Unity’s audio handling, we recommend starting with
 * Avoid using Decompress on Load for audio clips.
 * Do not use ONSP reflections for mobile applications. 
 * Disable Preload Audio Data for all individual audio clips.
+
+
 ## Unity Audio and Rift
 
 Audio input and output automatically use the Rift microphone and headphones unless configured to use the Windows default audio device by the user in the Oculus app. Events OVRManager.AudioOutChanged and AudioInChanged occur when audio devices change, making audio playback impossible without a restart.
@@ -40,4 +43,3 @@ The ONSP is available with the Audio SDK Plugins package from our [Downloads pag
 Unity versions 5.4.1p1 and later include a basic version of our ONSP built into the editor, which includes HRTF spatialization, but not early reflections and late reverberations. This makes it trivially easy to add basic spatialization to audio point sources in your Unity project. 
 
 For more information, see [VR Audio Spatializers](https://docs.unity3d.com/Manual/VRAudioSpatializer.html) in the Unity Manual, or [First-Party Audio Spatialization (Beta)](/documentation/audiosdk/latest/concepts/ospnative-unity-fp/) in our Oculus Native Spatializer for Unity guide.
-

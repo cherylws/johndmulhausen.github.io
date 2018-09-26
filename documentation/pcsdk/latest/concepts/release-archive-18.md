@@ -1,6 +1,7 @@
 ---
 title: Changes For Release 1.8.x
 ---
+
 This section describes changes to the Oculus SDK, the Oculus App, Oculus Home, and the runtime.
 
 ## Overview of Release 1.8.0
@@ -11,6 +12,8 @@ This release includes performance improvements, memory management fixes, and min
 
 * Oculus now provides a boundary system. When a user gets too close to the edge of the boundary, translucent boundary markers are displayed in a layer that is superimposed over the game or experience. For more information, see [Oculus Guardian System](/documentation/pcsdk/latest/concepts/dg-guardian-system/ "The Oculus Guardian System is designed to display in-application wall and floor markers when users get near boundaries they defined. When the user gets too close to the edge of a boundary, translucent boundary markers are displayed in a layer that is superimposed over the game or experience.").
 * Added AdaptiveGpuPerformanceScale. The value is calculated as desired\_GPU\_utilization / current\_GPU\_utilization. When it is 1.0, the GPU is performing optimally. When this drops below 1.0, consider resolution and other changes to improve frame rate. 
+
+
 ## API Changes for 1.8.0
 
 There are no breaking changes to version 1.8.0. 
@@ -30,7 +33,8 @@ The following are known issues:
 * Bandwidth-intensive USB devices, such as web cams and high-end audio interfaces, might not work when using the Rift. To work around this issue, install the device on another USB host controller or a separate computer.
 * For dual-boot systems using DK2 or CB1 HMDs, the OS selection screen might appear on the HMD instead of the monitor. To work around this, try plugging the HMD into a different port or unplug the HMD while booting.
 * If you are running your application from the Unity Editor and you press the controller's home button to return to Oculus Home, you will be prompted to close the application. If you select OK, Unity might remain in a state where it is running, but will never get focus. To work around this, restart Unity.
-## Migrating from SDK 1.7.x to SDK 1.8.0
+
+
+## Migrating from SDK 1.7.x to SDK 1.8.0 
 
 There are no breaking SDK changes or migration requirements other than installing the new SDK.
-

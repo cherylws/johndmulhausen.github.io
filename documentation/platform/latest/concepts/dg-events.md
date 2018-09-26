@@ -1,18 +1,24 @@
 ---
 title: Events
 ---
+
 Use Events to host time-specific gatherings for your users to attend, like a viewing party, social mixer, or game tournament. Events may be shown in Explore if the post matches a user's interests. Events will be shown in the Oculus Events section of Home and Oculus Explore if deeplinks are implemented. 
 
 Users can subscribe to upcoming VR events and receive a reminder before the event begins. Users can also see which events friends have subscribed to and join them to create a social experience. 
 
 In VR, when a user clicks **Interested** to subscribe to a future event or **Join Now** for an event in progress, they will be prompted to install the app if they have not done so already. Users can also explore and subscribe to events in the Oculus app on Gear VR and Oculus Go.
 
-To help promote your event on social channels, a web site will be created at https://www.oculus.com/experience/events/eventID once the event has been approved.
+To help promote your event on social channels, a web site will be created at https://www.oculus.com/experience/events/`eventID` once the event has been approved.
 
-![](/images/documentation-platform-latest-concepts-dg-events-0.png)  
+
+
+![](/images/documentationplatformlatestconceptsdg-events-0.png)
+
+
+
 ## Create an Event
 
-To create an event, go to your app's Oculus dashboard in the [Developer Center](https://dashboard.oculus.com/) and select **Discoverability > Events**.
+To create an event, go to your app's Oculus dashboard in the [Developer Center](https://dashboard.oculus.com/) and select **Discoverability &gt; Events**.
 
 Enter the following information to create your event:
 
@@ -22,6 +28,8 @@ Enter the following information to create your event:
 4. **Start** Time - Start time of the event in your local time zone.
 5. **End Time** - End time of the event in your local time zone.
 6. **Deeplink Message** (optional) - The deeplink message is a message we will include with apps launched from an event. We'll include the deeplink message with the app launch detail. Information on handling the deeplink message can be found in the section below. The deeplink message should not exceed 1,500 characters. 
+
+
 A 2D trailer video is required for an event to be shown in Oculus Explore. Trailer videos can be added to the Assets page in the Oculus store.
 
 ## Duplicate an Event
@@ -32,13 +40,31 @@ You may wish to create a reoccurring event. To duplicate an event, select the op
 
 Integrating deeplink support into your app is optional. If you do not use deeplinks, the app will be launched from an event by the normal launch process.
 
-You'll integrate a hook into your app that listens for a specific launch detail when the app is started, ovrLaunchType\_Deeplink on Native Android and Launchtype.Deeplink on Unity. When you see these details in the launch event, your app will retrieve the deeplink that you defined to direct the user to the appropriate location in your app. 
+You'll integrate a hook into your app that listens for a specific launch detail when the app is started, `ovrLaunchType_Deeplink` on Native Android and `Launchtype.Deeplink` on Unity. When you see these details in the launch event, your app will retrieve the deeplink that you defined to direct the user to the appropriate location in your app. 
 
 For example, on Native Android:
 
-ovrLaunchDetailsHandle handle = ovr\_ApplicationLifecycle\_GetLaunchDetails(); if (ovr\_LaunchDetails\_GetLaunchType(handle) == ovrLaunchType\_Deeplink) { string deeplink = ovr\_LaunchDetails\_GetDeeplinkMessage(handle); // ... }On Unity:
+```
+ovrLaunchDetailsHandle handle = ovr_ApplicationLifecycle_GetLaunchDetails();
+if (ovr_LaunchDetails_GetLaunchType(handle) == ovrLaunchType_Deeplink) {
+ string deeplink = ovr_LaunchDetails_GetDeeplinkMessage(handle);
+  // ...
+}
+```
 
-using Oculus.Platform.Models; LaunchDetails launchDetails = new LaunchDetails(CAPI. ovr\_ApplicationLifecycle\_GetLaunchDetails()); if (launchDetails.LaunchType == LaunchType.Deeplink) { String deeplinkMessage = launchDetails.DeeplinkMessage; ... }If you're using Unreal, please use the native API using the information found in [Unreal Development Getting Started](/documentation/platform/latest/concepts/pgsg-unreal-gsg/ "The Unreal getting started guide will walk you through the basics of setting up your development environment and checking the user's entitlement.").
+On Unity:
+
+```
+using Oculus.Platform.Models;
+LaunchDetails launchDetails = new LaunchDetails(CAPI.
+ovr_ApplicationLifecycle_GetLaunchDetails());
+if (launchDetails.LaunchType == LaunchType.Deeplink) {
+ String deeplinkMessage = launchDetails.DeeplinkMessage;
+ ...
+}
+```
+
+If you're using Unreal, please use the native API using the information found in [Unreal Development Getting Started](/documentation/platform/latest/concepts/pgsg-unreal-gsg/).
 
 ## Content Review
 
@@ -54,3 +80,4 @@ Want to see how your event will look before releasing to the public? To test you
 4. Select the **Home** tab, and preview your event in **Explore**.
 5. (Optional) If you've chosen to integrate deeplinks, you may select the event link to launch your app and test the deeplink.
 6. When you're satisfied with the event and deeplink, you can submit the event for review and public release.
+

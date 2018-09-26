@@ -1,6 +1,7 @@
 ---
 title: Testing and Troubleshooting
 ---
+
 Welcome to the testing and troubleshooting guide. 
 
 This guide describes tools and procedures necessary for testing and troubleshooting mobile VR applications.
@@ -17,3 +18,4 @@ This document describes utilities, tips and best practices for improving debuggi
 A guide to performance analysis during mobile VR application development. 
 * **[Native Debugging](/documentation/mobilesdk/latest/concepts/book-android-studio-debugging/)**  
 This guide provides basic recommendations for working with the Oculus Mobile SDK in Android Studio and Gradle, and is intended to supplement the relevant Android Studio documentation. 
+

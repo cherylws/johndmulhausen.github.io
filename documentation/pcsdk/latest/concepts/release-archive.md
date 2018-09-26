@@ -1,9 +1,10 @@
 ---
 title: Oculus API Change Archive
 ---
+
 This section describes API changes for each version release.
 
-* **[Changes in Version 1.27.x](/documentation/pcsdk/latest/concepts/release-changes/)**  
+* **[Changes in Version 1.26.x](/documentation/pcsdk/latest/concepts/release-changes/)**  
 
 * **[Changes in Version 1.25.x](/documentation/pcsdk/latest/concepts/release-archive-125/)**  
 
@@ -61,3 +62,4 @@ A number of changes were made to the API since the 0.4 release.
 A number of changes were made to the API since the 0.3.2 Preview release. 
 * **[Changes For Release 0.4 Since Release 0.2.5](/documentation/pcsdk/latest/concepts/release-archive-03/)**  
 In addition, the 0.4 Oculus API has been significantly redesigned since the 0.2.5 release, with the goals of improving ease of use, correctness and supporting a new driver model.
+

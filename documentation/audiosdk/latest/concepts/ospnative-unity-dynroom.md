@@ -1,6 +1,7 @@
 ---
 title: Dynamic Room Modeling
 ---
+
 The Oculus Spatializer provides dynamic room modeling, which enables sound reflections and reverb to be generated based on a dynamically updated model of the current room within the VR experience and the user's position within that space.
 
 ## Overview
@@ -17,23 +18,26 @@ The Spatializer also includes a visualization option in the Unity Editor, enabli
 
 To use the Oculus Spatializer within the Unity Editor, attach the following script to a game object:
 
-Assets/OSPNative/scripts/OculusSpatializerUnity.cs
+`Assets/OSPNative/scripts/OculusSpatializerUnity.cs`
 
 The easiest approach is to add this script to a static, empty game object in the scene. It will then activate the geometry engine, overriding the current implementation.
 
 The script exposes public variables that can be accessed after the game object with the script is added to the scene:
 
-![](/images/documentation-audiosdk-latest-concepts-ospnative-unity-dynroom-0.png)  
+![](/images/documentationaudiosdklatestconceptsospnative-unity-dynroom-0.png)
+
 You can modify the following variables:
 
 * Layer Mask: Geometry can be tagged with a given layer enum. The Spatailizer will only use geometry that matches what has been selected in Layer Mask.
 * Visualize Room: When turned on, you will see the rays hitting the geometry in the Unity Editor. Only geometry assigned to the layer(s) selected in the Layer Mask will be shown. You will also see the shoebox reverb model dynamically change to fit the current space as you move throughout the VR experience. You will also see the results from setting other variables, such as Rays Per Second, Max Wall Distance, etc.
-* Rays Per Second: This specifies the number of rays that are randomly sent out from the listener’s position per second to approximate room size and shape. A larger value produces a more accurate approximation of the room characteristics but requires more CPU resources.
+* Rays Per Second: This specifies the number of rays that are randomly sent out from the listenerâ€™s position per second to approximate room size and shape. A larger value produces a more accurate approximation of the room characteristics but requires more CPU resources.
 * Room Interp Speed: This specifies the time it takes (in seconds) for the room to smoothly transition from one room approximation to the next. The larger the number, the slower the transition. If this value is too small, the reflections and reverb could sound erratic and jump around. If this value is too large, the reflections and reverb may seem to lag behind when moving from one space to another space, especially where there are substantial differences in room size or shape.
 * Max Wall Distance: The maximum length (in feet) that each ray will travel. If a wall is not hit within that range, it will not be used in approximating the room size.
 * Ray Cache Size: The number of rays that are cached to approximate the room characteristics. The larger the cache, the more rays will be used to approximate the current room characteristics. If this value is too large, the sound may not transition quickly enough when moving from one space to another, especially where there are substantial differences in room size or shape. If this value is too small, the sound may be perceived as being too erratic.
 * Dynamic Reflections Enabled: If you turn off Dynamic Reflections Enabled, then reverb will persist, but reflections will be turned off. See "Reverb and Reflections", below, for more information.
 * Legacy Reverb: Dynamic room modeling provides a reverb effect which is smoother and more accurate than the legacy reverb effect. However dynamic room modeling requires more CPU resources. You can use the legacy reverb model if you need to reduce CPU resource usage, and the legacy reverb effect is satisfactory for your application.
+
+
 **Direct Sounds, Reflections, and Reverb**
 
 Following is a brief explanation about the difference between direct sounds, reflections and reverb.
@@ -47,4 +51,3 @@ First and second order reflections are unique in that they are fairly distinct. 
 Reverberation takes reflections one step further. After the third order reflection, the bounces start getting fuzzy and undefined. The result is a network of bounces that sound like continuous noise. These high-order bounces are the *reverb* portion of the sound and are modeled differently from the reflection portion because simulating them is CPU-intensive. We do tricks to cut down on the CPU and approximate the high order bounces. 
 
 In our terminology, reflections are the first few bounces that still sound discreet, and reverb is the higher order bounces that are indistinguishable from each other. 
-

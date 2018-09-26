@@ -1,11 +1,12 @@
 ---
 title: Preparing for Rift Development
 ---
+
 Unity 5 or later offers built-in Rift support. The Oculus SDK is not required.
 
-To enable VR support is enabled in the Unity Editor, check the **Virtual Reality Supported** checkbox in **Player Settings**. Applications targeting the **PC, Mac & Linux** platform in **Build Settings** will now run on the Rift.
+To enable VR support is enabled in the Unity Editor, check the **Virtual Reality Supported** checkbox in **Player Settings**. Applications targeting the **PC, Mac &amp; Linux** platform in **Build Settings** will now run on the Rift.
 
-Unity automatically applies position and orientation tracking, stereoscopic rendering, and distortion correction to your main camera when VR support is enabled. For more details, see [Unity VR Support](/documentation/unity/latest/concepts/book-unity-dg/ "Welcome to the Oculus Unity Developer Guide.").
+Unity automatically applies position and orientation tracking, stereoscopic rendering, and distortion correction to your main camera when VR support is enabled. For more details, see [Unity VR Support](/documentation/unity/latest/concepts/book-unity-dg/).
 
 If you have already set up your Oculus Rift for regular use, you are ready to begin Unity development.
 
@@ -16,4 +17,3 @@ You may develop Rift apps on PCs that do not meet our minimum specifications or 
 Advanced developers may find it useful to review our Oculus SDK documentation for more insight into the rendering pipeline and underlying logic. If that interests you, we recommend [Intro to VR](/documentation/intro-vr/latest/concepts/book-bp/) and the [PC Developer Guide](/documentation/pcsdk/latest/concepts/book-dg/) for a deeper dive into core Rift development concepts.
 
 If you are interested in submitting an application to the Oculus Store, please see our [Distribute Guide](/distribute/). We recommend doing so before beginning development in earnest so you have a realistic sense of our guidelines and requirements. 
-

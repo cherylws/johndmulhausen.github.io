@@ -1,6 +1,7 @@
 ---
 title: 0.6 Release Notes
 ---
+
 This document provides an overview of new features, improvements, and fixes included in the latest version of the Oculus Mobile SDK.
 
 ## 0.6.2.0
@@ -11,7 +12,7 @@ The 0.6.2.0 version of the Oculus Mobile SDK includes a change to how we link wi
 
 The source for the Unity SDKExample MediaSurface Plugin is now provided. The Media Surface Plugin provides a native library which is used with the Android MediaPlayer for hardware decoding of a single video to a texture. Note that the SDKExample MediaSurface Plugin is not intended to be production quality, and is provided for reference purposes. We have made the source available in case you would like to modify it for your use. The source and build files are located at the following SDK path: VrAppSupport/MediaSurfacePlugin.
 
-For detailed instructions on updating native projects to this SDK version, see [Mobile Native SDK: Migration](/documentation/mobilesdk/latest/concepts/mobile-native-migration/#mobile-native-migration "This section details migrating from earlier versions of the Mobile SDK for native development.").
+For detailed instructions on updating native projects to this SDK version, see [Mobile Native SDK: Migration](/documentation/mobilesdk/latest/concepts/mobile-native-migration/#mobile-native-migration).
 
 ## New Features
 
@@ -21,6 +22,8 @@ For detailed instructions on updating native projects to this SDK version, see [
 * VrCapture
 	+ Added mode to capture straight to local flash storage instead of waiting for a remote connection. Useful for automated testing, capturing the startup sequence, and working around issues caused by low-bandwidth WiFi networks.
 	
+
+
 ## API Changes
 
 * VrApi
@@ -30,6 +33,8 @@ For detailed instructions on updating native projects to this SDK version, see [
 	+ VrGUI Library project now contains Java source and resources.
 	+ VrAppInterface::DrawEyeView() takes an additional parameter.
 	
+
+
 ## Bug Fixes
 
 * VrApi
@@ -40,6 +45,8 @@ For detailed instructions on updating native projects to this SDK version, see [
 	+ Optimized GazeCursor to render in two draw calls per eye instead of 32.
 	+ Fixed GlGeometry BuildGlobe so that equirect center is at -Z (forward).
 	
+
+
 ## 0.6.1.0
 
 ## Overview of Major Changes
@@ -85,6 +92,8 @@ If you are using the Legacy Unity Integration, update to Oculus Runtime for OS X
 	+ Added Settings View for toggling VR Developer Mode.
 	+ Sensor Graphs now turn red when values exceed max defined by SetSensorRange().
 	
+
+
 ## API Changes
 
 * Native Application Framework
@@ -95,6 +104,8 @@ If you are using the Legacy Unity Integration, update to Oculus Runtime for OS X
 	+ The VrGui library now uses the SoundEffectPlayer interface for sound playback, replacing SoundManager. This simple interface can be overloaded to allow VrGui sounds to be played by any sound library.
 	+ VrActivity java class now subclasses Android Activity instead of ActivityGroup.
 	
+
+
 ## Bug Fixes
 
 * VrAPI
@@ -130,6 +141,8 @@ If you are using the Legacy Unity Integration, update to Oculus Runtime for OS X
 	+ Fixed rare crash when disconnecting from remote host on OS X.
 	+ Reconnecting to an app multiple times no longer puts the capture library in an undefined state.
 	
+
+
 ## Known Issues
 
 * Unity 4 with Oculus Runtime for OS X 0.4.4 and Legacy Integration 0.6.1.0 or 0.6.0.2
@@ -141,6 +154,8 @@ If you are using the Legacy Unity Integration, update to Oculus Runtime for OS X
 	+ Integrated systrace support is under development and is currently disabled.
 	+ Some VPNs break auto-discovery.
 	
+
+
 ## 0.6.0.1
 
 ## Overview
@@ -152,6 +167,8 @@ Note that our Mobile SDK documentation is now available online here: [https://de
 ## New Features
 
 * Allow Unity MediaSurface dimensions to be modified via plugin interface.
+
+
 ## Bug Fixes
 
 * Fixed performance regression triggered when coming back from the Universal Menu.
@@ -159,9 +176,13 @@ Note that our Mobile SDK documentation is now available online here: [https://de
 * Reduced once per second frame drop due to gathering stats.
 * Fixed Do Not Disturb setting.
 * Fixed adjusting clock levels from Unity during load.
+
+
 ## Known Issues
 
 * adb logcat -s VrApi always reports the amount of available memory as 0.
+
+
 ## 0.6.0
 
 ## Overview of Native Changes
@@ -173,6 +194,8 @@ VRLib has been restructured into three separate libraries in order to make the c
 * LibOVR – the Oculus Library
 * VrApi – the minimal API for VR
 * VrAppFramework – the application framework used by native apps
+
+
 Both LibOVR and VrAppFramework ship with full source. The VrApi is shipped as a set of public include files, a pre-built shared library, and a jar file. Shipping VrApi as a separate shared library allows the VrApi implementation to be updated and/or changed after an application has been released. This allows us to apply hot fixes, implement new optimizations, and add support for new devices without requiring applications to be recompiled with a new SDK. VrApi source is no longer included with the SDK.
 
 The Vr App Interface (now part of VrAppFramework) has been simplified and now has a clearly-defined lifecycle. The order in which functions are called has been clarified – previously, some functions could be called either in VR mode or outside of VR mode. The lifecycle can be found in VrAppFramework/Src/App.h.
@@ -184,6 +207,8 @@ There are three new native samples. These samples implement the same simple scen
 * VrCubeWorld\_SurfaceView – uses a plain Android SurfaceView and handles all Activity and Surface lifecycle events in native code. This sample uses only the VrApi and uses neither the Oculus Mobile Application Framework nor LibOVR.
 *  VrCubeWorld\_NativeActivity – uses the Android NativeActivity class. This sample uses only the VrApi and uses neither the Oculus Mobile Application Framework nor LibOVR.
 * VrCubeWorld\_NativeActivity – uses the Oculus Mobile Application Framework.
+
+
 For developers who prefer to use command-line scripts to build native projects, this SDK provides a robust cross-platform set of python build scripts to replace the platform specific build scripts provided with previous SDKs.
 
 ## Overview of Unity Integration Changes
@@ -191,9 +216,11 @@ For developers who prefer to use command-line scripts to build native projects, 
 * Oculus Runtime is no longer required for mobile development.
 * Synced with the Oculus PC SDK 0.6.0.0 beta.
 * Allows clients to re-map plugin event IDs.
+
+
 For both the PC and Mobile SDKs we recommend the following Unity versions or higher: Unity Pro 4.6.3, Unity Professional 5.0.2.p2, Unity Free 4.6, or Unity Personal 5.0.2.p2. For mobile development, compatibility issues are known to exist with Unity 5 and OpenGL ES 3.0 – please check back for updates. Earlier versions of Unity 5 should not be used with the Mobile SDK.
 
-Note: Before installing or integrating this distribution, we strongly recommend backing up your project before attempting any merge operations.## New Features
+## New Features
 
 * VrAPI
 	+ Improved frame prediction, in particular for Unity.
@@ -210,11 +237,15 @@ Note: Before installing or integrating this distribution, we strongly recommend 
 * Blocksplosion
 	+ Added OS X input mappings.
 	
+
+
 ## API Changes
 
 * Native Application Framework
 	+ Automatic caching of files extracted from apk.
 	
+
+
 ## Bug Fixes
 
 * VrAPI
@@ -223,26 +254,39 @@ Note: Before installing or integrating this distribution, we strongly recommend 
 	+ Fixed TimeWarp getting more than one frame behind after a bad hitch.
 	+ Workaround for "loss of head tracking" after closing and re-opening the device 96 times.
 	
+
+
 * Native Application Framework
 	+ Fixed volume bar not showing on first click of the volume adjustment.
 	
+
+
 * Unity Integration
 	+ Fixed prediction glitch every 64 frames.
 	+ Use correct prediction for OVR\_GetCameraPositionOrientation.
 	+ Fixed location of the PlatformMenu Gaze Cursor Timer.
 	
+
+
 * Cinema SDK
 	+ Fixed playback control reorienting screen in Void theater when user clicks on controls when they're off the screen on portrait videos.
 	+ Fixed divide by zero in SceneManager::GetFreeScreenScale() which caused Void theater to crash when starting a movie.
 	
+
+
 * 360 Photos SDK
 	+ Fixed Favorites button not creating Favorites folder.
 	
+
+
 * Blocksplosion
 	+ Fixed launch blocks falling straight down when launched when built with Unity 5.
 	+ Fixed touch triggering "next level" after returning from the System Activity.
 	+ Fixed launch block being offset when looking left or right.
 	
+
+
 ## Known Issues
 
-* Initial launch of 360Photos SDK Sample can crash if a duplicate category folder name is present on the target device’s sdcard. Subsequent launches of the app will not crash. A fix is in the works for the next release.
+* Initial launch of 360Photos SDK Sample can crash if a duplicate category folder name is present on the target deviceâ€™s sdcard. Subsequent launches of the app will not crash. A fix is in the works for the next release.
+

@@ -1,11 +1,12 @@
 ---
 title: 1.14 Release Notes
 ---
+
 This document provides an overview of new features, improvements, and fixes included in the latest version of the Oculus Mobile SDK.
 
 ## 1.14.0
 
-For additional information, see [Migrating to Mobile SDK 1.14.0](/documentation/mobilesdk/latest/concepts/mobile-native-migration/#mobile-native-migration-1-9-0 "This section is intended to help you upgrade from the Oculus Mobile SDK version 1.12.0 to 1.14.0.").
+For additional information, see [Migrating to Mobile SDK 1.14.0](/documentation/mobilesdk/latest/concepts/mobile-native-migration/#mobile-native-migration-1-9-0).
 
 ## New Features
 
@@ -18,6 +19,8 @@ The following new features can be found in 1.14:
 
 
 * Opt in ability to combine the controller recenter and headset reorient action. This new behavior provides the most benefit for experiences that are focused in front of the user (for instance, UI-centric applications). Full 360 degree experiences may wish to retain the old behavior if the developer feels it is more intuitive to leave the recenter of the controller independent of the headset reorient.
+
+
 
 
 ## API Changes
@@ -44,9 +47,14 @@ The following new features can be found in 1.14:
 
 
 * VRAPI\_REORIENT\_HMD\_ON\_CONTROLLER\_RECENTER property has been provided to allow apps the ability to opt into a behavior that combines the controller recenter action with reorienting the headset. To enable this, set the property to 1 using vrapi\_SetPropertyInt. This feature is disabled by default. 
+
+
 ## Bug Fixes
 
 * Removed code path in samples that always forced a maximum screen brightness.
+
+
 ## Known Issues
 
 * There are no known issues in this release. 
+

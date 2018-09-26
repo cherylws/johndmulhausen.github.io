@@ -1,9 +1,10 @@
 ---
 title: System Activities Release Notes
 ---
+
 This section describes changes to System Activities.
 
-* **[1.26.x Release Notes](/documentation/mobilesdk/latest/concepts/sa-release-1.26/)**  
+
 
 * **[1.25.x Release Notes](/documentation/mobilesdk/latest/concepts/sa-release-1.25/)**  
 
@@ -34,4 +35,5 @@ This section describes changes to System Activities.
 * **[1.10.x Release Notes](/documentation/mobilesdk/latest/concepts/sa-release-1.10/)**  
 
 * **[1.0.x Release Notes](/documentation/mobilesdk/latest/concepts/sa-release-1.0/)**  
+
 

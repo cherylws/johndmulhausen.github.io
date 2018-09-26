@@ -1,6 +1,7 @@
 ---
 title: Single Pass Stereo Rendering (Preview, Mobile Only)
 ---
+
 Single Pass stereo rendering is a preview rendering feature for Oculus Go and Gear VR available in Unity 5.6. If your application is CPU-bound or draw call bound, we strongly recommend using Single Pass rendering to improve performance. 
 
 In typical OpenGL stereo rendering, each eye buffer must be rendered in sequence, doubling application and driver overhead. When Single Pass is enabled, objects are rendered once to the left eye buffer, then duplicated to the right buffer automatically with appropriate modifications for vertex position and view-dependent variables such as reflection.
@@ -23,4 +24,6 @@ Although it can substantially reduce CPU overhead, keep in mind that application
 
 1. Open **Player Settings** and go to **Rift**.
 2. Set **Stereo Rendering Method** to **Single Pass (Preview)**.
-![](/images/documentation-unity-latest-concepts-unity-single-pass-0.png)  
+
+
+![](/images/documentationunitylatestconceptsunity-single-pass-0.png)

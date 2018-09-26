@@ -1,6 +1,7 @@
 ---
 title: Mobile Functional VRCs
 ---
+
 These requirements ensure your app functions according to Oculus Store standards. 
 
 ## Mobile Functional VRCs
@@ -27,3 +28,4 @@ The app should not submit frames or accept input when the user removes the heads
 Headlocked menus and UI elements are generally uncomfortable for the user and should be avoided.
 * **[VRC.Mobile.Functional.11](/distribute/latest/concepts/vrc-mobile-functional-11/)**  
 Apk filesize must be less than 1gb, but can come with an expansion file up to 4gb.
+

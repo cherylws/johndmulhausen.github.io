@@ -1,6 +1,7 @@
 ---
 title: Audio SDK 1.18 Release Notes
 ---
+
 This document provides an overview of new features, improvements, and fixes included in the latest version of the Oculus Audio SDK.
 
 ## Oculus Audio Loudness Meter 1.0.0
@@ -20,16 +21,22 @@ Provides real-time audio statistics and performance metrics from apps that use t
 * New Features 
 	+ Added support for Oculus Audio Profiler
 	
+
+
 ## Oculus Spatializer Native 1.18.0
 
 * New Features 
 	+ Added support for Oculus Audio Profiler
 	
+
+
 ## Oculus Spatializer Unity 1.18.0
 
 * New Features 
 	+ Added support for Oculus Audio Profiler
 	
+
+
 ## Oculus Spatializer Wwise 1.18.0
 
 * New Features 
@@ -39,3 +46,4 @@ Provides real-time audio statistics and performance metrics from apps that use t
 * Bug Fixes 
 	+ The Treat Sound As Ambisonic check box now works properly.
 	
+

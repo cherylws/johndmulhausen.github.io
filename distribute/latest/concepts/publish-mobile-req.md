@@ -1,6 +1,7 @@
 ---
 title: Mobile Virtual Reality Check (VRC) Guidelines
 ---
+
 Your Mobile VR app must meet or exceed these guidelines to be considered for distribution on the Oculus Store.
 
 ## Mobile Test Plan
@@ -9,8 +10,10 @@ The Mobile test plan is the exact criteria we use to test your app during the te
 
 Download the Mobile test plan:
 
-* [.xls](/test-plan/export/mobile)
-* [.csv](/test-plan/export/mobile/csv)
+* [.xls](https://developer.oculus.com/test-plan/export/mobile)
+* [.csv](https://developer.oculus.com/test-plan/export/mobile/csv)
+
+
 ## Mobile VRCs
 
 * **[Mobile Go VRCs](/distribute/latest/concepts/publish-mobile-req-go/)**  
@@ -29,3 +32,4 @@ These requirements ensure your app safeguards the privacy and integrity of Oculu
 These requirements ensure your app provides a user experience consistent with Oculus user interaction standards.
 * **[Mobile Asset VRCs](/distribute/latest/concepts/publish-mobile-req-asset/)**  
 These requirements ensure your app meets the asset and content guidelines for shipping in the Oculus Store.
+

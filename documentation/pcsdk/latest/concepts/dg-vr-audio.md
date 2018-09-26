@@ -1,24 +1,84 @@
 ---
 title: Rift Audio
 ---
+
 When setting up audio for the Rift, you need to determine whether the Rift headphones are active and pause the audio when your app doesn’t have focus.
 
-The user can enable the Rift headphones and microphone in the Oculus app or use the default Windows audio devices. Configuration is made the Oculus app in Settings -> Devices -> Headset. The following screenshot shows the Rift headphones disabled and the microphone enabled: 
+The user can enable the Rift headphones and microphone in the Oculus app or use the default Windows audio devices. Configuration is made the Oculus app in Settings -&gt; Devices -&gt; Headset. The following screenshot shows the Rift headphones disabled and the microphone enabled: 
 
-![](/images/documentation-pcsdk-latest-concepts-dg-vr-audio-0.png)  
-Audio ConfigurationThe headphone setting is handled automatically by the function ovr\_GetAudioDeviceOutGuid (located in OVR\_CAPI\_Audio.h), which returns the GUID for the device to target when playing audio. Similarly, use ovr\_GetAudioDeviceInGuid to identify the microphone device used for input. 
+![](/images/documentationpcsdklatestconceptsdg-vr-audio-0.png)
+
+The headphone setting is handled automatically by the function ovr_GetAudioDeviceOutGuid (located in OVR_CAPI_Audio.h), which returns the GUID for the device to target when playing audio. Similarly, use ovr_GetAudioDeviceInGuid to identify the microphone device used for input. 
 
 ## FMOD D for Native Rift Development
 
 If you detect that the Rift headphones are enabled, use code similar to the following for FMOD: 
 
-ERRCHECK(FMOD::System\_Create(&sys)); GUIDguid; ovr\_GetAudioDeviceOutGuid(&guid); intdriverCount=0; sys->getNumDrivers(&driverCount); intdriver=0; while(driver<driverCount) { charname[256]={0}; FMOD\_GUIDfmodGuid={0}; sys->getDriverInfo(driver,name,256,&fmodGuid,nullptr,nullptr,nullptr); if(guid.Data1==fmodGuid.Data1&& guid.Data2==fmodGuid.Data2&& guid.Data3==fmodGuid.Data3&& memcmp(guid.Data4,fmodGuid.Data4,8)==0) { break; } ++driver; } if(driver<driverCount) { sys->setDriver(driver); } else { // error rift not connected } For instructions on using FMOD with Unreal Engine, see “Unreal and FMOD” below. 
+```
+ERRCHECK(FMOD::System_Create(&amp;sys));
+GUIDguid;
+ovr_GetAudioDeviceOutGuid(&amp;guid);
+ 
+intdriverCount=0;
+sys-&gt;getNumDrivers(&amp;driverCount);
+ 
+intdriver=0;
+while(driver&lt;driverCount)
+{
+        charname[256]={0};
+        FMOD_GUIDfmodGuid={0};
+        sys-&gt;getDriverInfo(driver,name,256,&amp;fmodGuid,nullptr,nullptr,nullptr);
+ 
+        if(guid.Data1==fmodGuid.Data1&amp;&amp;
+                guid.Data2==fmodGuid.Data2&amp;&amp;
+                guid.Data3==fmodGuid.Data3&amp;&amp;
+                memcmp(guid.Data4,fmodGuid.Data4,8)==0)
+        {
+            break;
+        }
+
+       ++driver;
+}
+ 
+if(driver&lt;driverCount)
+{
+    sys-&gt;setDriver(driver);
+}
+else
+{
+// error rift not connected
+}
+
+    
+   
+```
+
+For instructions on using FMOD with Unreal Engine, see “Unreal and FMOD” below. 
 
 ## Wwise for Native Rift Development
 
 If you detect that the Rift headphones are enabled, use code similar to the following for Wwise: 
 
-AkInitSettings initSettings; AkPlatformInitSettings platformInitSettings; AK::SoundEngine::GetDefaultInitSettings( initSettings ); AK::SoundEngine::GetDefaultPlatformInitSettings( platformInitSettings ); // Configure initSettings and platformInitSettings... WCHAR outStr[128]; if (OVR\_SUCCESS(ovr\_GetAudioDeviceOutGuidStr(outStr))) { initSettings.eMainOutputType = AkAudioAPI::AkAPI\_Wasapi; platformInitSettings.idAudioDevice = AK::GetDeviceIDFromName(outStr); } For instructions on using Wwise with Unity 5, see “Unity 5 and Wwise” below. For instructions on using Wwise with Unreal Engine, see “Unreal and FMOD” below. 
+```
+AkInitSettings initSettings;
+AkPlatformInitSettings platformInitSettings;
+AK::SoundEngine::GetDefaultInitSettings( initSettings );
+AK::SoundEngine::GetDefaultPlatformInitSettings( platformInitSettings );
+ 
+// Configure initSettings and platformInitSettings...
+ 
+WCHAR outStr[128];
+if (OVR_SUCCESS(ovr_GetAudioDeviceOutGuidStr(outStr)))
+{
+    initSettings.eMainOutputType = AkAudioAPI::AkAPI_Wasapi;
+    platformInitSettings.idAudioDevice = AK::GetDeviceIDFromName(outStr);
+}    
+
+    
+   
+```
+
+For instructions on using Wwise with Unity 5, see “Unity 5 and Wwise” below. For instructions on using Wwise with Unreal Engine, see “Unreal and FMOD” below. 
 
 ## Unity 5
 
@@ -32,9 +92,18 @@ To get the audio device GUID from libOVR, you must include the Oculus Utilities 
 
 The following function should be called before AkSoundEngine.Init(...):
 
-void SetRiftAudioDevice(AkPlatformInitSettings settings) { string audioDevice = OVRManager.audioOutId; uint audioOutId = AkSoundEngine.GetDeviceIDFromName (audioDevice); settings.idAudioDevice = audioOutId; }Pass AkPlatformInitSettings into the function above and use it to initialize the Ak sound engine.
+```
+void SetRiftAudioDevice(AkPlatformInitSettings settings)
+{
+string audioDevice = OVRManager.audioOutId;
+uint audioOutId = AkSoundEngine.GetDeviceIDFromName (audioDevice);
+settings.idAudioDevice = audioOutId;
+}
+```
 
-Note:OVRManager.audioOutId will be deprecated in the future. This minor change should not impact the integration.VR Audio Output in Oculus Store > Settings > Devices > Rift Headset may be used to configure which input mic to use within the Ak sound engine. The GUID for this is exposed through OVRManager.audioInId.
+Pass AkPlatformInitSettings into the function above and use it to initialize the Ak sound engine.
+
+VR Audio Output in Oculus Store &gt; Settings &gt; Devices &gt; Rift Headset may be used to configure which input mic to use within the Ak sound engine. The GUID for this is exposed through OVRManager.audioInId.
 
 ## Unity 4
 
@@ -52,9 +121,10 @@ Alternatively, users can disable loading all HMD plugins by specifying "-nohmd" 
 
 ## Unreal and Wwise
 
-To use Wwise with any Unreal version, use the Wwise Unreal Plug-in provided by Audiokinetic here: [https://www.audiokinetic.com/library/2016.1.0\_5775/?source=UE4&id=index.html](https://www.audiokinetic.com/library/2016.1.0_5775/?source=UE4&id=index.html).
+To use Wwise with any Unreal version, use the Wwise Unreal Plug-in provided by Audiokinetic here: [https://www.audiokinetic.com/library/2016.1.0_5775/?source=UE4&amp;id=index.html](https://www.audiokinetic.com/library/2016.1.0_5775/?source=UE4&amp;id=index.html).
 
-Note: The link above links to build Wwise 2016.1 build 5775 for use with Unity 4.12. Be sure to select the appropriate build for your Unity version in the upper-left. ![](/images/documentation-pcsdk-latest-concepts-dg-vr-audio-1.png)  
+![](/images/documentationpcsdklatestconceptsdg-vr-audio-1.png)
+
 ## Unreal and FMOD
 
 For an illustration of how to target the Oculus Rift headphones using FMOD in UE4, see the FMOD section above.
@@ -63,7 +133,39 @@ For an illustration of how to target the Oculus Rift headphones using FMOD in UE
 
 To target the Oculus Rift headphones using FMOD in Unity 5, use the following code snippet:
 
- FMOD.System sys; FMODUnity.RuntimeManager.StudioSystem.getLowLevelSystem(out sys); int driverCount = 0; sys.getNumDrivers(out driverCount); string riftId = OVRManager.audioOutId; int driver = 0; while (driver < driverCount) { System.Guid guid; int rate, channels; FMOD.SPEAKERMODE mode; sys.getDriverInfo(driver, out guid, out rate, out mode, out channels); if (guid.ToString() == riftId) { break; } ++driver; } if(driver < driverCount) { sys.setDriver(driver); } ## Oculus Audio Spatialization
+```
+    FMOD.System sys;
+    FMODUnity.RuntimeManager.StudioSystem.getLowLevelSystem(out sys);
+    
+    int driverCount = 0;
+    sys.getNumDrivers(out driverCount);
+    
+    string riftId = OVRManager.audioOutId;
+    
+    int driver = 0;
+    while (driver &lt; driverCount)
+    {
+    System.Guid guid;
+    int rate, channels;
+    FMOD.SPEAKERMODE mode;
+    sys.getDriverInfo(driver, out guid, out rate, out mode, out channels);
+    
+    if (guid.ToString() == riftId)
+    {
+    break;
+    }
+    
+    ++driver;
+    }
+    
+    if(driver &lt; driverCount)
+    {
+    sys.setDriver(driver);
+    }
+   
+```
+
+## Oculus Audio Spatialization
 
 The Oculus Audio SDK, available from our Downloads page, provides free, easy-to-use spatializer plugins for engines and middleware. Our spatialization features support both Rift and Gear VR development.
 
@@ -75,11 +177,10 @@ For additional information on using Oculus spatializer plugins with Unity and Un
 
 Audio is an important part of the virtual reality experience, and it is important that all VR apps provide a comfortable listening level for users. Developers should target a reasonable sound level that is consistent between different experiences. To achieve this, Oculus recommends the following best practices.
 
-First, target -18 LUFS during final mix. To do this, you can use the use the Oculus Audio Loudness Meter [https://www.audiokinetic.com/library/2016.1.0\_5775/?source=UE4&id=index.html](https://www.audiokinetic.com/library/2016.1.0_5775/?source=UE4&id=index.html). Alternatively, you can use third party tools such as Avid's Pro Limited Plugin, Nugen's VisLM, Klangfreund LUFS Meter, Audacity VuMeter, or similar loudness measurement tools.
+First, target -18 LUFS during final mix. To do this, you can use the use the Oculus Audio Loudness Meter [https://www.audiokinetic.com/library/2016.1.0_5775/?source=UE4&amp;id=index.html](https://www.audiokinetic.com/library/2016.1.0_5775/?source=UE4&amp;id=index.html). Alternatively, you can use third party tools such as Avid's Pro Limited Plugin, Nugen's VisLM, Klangfreund LUFS Meter, Audacity VuMeter, or similar loudness measurement tools.
 
 Second, measure your experience against the audio levels in published Oculus experiences, especially the ambient audio in Home and the Dreamdeck experience. Set overall system volume so that Dreamdeck and Home sound comfortable, and then adjust your experience's mix to this volume.
 
 Finally, mix your application using the Rift headphones. This ensures that the sounds you're creating and mixing have a frequency content appropriate for the headphones most Oculus users will use.
 
 By adhering to these guidelines, we can guarantee that our Oculus VR users will have a pleasant audio experience.
-

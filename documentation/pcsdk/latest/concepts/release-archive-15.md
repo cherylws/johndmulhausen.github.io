@@ -1,6 +1,7 @@
 ---
 title: Changes For Release 1.5.x
 ---
+
 This section describes changes to the Oculus SDK, the Oculus App, Oculus Home, and the runtime.
 
 ## Overview of Release 1.5.0
@@ -11,6 +12,8 @@ The 1.5.0 release focuses on performance improvements and minor bug fixes.
 
 * The SDK now supports protected content, which is designed to prevent any mirroring of the compositor. For more information, see [Protecting Content](/documentation/pcsdk/latest/concepts/dg-render-advanced/#dg-render-advanced-protected-content "There are some cases where you only want the content to display on the headset. The protected content feature is designed to prevent any mirroring of the compositor.").
 * The Touch controller pairing process has improved. For more information, see [Pairing the Oculus Touch Controllers](/documentation/pcsdk/latest/concepts/pairing-touch-controllers/ "After you receive your Touch Controllers, you need to pair them with the headset.").
+
+
 ## API Changes for 1.5.0
 
 There are no breaking changes to version 1.5.0.
@@ -28,7 +31,8 @@ The following are known issues:
 * Bandwidth-intensive USB devices, such as web cams and high-end audio interfaces, might not work when using the Rift. To work around this issue, install the device on another USB host controller or a separate computer.
 * For dual-boot systems using DK2 or CB1 HMDs, the OS selection screen might appear on the HMD instead of the monitor. To work around this, try plugging the HMD into a different port or unplug the HMD while booting.
 * If you are running your application from the Unity Editor and you press the controller's home button to return to Oculus Home, you will be prompted to close the application. If you select OK, Unity might remain in a state where it is running, but will never get focus. To work around this, restart Unity.
-## Migrating from SDK 1.4.x to SDK 1.5.0
+
+
+## Migrating from SDK 1.4.x to SDK 1.5.0 
 
 There are no breaking SDK changes or migration requirements other than installing the new SDK.
-

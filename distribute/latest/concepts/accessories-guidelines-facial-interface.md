@@ -1,6 +1,7 @@
 ---
 title: Facial Interface
 ---
+
 The facial interface for the headset sets the proper viewing distance and enhances overall comfort while wearing.
 
 Before creating a facial interface or related accessory, review the following general recommendations: 
@@ -11,14 +12,16 @@ Before creating a facial interface or related accessory, review the following ge
 * Should not allow the penetration of light into the field of view
 * Should not put added pressure on sensitive facial features like nose and cheeks
 * Should not add any stress onto the headset connector slot or the strap arms of the main strap
+
+
 ## Mechanical Layout and Dimensions
 
 These images detail the interaction between the facial interface and the headset, using the Rift Fit A as an example. 
 
-![](/images/distribute-latest-concepts-accessories-guidelines-facial-interface-0.png)  
-Facial Interface## Mechanical Layout and Dimensions
+![](/images/distributelatestconceptsaccessories-guidelines-facial-interface-0.png)
+
+## Mechanical Layout and Dimensions
 
 These images detail the interaction between the facial interface and the headset, using the Rift Fit A as an example. 
 
-![](/images/distribute-latest-concepts-accessories-guidelines-facial-interface-1.png)  
-Facial Interface
+![](/images/distributelatestconceptsaccessories-guidelines-facial-interface-1.png)

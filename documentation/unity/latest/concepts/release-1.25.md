@@ -1,6 +1,9 @@
 ---
 title: 1.25 Oculus Utilities for Unity Release Notes
 ---
+
+
+
 ## Oculus Utilities for Unity version 1.25.0
 
 ## New Features
@@ -10,15 +13,21 @@ title: 1.25 Oculus Utilities for Unity Release Notes
 	+ [Dynamic Power Management](/documentation/unity/latest/concepts/unity-mobile-performance-intro/#unity-mobile-performance-intro "This section provides guidelines to help your Unity app perform well with Samsung Gear VR.")
 	+ [72 Hz Mode](/documentation/unity/latest/concepts/unity-advanced-go/ "This section describes advanced rendering features available for the Oculus Go.")
 	
+
+
 ## Integration Changes
 
 * The Oculus Unity packaging structure has changed. When upgrading to 1.25 we recommend deleting your old copy of the Utilities and restarting Unity, then adding the 1.25 package.
+
+
 ## Bug Fixes
 
 * Fixed a bug where the screen briefly flashes white when launching an Oculus Go application.
 * Fixed a bug where UnityEngine.GL rendered over a scene, switched to using MeshRender that respects depth and the render queue.
 * Fixed a race condition that could result in inconsistent handling of system UI requests, such as transitioning to the Confirm Quit UI menu.
-* Fixed an issue where OVRScreenFade MonoBehaviour was incorrectly enabling MeshRenderer when the camera was switched and not setting the alpha to 0. This may result in the user’s view of the scene being blocked. 
+* Fixed an issue where OVRScreenFade MonoBehaviour was incorrectly enabling MeshRenderer when the camera was switched and not setting the alpha to 0. This may result in the userâ€™s view of the scene being blocked. 
+
+
 ## Known Issues
 
 * If you experience long UI stalls or poor performance with the Unity Editor when targeting Oculus Rift on Windows 10, please run Windows Update to ensure that you have the latest version of Windows 10.
@@ -62,3 +71,4 @@ title: 1.25 Oculus Utilities for Unity Release Notes
 * Mixed Reality Capture
 	+ ZED Camera users should upgrade their SDK version to 2.3.1. All previous versions are not compatible.
 	
+

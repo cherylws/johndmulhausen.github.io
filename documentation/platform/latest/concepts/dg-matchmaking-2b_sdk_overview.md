@@ -1,11 +1,12 @@
 ---
 title: SDK Overview
 ---
+
 This page will walk you through the Matchmaking SDK concepts. The [Matchmaking Quickstart](/documentation/platform/latest/concepts/dg-matchmaking-3quickstart/) and [Additional Configurations](/documentation/platform/latest/concepts/dg-matchmaking-4skill_queries/) pages will walk you through how to implement these methods in your game.
 
 The following SDK methods are available to call from your client app. With Matchmaking SDK methods listed below, we recommend waiting for response messages before making additional requests. Making a call before the previous call has been handled creates a race condition that may result in unintended actions.
 
-We’ll review the main SDK methods in OVR\_Requests\_Matchmaking.h. You should review the other Matchmaking header files in the [Reference Content](/documentation/platform/latest/concepts/book-reference/ "The Platform SDK developer reference contains a complete list of the Platform SDK headers, functions, and data structures.") section to see all available requests.
+We’ll review the main SDK methods in `OVR_Requests_Matchmaking.h`. You should review the other Matchmaking header files in the [Reference Content](/documentation/platform/latest/concepts/book-reference/) section to see all available requests.
 
 * **Enqueue the user:**
 
@@ -77,5 +78,6 @@ Native - ovr\_Matchmaking\_StartMatch()
 Unity - Platform.Matchmaking.StartMatch()
 
 After the match is over, you’ll want to report the results of the match for consideration in future matches.
+
 
 

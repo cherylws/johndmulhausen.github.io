@@ -1,6 +1,7 @@
 ---
 title: User Orientation and Positional Tracking
 ---
+
 This section offers best practices about how to track and translate a user's real-world movements to the virtual world.
 
 User orientation and positional tracking only applies to VR devices with 6DOF tracking capabilities, like the Rift.
@@ -18,4 +19,3 @@ Both **roomscale** and **tracked size space** may benefit from querying the play
 A challenge unique to VR is that users can now move the **virtual camera** into unusual positions that might have been previously impossible. For instance, users can move the camera to look under objects or around barriers to see parts of the environment that would be hidden in a conventional video game. While this opens up new methods of interaction, like physically moving to peer around cover or examine objects in the environment, this also allows users to discover technical shortcuts you might have taken in designing the environment that would normally be hidden. Make sure that your art and assets do not break the user’s sense of immersion in the virtual environment.
 
 **Head-object intersections** are another issue that is unique to positionally tracked VR. Users could potentially use position tracking to clip through the virtual environment by leaning through a wall or object. Ensure that your design does not allow a user to get close enough to “solid” objects that they may intersect with causing a discomforting experience.
-

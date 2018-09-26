@@ -1,6 +1,7 @@
 ---
 title: Oculus Unreal Engine 4 Integration 1.11 Release Notes
 ---
+
 These release notes describe changes to Oculus's Unreal Engine 4.13, 4.14, and 4.15 available from the Oculus GitHub repository.
 
 ## 1.11.0
@@ -22,6 +23,8 @@ New Features
 		- DumpSessionState() now dumps out all individual existing named sessions.
 		
 	
+
+
 Bug Fixes
 
 * Added support for wire frame representation of objects while using the 11:11:10 LDR format
@@ -34,10 +37,13 @@ Bug Fixes
 		- Session.bHosting now returns if the current user is the host/owner of the session.
 		
 	
+
+
 Known Issues
 
 * Adaptive Pixel Density is not currently working and should be disabled. If applications using Adaptive Pixel Density reach 45 Hz, they will remain stuck at that frame rate until relaunched. A fix is planned for the Rift 1.12 runtime release and should not require any application changes.
-* A significant drop in frame rate occurs when UE4 is not in focus in VR preview mode. To avoid this issue, uncheck the Use Less CPU when in **Background** in **Edit** > **Editor Preferences** > **General** (left sidebar) > **Miscellaneous** (left sidebar) > **Performance**.
+* A significant drop in frame rate occurs when UE4 is not in focus in VR preview mode. To avoid this issue, uncheck the Use Less CPU when in **Background** in **Edit** &gt; **Editor Preferences** &gt; **General** (left sidebar) &gt; **Miscellaneous** (left sidebar) &gt; **Performance**.
 * Exclusive Mode issues: Multiple initializations of the DXGISwapChain may cause flickering as the screen switches modes and a black screen when rendering to the Rift with a different GPU from the one the game is using to render the eye buffers.
-* Stereo Layer Depth Ordering: Doesn’t support head-locked layers, only world-locked and tracker-locked.
+* Stereo Layer Depth Ordering: Doesnâ€™t support head-locked layers, only world-locked and tracker-locked.
 * Oculus Blueprints not visible in Level Blueprint in Epic launcher and Epic source versions when Gear VR Plugin is enabled. Workaround for source version: open the file GearVR.uplugin and replace "WhitelistPlatforms" : ["Android"] with "WhitelistPlatforms" : [ "Android", "Win64", "Win32" ]. This does not affect source shipped through the Oculus Unreal GitHub repository.
+

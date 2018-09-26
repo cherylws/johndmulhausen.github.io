@@ -1,6 +1,7 @@
 ---
 title: Rift Performance VRCs
 ---
+
 These requirements ensure your app is responsive, performant, and able to render graphics at the quality expected for an Oculus Store app.
 
 ## Rift Performance VRCs
@@ -25,3 +26,4 @@ App must render without visible z-fighting or depth conflict artifacts.
 The app should render head-locked UI elements in a compositor layer to avoid judder if the app misses frames or runs with Asynchronous SpaceWarp.
 * **[VRC.PC.Performance.10](/distribute/latest/concepts/vrc-pc-performance-10/)**  
 The app must not synchronize animation or physics to an assumed 90Hz frame rate.
+

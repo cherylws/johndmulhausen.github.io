@@ -1,20 +1,27 @@
 ---
 title: 1.12 Oculus Utilities for Unity 5 Release Notes
 ---
+
+
+
 ## Oculus Utilities for Unity 5 version 1.12.0
 
 This document provides an overview of new features, improvements, and fixes included in the latest version of the Oculus Utilities for Unity 5. For information on first-party changes to Unity VR support for Oculus, see the Unity Release Notes for the appropriate version. You will find a scripting reference for the included C# scripts in our [Unity Reference Content](/documentation/unity/latest/concepts/book-unity-reference/).
 
 ## Version Compatibility
 
-On initial release, Utilities v 1.12.0 is compatible with our recommended Unity 5.3.8f1 and 5.4.5f1. For up-to-date compatibility information, see [Compatibility and Version Requirements](/documentation/unity/latest/concepts/unity-req/ "This guide describes Unity Editor version recommendations and system requirements.").
+On initial release, Utilities v 1.12.0 is compatible with our recommended Unity 5.3.8f1 and 5.4.5f1. For up-to-date compatibility information, see [Compatibility and Version Requirements](/documentation/unity/latest/concepts/unity-req/).
 
 ## New Features
 
 * Added support for the Gear VR Controller to OVRInput. For more information, see [OVRInput](/documentation/unity/latest/concepts/unity-ovrinput/#unity-ovrinput "OVRInput exposes a unified input API for multiple controller types.").
+
+
 ## API Changes
 
 * Added OVRPlugin.GetAppFramerate() to OVRDisplay.cs; returns frame rate reported by Oculus plugin (Rift and Gear VR). Requires a Unity Editor version we recommend for use with Utilities 1.12 - see [Compatibility and Version Requirements](/documentation/unity/latest/concepts/unity-req/ "This guide describes Unity Editor version recommendations and system requirements.") for details.
+
+
 ## Bug Fixes
 
 * Changed OVRInput.GetAngularVelocity(..) and OVRInput.GetAngularAcceleration(..) to return Vector3 instead of Quaternion, avoiding issues for rates above 2*pi. Developers who need the old behavior for any reason may use Quaternion.Euler(..).
@@ -28,6 +35,8 @@ On initial release, Utilities v 1.12.0 is compatible with our recommended Unity 
 	2. Fixed issue causing layer colors to appear washed out when using render targets as input textures on PC.
 	3. Fixed issue where right-side textures were lost when using stereo pairs of OVROverlays.
 	
+
+
 ## Known Issues
 
 * The following versions of Unity require the [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145) or Rift builds will fail to run in VR, and the error “Security error. This plugin is invalid!” will be reported in output\_log.txt:
@@ -50,8 +59,9 @@ On initial release, Utilities v 1.12.0 is compatible with our recommended Unity 
 * Mobile App Submission to Oculus Store 
 	+ All mobile applications using Utilities 1.9 and 1.10 will fail Oculus Store submission due to a bug affecting reserved interaction handling for the Universal Menu. Please remove previously-imported project files as described in [Importing the Oculus Utilities Package](/documentation/unity/latest/concepts/unity-import/ "Oculus Utilities for Unity is an optional Unity Package that includes scripts, prefabs, and other resources to assist with development.") and import Utilities version 1.12, and update your Unity editor to a [compatible version](/documentation/unity/latest/concepts/unity-req/ "This guide describes Unity Editor version recommendations and system requirements.") if necessary. 
 	+ When building a mobile application for submission to the Oculus Store, you must set **Install Location** to **Auto** in addition to generating a custom manifest as described in [Building Mobile Applications](/documentation/unity/latest/concepts/unity-build-android/#unity-build-android "This section describes the steps necessary for building Unity applications for Oculus Go and Samsung Gear VR.").
-		1. Click **Edit > Project Settings > Player**.
+		1. Click **Edit &gt; Project Settings &gt; Player**.
 		2. Expand the **Other Settings** properties.
 		3. Set **Install Location** to **Auto**.
 		
 	
+

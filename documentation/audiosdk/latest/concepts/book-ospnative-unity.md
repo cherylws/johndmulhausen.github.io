@@ -1,11 +1,12 @@
 ---
 title: Oculus Native Spatializer for Unity
 ---
+
 Welcome to this guide to using the Oculus Native Spatializer plugin in Unity.
 
-Before reading this guide, be sure to review the [Oculus Audio SDK Guide](/documentation/audiosdk/latest/concepts/book-audiosdk/ "This document describes how to install, configure, and use the Oculus Audio SDK.") for information on features, requirements, and integration steps that is relevant to all of our Audio SDK plugins.
+Before reading this guide, be sure to review the [Oculus Audio SDK Guide](/documentation/audiosdk/latest/concepts/book-audiosdk/) for information on features, requirements, and integration steps that is relevant to all of our Audio SDK plugins.
 
-For general background information on audio spatialization, see our [Introduction to Virtual Reality Audio](/documentation/audiosdk/latest/concepts/book-audio-intro/ "Welcome to audio development for virtual reality!").
+For general background information on audio spatialization, see our [Introduction to Virtual Reality Audio](/documentation/audiosdk/latest/concepts/book-audio-intro/).
 
 * **[Overview](/documentation/audiosdk/latest/concepts/ospnative-unity-overview/)**  
 This guide describes how to install and use the Oculus Native Spatializer plugin in Unity 5.2+ and in end-user applications.
@@ -25,3 +26,4 @@ The Oculus Spatializer supports playing AmbiX format ambisonic audio in Unity 20
 This guide describes how to migrate a Unity project from the Two Big Ears 3Dception spatializer to Unity's built-in Oculus Spatializer or the Oculus Native Spatializer Plugin (ONSP) that ships with the Oculus Audio SDK, using the Two Big Ears 3Dception\_Example.unity scene found in the latest Non-Commercial 3Dception 1.2.4 package as an example.
 * **[Managing Sound FX with Oculus Audio Manager](/documentation/audiosdk/latest/concepts/ospnative-unity-audiomanager/)**  
 The Oculus Audio Manager provides sound fx management that is external to Unity scene files. This has audio workflow benefits as well as providing you with the ability to group sound FX events together for greater flexibility. 
+

@@ -1,6 +1,7 @@
 ---
 title: Changes For Release 0.5
 ---
+
 A number of changes were made to the API since the 0.4 release. 
 
 The Oculus SDK 0.5 moves from static linking to a dynamic link library (DLL) model. Using a DLL offers several advantages:
@@ -8,6 +9,8 @@ The Oculus SDK 0.5 moves from static linking to a dynamic link library (DLL) mod
 * As long as the arguments and return values are the same, experiences do not need to be recompiled to take advantage of the updated library.
 * Localization into new languages is easier because the functions remain consistent across languages.
 * The DLL can be updated to take advantage of new features and headsets without affecting current games and experiences.
+
+
 In addition to moving to a DLL model, the following changes were made:
 
 * SDK versions now use a *product*.*major*.*minor*.*patch* format. The product value is currently set to 0 as this is a pre-release product. For example, 0.5.0.1 means Product 0, Major 5, Minor 0, Patch 1.
@@ -22,6 +25,8 @@ In addition to moving to a DLL model, the following changes were made:
 * Diagnostics and configuration capture were improved.
 * Monitor rotation is now supported in the legacy Extended mode.
 * Default time warp scheduling is improved, which should reduce frame drops.
+
+
 The following SDK changes were made:
 
 * Moved and renamed LibOVR/Src/OVR\_CAPI.h to LibOVR/Include/OVR\_CAPI\_0\_5\_0.h. Some additional public headers such as OVR\_Version.h have been moved to LibOVR/Include/. Any other previously public headers are now private to LibOVR.
@@ -37,3 +42,4 @@ The following SDK changes were made:
 * The hmdToEyeViewOffset argument for ovr\_GetEyePosess is now const.
 * Added the ovrQuatf playerTorsoMotion argument to ovr\_GetEyeTimewarpMatricesDebug.
 * Added ovr\_TraceMessage.
+

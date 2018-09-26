@@ -1,6 +1,7 @@
 ---
 title: Vision
 ---
+
 This section offers tips about how to display the virtual world you’re creating to your users and is provided with a bit more explanation due to its complexity.
 
 ## Using Monocular Depth Clues
@@ -35,7 +36,7 @@ At a certain distance depth perception becomes less sensitive. Up close, stereop
 
 Use this relative insensitivity to depth perception in the distance to free up computational power by using **imposter** or **billboard** textures in place of fully 3D scenery. For instance, rather than rendering a distant hill in 3D, you might simply render a flat image of the hill onto a single polygon that appears in the left and right eye images. This image appears to the eyes in VR the same as in traditional 3D games.
 
-Note: The effectiveness of these impostors will vary depending on the size of the objects involved, the depth cues inside of and around those objects, and the context in which they appear. You will need to engage in individual testing with your assets to ensure the impostors look and feel right. Be sure that the impostors are sufficiently distant from the camera to blend in inconspicuously, and that interfaces between real and impostor scene elements do not break immersion.## Rendering Stereoscopic Images
+## Rendering Stereoscopic Images
 
 We often face situations in the real world where each eye gets a very **different viewpoint**, and we generally have little problem with it. Peeking around a corner with one eye works in VR just as well as it does in real life. In fact, the eyes’ different viewpoints can be beneficial: say you’re a special agent (in real life or VR) trying to stay hidden in some tall grass. Your eyes’ different viewpoints allow you to look “through” the grass to monitor your surroundings as if the grass weren’t even there in front of you. Doing the same in a video game on a 2D screen may leave the world completely occluded behind each blade of grass.
 
@@ -51,17 +52,29 @@ Should you choose to incorporate some HUD elements, be aware of the following is
 
 1. **Don’t occlude the scene with the HUD.** This isn’t a problem in non-stereoscopic games, because the user can easily assume that the HUD actually is in front of everything else. Adding binocular disparity (the slight differences between the images projected to each eye) as a depth cue can create a contradiction if a scene element comes closer to the user than the depth plane of the HUD. Based on occlusion, the HUD is perceived to be closer than the scene element because it covers everything behind it, yet binocular disparity indicates that the HUD is farther away than the scene element it occludes. This can lead to difficulty and/or discomfort when trying to fuse the images for either the HUD or the environment.
 2. **Don’t draw the elements “behind” anything in the scene.** This effect is extremely common with reticles, subtitles, and other sorts of floating UI elements. It’s common for an object that should be “behind” a wall (in terms of distance from the camera) to be drawn “in front” of the wall because it’s been implemented as an overlay. This sends conflicting cues about the depth of these objects, which can be uncomfortable.
-![](/images/design-latest-concepts-bp-vision-0.jpg)  
+
+
+
+
+![](/images/designlatestconceptsbp-vision-0.jpg)
+
+
+
 Instead, we recommend that you **build the information into the environment**. Users can move their heads to retrieve information in an intuitive way. For instance, rather than including mini map and compass in a HUD, the player might get their bearings by glancing down at an actual map and compass in their avatar’s hands or cockpit or a watch that displays the player’s vital information.. This is not to say realism is necessary, enemy health gauges might float over their heads. What’s important is presenting information in a clear and comfortable way that does not interfere with the player’s ability to perceive a clear, single image of the environment or the information they are trying to gather.
 
 Targeting reticles are common elements to games, and are a good example of where we can adapt an old information paradigm to VR. While a reticle is critical for accurate aiming, simply pasting it over the scene at a fixed depth plane will not yield the behavior players expect in a game. For example, if the reticle is rendered at a depth different from where the eyes are converged, it is perceived as a double image. In order for the targeting reticle to work the same way it does in traditional video games, it must be drawn directly onto the object it is targeting on screen, presumably where the user’s eyes are converged when aiming. The reticle itself can be a fixed size that appears bigger or smaller with distance, or you can program it to maintain an absolute size to the user; this is largely an aesthetic decision.
 
 Place critical gameplay elements in the user's **immediate line of sight**. UI or elements displayed outside the user's immersive line of sight are more likely to be missed. 
 
-![](/images/design-latest-concepts-bp-vision-1.jpg)  
-*http://buildmedia.com/portfolio-items/what-are-survey-accurate-visual-simulations/*
 
-## Camera Origin & User Perspective
+
+![](/images/designlatestconceptsbp-vision-1.jpg)
+
+
+
+**http://buildmedia.com/portfolio-items/what-are-survey-accurate-visual-simulations/**
+
+## Camera Origin &amp; User Perspective
 
 You should consider the altitude of the user, or height of the user’s point of view (POV), as this can be a factor in causing discomfort. The lower the user’s POV, the more rapidly the ground plane changes, creating a more intense display of optic flow. This can create an uncomfortable sensation for the same reason that moving up staircases is uncomfortable: doing so creates an intense optic flow across the visual field.
 
@@ -70,4 +83,3 @@ When developing a VR app, you can choose to make the camera’s origin rest on p
 **Using the floor as the origin** will cause people’s viewpoint to be at the same height off the ground that they are in real life. Aligning their virtual viewpoint height with their real-world height can increase the sense of immersion. However, you can’t control how tall people in your virtual worlds are. If you want to render a virtual body, you’ll need to build a solution that can scale to different people’s height.
 
 **Using the user’s eyes as the camera’s origin means** that you can control their height within the virtual world. This is useful for rendering virtual bodies that are a specific height and also for offering perspectives that differ from people’s real-world experience (for example, you can show people what the world looks like from the eyes of a child). However, by using the eye point as the origin, you no longer know where the physical floor is. This complicates interactions that involve ducking low or picking things up from the ground. Since you won't actually know the user’s height, you may wish to add a recentering step at the beginning of your app to accurately record the user’s real world height. 
-

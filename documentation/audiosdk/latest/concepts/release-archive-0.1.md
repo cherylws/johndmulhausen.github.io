@@ -1,6 +1,7 @@
 ---
 title: Audio SDK 0.10 Release Notes
 ---
+
 This document provides an overview of new features, improvements, and fixes included in the latest version of the Oculus Audio SDK.
 
 ## 0.10.2
@@ -14,6 +15,8 @@ Currently the Oculus Audio SDK supports Mac, Windows, and mobile platforms, and 
 * FMOD (Windows, Mac and mobile)
 * Audiokinetic Wwise (Windows)
 * Unity 4.6 and later (Windows, Mac, and mobile)
+
+
 The optional OVRAudio C/C++ SDK is available to qualified developers by contacting developer support directly.
 
 ## New Features
@@ -40,12 +43,16 @@ The optional OVRAudio C/C++ SDK is available to qualified developers by contacti
 	+ Added 16 kHz support.
 	+ Removed Bass Boost option.
 	
+
+
 ## API Changes
 
 * OVRAudio (internal only)
 	+ Added ovrAudio\_SetAudioSourcePropertyf().
 	+ Added ovrAudio\_SetUserConfig().
 	
+
+
 ## Bug Fixes
 
 * Unity plugin
@@ -55,6 +62,9 @@ The optional OVRAudio C/C++ SDK is available to qualified developers by contacti
 * Wwise plugin
 	+ Fixed various crash bugs.
 	
+
+
 ## Known Issues
 
 * This is still a preview release, so expect a lot of bugs and other minor issues!
+

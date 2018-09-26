@@ -1,6 +1,7 @@
 ---
 title: Rift Asset VRCs
 ---
+
 These requirements ensure your app meets the asset and content guidelines for shipping in the Oculus Store.
 
 ## Rift Asset VRCs
@@ -21,3 +22,4 @@ App description, screenshots, and videos must not include HMDs, controllers, or 
 Trailer must not be longer than 2 minutes.
 * **[VRC.PC.Asset.8](/distribute/latest/concepts/vrc-pc-asset-8/)**  
 Artwork asset text should not use a font smaller than 24 pt.
+

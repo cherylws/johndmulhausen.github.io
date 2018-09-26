@@ -1,7 +1,8 @@
 ---
 title: "Oculus Rift: Testing and Performance Analysis"
 ---
-This guide describes basic testing and performance analysis for Oculus Rift development in Unreal.
+
+This guide describes basic testing and performance analysis for Oculus Rift development in Unreal. 
 
 VR application debugging is a matter of getting insight into how the application is structured and executed, gathering data to evaluate actual performance, evaluating it against expectation, then methodically isolating and eliminating problems.
 
@@ -22,12 +23,16 @@ Below you will find some general guidelines for establishing your baselines, giv
 * 90 FPS (required by Oculus Store)
 * 500-1,000 draw calls per frame
 * 1-2 million triangles or vertices per frame
+
+
 For more information, see:
 
-* [PC SDK Developer Guide](/documentation/pcsdk/latest/concepts/book-dg/)
+* [PC SDK Developer Guide](https://developer.oculus.com/documentation/pcsdk/latest/concepts/book-dg/)
 * Oculus Store Submission Requirements
-	+ [Oculus Rift App Requirements](/documentation/publish/latest/concepts/publish-mobile-req/)
-	+ [Rift Virtual Reality Check (VRC) Guidelines](/distribute/latest/concepts/publish-rift-app-submission/)
+	+ [Oculus Rift App Requirements](https://developer.oculus.com/documentation/publish/latest/concepts/publish-mobile-req/)
+	+ [Rift Virtual Reality Check (VRC) Guidelines](https://developer.oculus.com/distribute/latest/concepts/publish-rift-app-submission/)
+	
+
 
 ## Rift Performance HUD
 
@@ -55,12 +60,13 @@ If you have a Mali phone, such as a GALAXY S6, you can use the Mali Graphics Deb
 
 Note that because there are no swap buffers in VR, Gear VR does not currently support frame delimiters. Consequently, application frames will be displayed as different render passes of the same frame.
 
-![](/images/documentation-unreal-latest-concepts-unreal-debug-rift-0.png)  
+![](/images/documentationunreallatestconceptsunreal-debug-rift-0.png)
+
 ## Additional Third-Party Tools
 
 **ETW and GPUView**
 
-[Event Tracing for Windows](https://msdn.microsoft.com/en-us/library/windows/desktop/bb968803%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) (ETW) is a trace utility provided by Windows for performance analysis. [GPUView](https://msdn.microsoft.com/en-us/library/windows/desktop/jj585574%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) view provides a window into both GPU and CPU performance with DirectX applications. It is precise, has low overhead, and covers the whole Windows system.
+[Event Tracing for Windows](https://msdn.microsoft.com/en-us/library/windows/desktop/bb968803%28v=vs.85%29.aspx?f=255&amp;MSPPError=-2147217396) (ETW) is a trace utility provided by Windows for performance analysis. [GPUView](https://msdn.microsoft.com/en-us/library/windows/desktop/jj585574%28v=vs.85%29.aspx?f=255&amp;MSPPError=-2147217396) view provides a window into both GPU and CPU performance with DirectX applications. It is precise, has low overhead, and covers the whole Windows system. 
 
 In some cases ETW and GPUView may be useful for debugging problems such as system-level contention with background processes. For a detailed description of how to use ETW with our native Rift SDK, see [VR Performance Optimization Guide](/documentation/pcsdk/latest/concepts/dg-performance-opt-guide/) in our PC SDK Developer Guide. Not all of the content will be relevant to the Unreal developer, but it contains a lot of applicable conceptual material that may be very useful.
 
@@ -74,11 +80,11 @@ NSight is a CPU/GPU debug tool for NVIDIA users, available in a [Visual Studio v
 
 Mac OpenGL Monitor
 
-An OpenGL debugging and optimizing tool for OS X. Available here: [https://developer.apple.com/library/mac/technotes/tn2178/\_index.html#//apple\_ref/doc/uid/DTS40007990](https://developer.apple.com/library/mac/technotes/tn2178/_index.html#//apple_ref/doc/uid/DTS40007990)
+An OpenGL debugging and optimizing tool for OS X. Available here: [https://developer.apple.com/library/mac/technotes/tn2178/_index.html#//apple_ref/doc/uid/DTS40007990](https://developer.apple.com/library/mac/technotes/tn2178/_index.html#//apple_ref/doc/uid/DTS40007990)
 
 **APITrace**
 
-<https://apitrace.github.io/>
+[https://apitrace.github.io/](https://apitrace.github.io/)
 
 ## Other Resources
 
@@ -86,8 +92,10 @@ For detailed information about Oculus development, go to:
 
 * Unreal: Virtual Reality Development: [https://docs.unrealengine.com/latest/INT/Platforms/VRZ/](https://docs.unrealengine.com/latest/INT/Platforms/VR/)
 * Unreal: Oculus Rift wiki: [https://wiki.unrealengine.com/Oculus\_Rift](https://wiki.unrealengine.com/Oculus_Rift)
-* Oculus Forums/Unreal: <https://forums.oculus.com/developer/categories/unreal>
-* Unreal Forums/VR Development: <https://forums.unrealengine.com/forumdisplay.php?27-VR-Development>
+* Oculus Forums/Unreal: &lt;https://forums.oculus.com/developer/categories/unreal&gt;
+* Unreal Forums/VR Development: &lt;https://forums.unrealengine.com/forumdisplay.php?27-VR-Development&gt;
+
+
 ## Contact
 
 Visit our developer support forums at [https://developer.oculus.com](/).

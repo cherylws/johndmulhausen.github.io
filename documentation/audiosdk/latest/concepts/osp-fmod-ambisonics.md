@@ -1,11 +1,13 @@
 ---
 title: Ambisonics in FMOD
 ---
+
 The Oculus FMOD OSP supports Oculus Ambisonics in the AmbiX (ACN/SN3D) format.
 
-To apply Oculus Ambisonics to a sound file, select *Add Effect > Plug-in Effects > Oculus Ambisonics*.
+To apply Oculus Ambisonics to a sound file, select **Add Effect &gt; Plug-in Effects &gt; Oculus Ambisonics**.
 
-![](/images/documentation-audiosdk-latest-concepts-osp-fmod-ambisonics-0.png)  
+![](/images/documentationaudiosdklatestconceptsosp-fmod-ambisonics-0.png)
+
 Ambisonics are not officially supported by FMOD Studio 1.8, but its flexible bus architecture and multi-channel audio support allows ambisonics to work. However, there are two quirks to watch out for:
 
 ## Head Tracking Only Works with an Oculus Effect on the Master Track
@@ -24,7 +26,8 @@ There are two ways to work around this:
 
 Notice in the screenshot below that the meters on the “In” at the left side of the track shows 4 channels. This is the best approach if you wish to play back a single ambisonic sound or loop.
 
-![](/images/documentation-audiosdk-latest-concepts-osp-fmod-ambisonics-1.png)  
+![](/images/documentationaudiosdklatestconceptsosp-fmod-ambisonics-1.png)
+
 
 * Convert your 4-channel ambisonics sound files to pseudo 5.1 files by converting them to 6 channels.
 
@@ -32,7 +35,9 @@ Insert two silent channels between the ambisonics channel, so the third and four
 
 This approach works well if you are playing back several ambisonic sounds in one event and want to mix them together before spatializing. The most common use case for this is an interactive music mix using ambisonics.
 
-![](/images/documentation-audiosdk-latest-concepts-osp-fmod-ambisonics-2.png)  
-Note: You will have to make your project speaker mode 5.1 instead of stereo to make this work.
-For more information on Oculus Ambisonics, see the *Oculus Ambisonics* section of the [Supported Features](/documentation/audiosdk/latest/concepts/audiosdk-features/#audiosdk-features-supported "This section describes supported features.") section of our Audio SDK Guide.
+![](/images/documentationaudiosdklatestconceptsosp-fmod-ambisonics-2.png)
 
+Note: You will have to make your project speaker mode 5.1 instead of stereo to make this work.
+
+
+For more information on Oculus Ambisonics, see the **Oculus Ambisonics** section of the [Supported Features](/documentation/audiosdk/latest/concepts/audiosdk-features/#audiosdk-features-supported) section of our Audio SDK Guide.

@@ -1,6 +1,7 @@
 ---
 title: Oculus Touch Controllers
 ---
+
 This section describes Oculus Touch best practices gathered from developing and reviewing large numbers of games and experiences. These are not requirements and we expect them to evolve over time. 
 
 **Note: **To view application requirements, go to [https://developer.oculus.com/distribute/latest/concepts/publish-rift-app-submission/](/distribute/latest/concepts/publish-rift-app-submission/)
@@ -9,7 +10,7 @@ This section describes Oculus Touch best practices gathered from developing and 
 
 When developing applications that use Oculus Touch, consider the following:
 
-* If your application supports multiple input methods (such as Oculus Touch, Xbox 360 Controller, and Oculus Remote), use ovrControllerType\_Active to determine which one is in use. You can also use this to determine if one or both Touch controllers are in use. Some applications render the Touch controllers differently (e.g. as hands vs. controllers) depending on their in-use state. For more information, see this section and the API reference [Developer Reference/](/documentation/pcsdk/latest/concepts/api-reference/). 
+* If your application supports multiple input methods (such as Oculus Touch, Xbox 360 Controller, and Oculus Remote), use ovrControllerType\_Active to determine which one is in use. You can also use this to determine if one or both Touch controllers are in use. Some applications render the Touch controllers differently (e.g. as hands vs. controllers) depending on their in-use state. For more information, see this section and the API reference [Developer Reference/](https://developer.oculus.com/documentation/pcsdk/latest/concepts/api-reference/). 
 * Unless you have an uncommon use case, use the Avatar SDK to represent high quality hands and/or controllers in your app.
 * Map the grip button to grab actions. Although there are some exceptions to the rule (especially involving throwing), the new user experience and most applications condition users to use it this way. If you break expectations, make sure to educate your users.
 * Prefer hands over controller models, especially for any application that involves social interaction or picking things up.
@@ -22,6 +23,8 @@ When developing applications that use Oculus Touch, consider the following:
 For multiplayer games, you can render the hands of the first person and the up to the full bodies of the other players.
 
 
+
+
 ## Tracking
 
 The following are basic tracking tips:
@@ -29,6 +32,8 @@ The following are basic tracking tips:
 * For front-facing apps, keep the action in front of the user. Don’t encourage users to do things that will break the line of sight between the controllers and sensors, which will lead to poor tracking.
 * Don’t require the user to interact with VR elements near the floor or far above their heads. Remove those objects, or allow a distance grab. If you decide to allow interactions at a distance, make sure to indicate that the object is available through a highlight, glow, shake, haptics, or another mechanism.
 * Avoid interactions that encourage users to get too close or too far from one or more position trackers.
+
+
 ## Large Play Areas
 
 For applications that use a large amount of the tracking space, either horizontally or vertically, you’ll want to put a little more effort into making the best use of the available space:
@@ -45,6 +50,8 @@ For applications that use a large amount of the tracking space, either horizonta
 	+ It is generally better to overflow away from the sensors, not towards, since tracking is better further back (and closer might put you past the sensor position).
 	+ Users can attempt to use recenter to reach playable areas they would otherwise be unable to reach.
 	
+
+
 * **[Controller Data](/documentation/pcsdk/latest/concepts/dg-input-touch/)**  
 The Oculus SDK provides APIs that return the position and state for each Oculus Touch controller. 
 * **[Hand Tracking](/documentation/pcsdk/latest/concepts/dg-input-touch-poses/)**  
@@ -57,3 +64,4 @@ In addition to buttons, Touch controllers can detect whether user fingers are to
 In addition to reporting input state, Oculus touch controllers can provide haptic feedback through vibration.
 * **[Emulating Gamepad Input with Touch](/documentation/pcsdk/latest/concepts/dg-gamepad-emulation-touch/)**  
 Touch controllers can partially emulate Microsoft XInput API gamepad input without any code changes. However, you must account for the missing logical and ergonomic equivalences between the two types of controllers.
+

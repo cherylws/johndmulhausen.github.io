@@ -1,6 +1,7 @@
 ---
 title: 0.4 Release Notes
 ---
+
 This document provides an overview of new features, improvements, and fixes included in version 0.4 of the Oculus Mobile SDK.
 
 ## 0.4.3.1
@@ -11,23 +12,27 @@ This release adds support for Unity 5.0.0p2. Developers using Unity 5 must updat
 
 We would like to highlight the inclusion of the new Mobile Unity Integration with full DK2 support based on the Oculus PC SDK 0.4.4. As this is a significant API refactor, please refer to the Unity Development Guide: Migrating From Earlier Versions section for information on how to upgrade projects built with previous versions of the Mobile Unity Integration.
 
-Note: Before installing or integrating this distribution, we strongly recommend that you backup your project before attempting any merge operations.## 0.4.3
+## 0.4.3
 
 ## New Features
 
 * Android Manifest
-	+ Applications will now be required to specify the following permission to support distortion configuration updates by the system service. <uses-permission android:name='android.permission.READ\_EXTERNAL\_STORAGE' />
+	+ Applications will now be required to specify the following permission to support distortion configuration updates by the system service. &lt;uses-permission android:name='android.permission.READ\_EXTERNAL\_STORAGE' /&gt;
 	+ **Note**: Always refer to the *Oculus Mobile Submission Guidelines* for the latest information regarding the submission process.
 	
 * VrPlatform
-	+ Support for entitlement checking with VrPlatform. Integration steps and instructions are included in the Oculus Mobile Developer Guide’s *Mobile SDK Setup section*.
+	+ Support for entitlement checking with VrPlatform. Integration steps and instructions are included in the Oculus Mobile Developer Guideâ€™s *Mobile SDK Setup section*.
 	
+
+
 * Unity Integration
 	+ New Mobile Unity Integration Based on Oculus PC SDK 0.4.4
 	
 * Miscellaneous
 	+ The Mobile SDK Documentation folder hierarchy has been re-organized into a single document.
 	
+
+
 ## API Changes
 
 * VrLib
@@ -40,6 +45,8 @@ Note: Before installing or integrating this distribution, we strongly recommend 
 	+ Improved Passthrough Camera latency by disabling Optical Image Stabilization (Exynos chipset only).
 	+ Free EGL sync objects on time warp thread shutdown.
 	
+
+
 ## Bug Fixes
 
 * 360 Videos SDK
@@ -50,6 +57,8 @@ Note: Before installing or integrating this distribution, we strongly recommend 
 * 360 Photos SDK
 	+ Fixed several UI bugs.
 	
+
+
 ## 0.4.2
 
 ## Overview of Major Changes
@@ -58,7 +67,7 @@ If you are developing with Unity, we recommend updating to Unity 4.6.1, which co
 
 We would like to highlight the inclusion of the new Mobile Unity Integration with full DK2 support based on the Oculus PC SDK 0.4.4. As this is a significant API refactor, please refer to the Unity Development Guide: Migrating From Earlier Versions section for information on how to upgrade projects built with previous versions of the Mobile Unity Integration.
 
-Note: Before installing or integrating this distribution, we **strongly recommend** that you backup your project before attempting any merge operations.## API Changes
+## API Changes
 
 * VrLib
 	+ Universal Menu localization support: English, French, Italian, German, Spanish, Korean.
@@ -71,6 +80,8 @@ Note: Before installing or integrating this distribution, we **strongly recommen
 	+ Moonlight Debug Util class names now prefixed with OVR to prevent namespace pollution.
 	+ Provide callback for configuring VR Mode Parms on OVRCameraController; see OVRModeParms.cs for an example.
 	
+
+
 * Native Framework
 	+ Fixed bug in which Volume toast is not dismissed if user transitions to Universal Menu while the toast is active.
 	+ Allow for app-specific handling when the user selects Reorient in the Universal Menu.
@@ -91,6 +102,8 @@ Note: Before installing or integrating this distribution, we **strongly recommen
 		- Fixed rendering artifact that occurred when starting to play a video.
 		
 	
+
+
 ## 0.4.1
 
 ## Overview of Major Changes
@@ -105,6 +118,8 @@ Added support for Android 5.0 (Lollipop) and Unity Free.
 * Unity
 	+ Added Unity Free support for Gear VR developers.
 	
+
+
 ## 0.4.0
 
 ## Overview of Major Changes
@@ -114,9 +129,13 @@ First public release of the Oculus Mobile SDK.
 ## New Features
 
 * First public release of the Oculus Mobile SDK.
+
+
 ## API Changes
 
-* The Mobile SDK is now using API Level 19. Please make the following change to your manifest file: <android:minSdkVersion='19' android:targetSdkVersion='19' />
+* The Mobile SDK is now using API Level 19. Please make the following change to your manifest file: &lt;android:minSdkVersion='19' android:targetSdkVersion='19' /&gt;
+
+
 ## Bug Fixes
 
 * Health and Safety Message no longer required on mount.
@@ -127,3 +146,4 @@ First public release of the Oculus Mobile SDK.
 * Unity vignette rendering updated to match native (slightly increases effective FOV).
 * Unity volume pop-up distance to match native.
 * Fix Gaze Cursor Timer scale.
+

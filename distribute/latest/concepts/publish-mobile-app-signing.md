@@ -1,12 +1,15 @@
 ---
 title: Application Signing
 ---
+
 Mobile apps may require two different types of signatures during the development and release process. These are independent but easy to confuse.
 
 These two signatures are:
 
 * "osig" Oculus Signature File (required during development of Gear VR apps)
 * Android Application Signature (required for release)
+
+
 ## Oculus Signature "osig" Files for Development (Gear VR Only)
 
 To develop a Gear VR application, you will need an Oculus-issued Oculus Signature File (osig) for each of your development devices. The osig is a file that you include in your application to access protected low-level VR functionality on your mobile device. Each signature file is tied to a specific device, so you need to generate osig files for each device you use for development.
@@ -27,5 +30,4 @@ Make sure to save the certificate file you use to sign your application. All sub
 
 ## Unity Settings for Android Application Signing (Go and Gear VR)
 
-Unity automatically signs Android applications with a temporary debug certificate by default. Before building your final release build, create a new Android keystore and assign it with the Use Existing Keystore option, found in Edit > Project Settings > Player > Publishing Settings. For more information, see [Android Player Settings: Publishing Settings](http://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html) in the Unity documentation.
-
+Unity automatically signs Android applications with a temporary debug certificate by default. Before building your final release build, create a new Android keystore and assign it with the Use Existing Keystore option, found in Edit &gt; Project Settings &gt; Player &gt; Publishing Settings. For more information, see [Android Player Settings: Publishing Settings](http://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html) in the Unity documentation.

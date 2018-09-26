@@ -1,6 +1,7 @@
 ---
 title: Introduction to Best Practices
 ---
+
 The VR best practices are designed to help you create great VR content.
 
 VR is awesome. VR opens a world of possibilities by creating the sensation of being entirely transported into a virtual (or real, but digitally reproduced) three-dimensional world. VR provides a visceral and immersive experience that traditional screen-based media cannot. These best practices will help you develop VR experiences that users will enjoy.
@@ -32,4 +33,3 @@ The suggestions in this guide are by no means the only mechanisms that could wor
 ## Wanted: Feedback
 
 Find something interesting that you want to share about these topics? Post it to the [Game Design](https://forums.oculus.com/developer/categories/game-design) forums, we (and the VR community) appreciate any input you’d like to share.
-

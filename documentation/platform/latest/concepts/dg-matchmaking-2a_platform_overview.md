@@ -1,6 +1,7 @@
 ---
 title: Configuration Overview
 ---
+
 This page will walk you through the concepts of matchmaking, and the configuration details available in the Developer Center. The [Matchmaking Quickstart](/documentation/platform/latest/concepts/dg-matchmaking-3quickstart/) and [Additional Configurations](/documentation/platform/latest/concepts/dg-matchmaking-4skill_queries/) pages will walk you through how to implement Matchmaking in your game.
 
 ## Matchmaking Configuration Options
@@ -44,6 +45,8 @@ To create a matchmaking pool, navigate to [Matchmaking](https://dashboard.oculus
 	+ **Reservation Period** - (Optional) This is the amount of time, in seconds, that a user has to accept a multiplayer session before their spot is released to another user.
 	+ **Suggested Rampdown** - (Optional) Potential matches are ranked in terms of their Match Quality. When users enter the matchmaking queue the match quality the service will try to match the user with is 1, the required score gradually decreases adding incrementally less ideal matches over time. The Suggested Rampdown is the time, in seconds, for the score to decrease from 1 to your defined Minimum Quality Bar.
 	
+
+
 **Create a Skill Pool**
 
 To create a skill pool, use the drop-down to select skill pool, click ‘Create Pool’, and enter the following information for your skill pool. 
@@ -52,11 +55,13 @@ To create a skill pool, use the drop-down to select skill pool, click ‘Create 
 * **Luck Factor** - Luck Factor is a qualitative judgment about how much luck is involved in your game. Card games would have a higher Luck Factor and it would be appropriate to allow players of a wide skill range, while a skill-based game, like chess, rely more on skill and less on luck. 
 * **Draw Probability** - This is a number (between 0 and 1, inclusive) that is your estimate that a match of evenly-matched players will result in a draw.
 * **Skill Reset** - Skill reset allows you to reduce, or normalize, the skill ratings for all players by a certain amount at a specified time.
+
+
 ## Data Settings
 
 Data Settings are the key/value pair data that the enqueuing player or room provides about itself at enqueue time. Data Settings can be used both to determine what a player is looking for in a match, as well as what a player looks like to another player. For example, if a player may be enqueued with the type of match they want to play, the map they want to play on, and the level they have achieved in the game. You may also use Data Settings to ensure that matches are only made with users who are using the same version of your app.
 
-To add Data Settings to a matchmaking pool, navigate to [Matchmaking](/documentation/platform/latest/concepts/dg-matchmaking-1intro/ "Matchmaking places users together in a shared multiplayer experience. User matching can be done by common skill or other criteria that you define. The Matchmaking service offers two modes, Quickmatch and Browse.") in the Developer Center, click the more options selection for the pool, and then click **Manage Queries**. Then, on the Matchmaking Queries page, click **Edit Data Settings**.
+To add Data Settings to a matchmaking pool, navigate to [Matchmaking](/documentation/platform/latest/concepts/dg-matchmaking-1intro/) in the Developer Center, click the more options selection for the pool, and then click **Manage Queries**. Then, on the Matchmaking Queries page, click **Edit Data Settings**.
 
 * **Key** - This is the unique string that you will use to reference this Data Setting. The Key is case-sensitive, the name you define in the Dashboard must exactly match the key you reference in your code. 
 * **Type** - The type of data you are entering. Options are: 
@@ -66,6 +71,8 @@ To add Data Settings to a matchmaking pool, navigate to [Matchmaking](/documenta
 	+ **STRING** - An enumerated string where you define the acceptable values.
 	
 * **Default Value** - The default value of the Data Setting if a value is not provided.
+
+
 We'll review how to implement Data Settings by applying them to users or rooms at enqueue time on the [Adding Skill and Using Queries](/documentation/platform/latest/concepts/dg-matchmaking-4skill_queries/) page.
 
 ## Matchmaking Queries
@@ -74,7 +81,7 @@ Matchmaking Queries allow you to define the criteria that determines whether enq
 
 A Matchmaking Query is composed of one or more expressions that make up a conditional statement. The Matchmaking service populates each expression with the Data Settings of the user and potential match candidate, and determines the quality of the potential match. The 'How do we determine who gets matched?' section below will review how we use this information to compare potential matches. 
 
-To add a Matchmaking Query Expression to a Matchmaking Pool, navigate to [Matchmaking](/documentation/platform/latest/concepts/dg-matchmaking-1intro/ "Matchmaking places users together in a shared multiplayer experience. User matching can be done by common skill or other criteria that you define. The Matchmaking service offers two modes, Quickmatch and Browse.") in the Developer Center, click the more options selection for the Pool, and click **Manage Queries**. Then, in the Matchmaking Queries page, click **Create Query**.
+To add a Matchmaking Query Expression to a Matchmaking Pool, navigate to [Matchmaking](/documentation/platform/latest/concepts/dg-matchmaking-1intro/) in the Developer Center, click the more options selection for the Pool, and click **Manage Queries**. Then, in the Matchmaking Queries page, click **Create Query**.
 
 * **Query Key** - This is the unique string that you will use to reference this Matchmaking Query. The Query Key is case-sensitive, the name you define in the Dashboard must exactly match the key you reference in your code. 
 * **Importance** - You will configure an importance for the expression. When an expression passes, it evaluates to a value of 1, and otherwise (failure case) evaluates to the value of the associated importance. Note that the match-on-failure delay times below are calculated based on a rampdown time of 30 seconds. The greater the assigned importance, the less likely a match will occur if the expression fails. And in the case of expressions with **Required** importance, a failure will never result in a match. 
@@ -83,11 +90,11 @@ To add a Matchmaking Query Expression to a Matchmaking Pool, navigate to [Matchm
 	+ **Medium**: ~0.75, i.e. matches on failure after 15 seconds.
 	+ **Low**: ~0.9, i.e. matches on failure after 6 seconds.
 	
-* **Expression** - The Expression is where you define what criteria must be, or you’d prefer to be, met in order for a match to be made. You can define that a Data Setting must be in a specified range of a defined value or the other users Data Setting. 
+* **Expression** - The Expression is where you define what criteria must be, or youâ€™d prefer to be, met in order for a match to be made. You can define that a Data Setting must be in a specified range of a defined value or the other users Data Setting. 
+
+
 **How do we determine who gets matched?**
 
 Each potential match between users is assigned a Match Quality value between 0 and 1. When determining the quality of a match between users, the criteria values of the criteria considered, like Ping Time, Skill, and Queries get multiplied together to get a single Match Quality value. A successful match is made when the Match Quality exceeds the match threshold. The match threshold decreases over time that a user is enqueued. The Match Quality value and how quickly the match threshold decreases can be configured in your matchmaking pool. We recommend leaving these values as the default until you have data to evaluate the quality of your matches. We'll review how to tune your matches in the [Testing and Tuning](/documentation/platform/latest/concepts/dg-matchmaking-5debugging/) section.
 
 A value of 0.5 is considered to be a marginal match, while 0.9 an excellent match. A successful match occurs if the match value is greater than or equal to the match threshold. With the rampdown, a match threshold is 1.0 at enqueue time seeking a perfect match, but will decrease to 0.5 over a rampdown period of 30 seconds (default, the rampdown time can be configured in your Pools) where less ideal matches will be accepted.
-
-Note: Match calculations are asymmetric, meaning that if we are determining whether users A and B can match each other, the match calculation must succeed in the both the A -> B direction and the B -> A direction in order for them to be matched.

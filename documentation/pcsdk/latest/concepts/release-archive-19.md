@@ -1,6 +1,7 @@
 ---
 title: Changes For Release 1.9.x
 ---
+
 This section describes changes to the Oculus SDK, the Oculus App, Oculus Home, and the runtime.
 
 ## Overview of Release 1.9.0
@@ -12,6 +13,8 @@ This release includes performance improvements, memory management fixes, and min
 * Improved activity detection for Touch.
 * Improved Asynchronous SpaceWarp. For more information, see [Asynchronous SpaceWarp](/documentation/pcsdk/latest/concepts/asynchronous-spacewarp/ "Asynchronous Spacewarp (ASW) is a frame-rate smoothing technique that almost halves the CPU/GPU time required to produce nearly the same output from the same content.").
 * Improved the Oculus Guardian system.
+
+
 ## API Changes for 1.9.0
 
 There are no breaking changes to version 1.9.0. 
@@ -31,7 +34,8 @@ The following are known issues:
 * Bandwidth-intensive USB devices, such as web cams and high-end audio interfaces, might not work when using the Rift. To work around this issue, install the device on another USB host controller or a separate computer.
 * For dual-boot systems using DK2 or CB1 HMDs, the OS selection screen might appear on the HMD instead of the monitor. To work around this, try plugging the HMD into a different port or unplug the HMD while booting.
 * If you are running your application from the Unity Editor and you press the controller's home button to return to Oculus Home, you will be prompted to close the application. If you select OK, Unity might remain in a state where it is running, but will never get focus. To work around this, restart Unity.
-## Migrating from SDK 1.8.x to SDK 1.9.0
+
+
+## Migrating from SDK 1.8.x to SDK 1.9.0 
 
 There are no breaking SDK changes or migration requirements other than installing the new SDK.
-

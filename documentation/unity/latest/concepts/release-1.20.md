@@ -1,6 +1,9 @@
 ---
 title: 1.20 Oculus Utilities for Unity Release Notes
 ---
+
+
+
 ## Oculus Utilities for Unity version 1.20.0
 
 2017.1 and 2017.2 are officially supported, and we recommend developers update to these versions when convenient. Our support for 2017.3 is currently in beta, and we do not recommend shipping applications using it at this time. 
@@ -8,6 +11,8 @@ title: 1.20 Oculus Utilities for Unity Release Notes
 ## Bug Fixes
 
 * Fixed regression of MRC sandwich composition in Unity 5.6.1p2 in which the foreground output was missing.
+
+
 ## Known Issues
 
 * Do not use Utilities 1.16.0-beta. If you are using that version, please update to a later version.
@@ -43,3 +48,4 @@ title: 1.20 Oculus Utilities for Unity Release Notes
 	+ When Single Pass is enabled, building mobile projects will fail with the error message “Shader error in 'Mobile/Bumped Detail Diffuse'” in certain cases. For more information, see “Known Issues” in [Single Pass Stereo Rendering (Preview, Mobile Only)](/documentation/unity/latest/concepts/unity-single-pass/ "Single Pass stereo rendering is a preview rendering feature for Oculus Go and Gear VR available in Unity 5.6. If your application is CPU-bound or draw call bound, we strongly recommend using Single Pass rendering to improve performance.").
 	+ Two graphics driver issues affect mobile applications with Single Pass enabled using some S8 or S8+ phones with Unity 5.6.0p2-3. They can occur when Standard Shader Quality is set to low, or when you are using tree objects. For more information and workarounds, see “Known Issues” in [Single Pass Stereo Rendering (Preview, Mobile Only)](/documentation/unity/latest/concepts/unity-single-pass/ "Single Pass stereo rendering is a preview rendering feature for Oculus Go and Gear VR available in Unity 5.6. If your application is CPU-bound or draw call bound, we strongly recommend using Single Pass rendering to improve performance.").
 	
+

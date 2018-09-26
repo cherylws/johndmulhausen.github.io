@@ -1,6 +1,7 @@
 ---
 title: Audio SDK 1.29 Release Notes
 ---
+
 This document provides an overview of new features, improvements, and fixes included in the latest version of the Oculus Audio SDK.
 
 ## 1.29.0
@@ -14,9 +15,14 @@ This document provides an overview of new features, improvements, and fixes incl
 	+ Wwise 2018.1 support has been added.
 	
 * **Decoupling of early reflections and late reverb**: Early reflections have now been decoupled from late reverb. Previously, reverb could only be turned on if reflections were on. Now, you can use any possible combination of reflections and reverb. This allows for room modeling on lower-spec platforms (including Oculus Go) where much of the time spent in the modeling phase is in the early reflections. The reverb portion results in a more-or-less a fixed CPU hit, so turning that on and disabling early reflections can help to keep the CPU budget in check. 
+
+
 ## Bug Fixes
 
 *  There are not bug fixes in this release.
+
+
 ## API Changes
 
 * There are no breaking API changes in this release.
+

@@ -1,6 +1,7 @@
 ---
 title: Changes For Release 1.11.x
 ---
+
 This section describes changes to the Oculus SDK, the Oculus App, Oculus Home, and the runtime.
 
 ## Overview of Release 1.11.x
@@ -19,6 +20,8 @@ This release enables you to specify a tracking origin, provides raw button value
 	+ ASW Presented-Frame Count
 	+ ASW Failed-Frame Count
 	
+
+
 * Added the following ASW SDK statistics:
 
 
@@ -27,6 +30,8 @@ This release enables you to specify a tracking origin, provides raw button value
 	+ AswPresentedFrameCount
 	+ AswFailedFrameCount
 	
+
+
 ## API Changes for 1.11.x
 
 There are no breaking changes to version 1.11.x. 
@@ -46,3 +51,4 @@ The following are known issues:
 * Bandwidth-intensive USB devices, such as web cams and high-end audio interfaces, might not work when using the Rift. To work around this issue, install the device on another USB host controller or a separate computer.
 * For dual-boot systems using DK2 or CB1 HMDs, the OS selection screen might appear on the HMD instead of the monitor. To work around this, try plugging the HMD into a different port or unplug the HMD while booting.
 * If you are running your application from the Unity Editor and you press the controller's home button to return to Oculus Home, you will be prompted to close the application. If you select OK, Unity might remain in a state where it is running, but will never get focus. To work around this, restart Unity.
+

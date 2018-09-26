@@ -1,6 +1,7 @@
 ---
 title: Show Loading Icon
 ---
+
 Immediately displays a specified defined texture as a splash screen.
 
 ## Overview
@@ -16,14 +17,22 @@ This blueprint immediately displays a specified defined texture as a splash scre
 * [Is Loading Icon Enabled](/documentation/unreal/latest/concepts/unreal-blueprints-is-loading-icon-enabled/)
 * [Show Loading Icon](/documentation/unreal/latest/concepts/unreal-blueprints-show-loading-icon/ "Immediately displays a specified defined texture as a splash screen.")
 * [Show Loading Splash Screen](/documentation/unreal/latest/concepts/unreal-blueprints-show-loading-splash-screen/ "Immediately displays the currently defined splash screen.")
+
+
 ## Blueprint
 
-![](/images/documentation-unreal-latest-concepts-unreal-blueprints-show-loading-icon-0.png)  
-![](/images/documentation-unreal-latest-concepts-unreal-blueprints-show-loading-icon-1.png)  
-![](/images/documentation-unreal-latest-concepts-unreal-blueprints-show-loading-icon-2.png)  
+![](/images/documentationunreallatestconceptsunreal-blueprints-show-loading-icon-0.png)
+
+![](/images/documentationunreallatestconceptsunreal-blueprints-show-loading-icon-1.png)
+
+![](/images/documentationunreallatestconceptsunreal-blueprints-show-loading-icon-2.png)
+
 ## Arguments
 
 * Texture: The texture to be displayed as a splash screen.
+
+
 ## Output
 
 * No output.
+

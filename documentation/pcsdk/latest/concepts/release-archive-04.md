@@ -1,6 +1,7 @@
 ---
 title: Changes For Release 0.4
 ---
+
 A number of changes were made to the API since the 0.3.2 Preview release. 
 
 These are summarized as follows:
@@ -12,6 +13,8 @@ These are summarized as follows:
 * ovrSensorDesc struct has been merged into ovrHmdDesc.
 * Addition of ovr\_AttachToWindow. This is a platform specific function to specify the application window whose output will be displayed on the HMD. Only used if the ovrHmdCap\_ExtendDesktop flag is false.
 * Addition of ovr\_GetVersionString. Returns a string representing the libOVR version. 
+
+
 There have also been a number of minor changes:
 
 * Renamed ovrSensorCaps struct to ovrTrackingCaps.
@@ -22,3 +25,4 @@ There have also been a number of minor changes:
 * Removed ovrHmdCaps::ovrHmdCap\_LatencyTest flag. Was used to indicate support of pixel reading for continuous latency testing.
 * AdditionofovrDistortionCaps::ovrDistortionCap\_Overdriveflag. Overdrivebrightness transitions to reduce artifacts on DK2 displays.
 * Addition of ovrStatusBits::ovrStatus\_CameraPoseTracked flag. Indicates that the camera pose is successfully calibrated.
+

@@ -1,6 +1,7 @@
 ---
 title: VRC.PC.Performance.5
 ---
+
 App must display graphics in the headset at 90 frames per second on AMD 290 GPU running Windows 10.
 
 **Required** - Yes
@@ -11,11 +12,12 @@ It is acceptable for performance to drop below 90 if you have a compositor layer
 
 ## Steps to Test
 
-1. Launch the Oculus Debug Tool and open the [Lost Frame Capture](/documentation/pcsdk/latest/concepts/dg-performance-lostframes/) window.
+1. Launch the Oculus Debug Tool and open the [Lost Frame Capture](https://developer.oculus.com/documentation/pcsdk/latest/concepts/dg-performance-lostframes/) window.
 2. Launch the title and click the Record button on the Lost Frame Capture window.
 3. Put on the HMD and play through content for at least 45 minutes.
 4. Stop recording and examine the capture result for frame rate and dropped frames.
+
+
 ## Expected Result
 
 App runs at 90 FPS with no significant framerate drops (momentary drops are ok).
-

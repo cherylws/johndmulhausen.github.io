@@ -1,13 +1,14 @@
 ---
 title: Users, Friends, and Relationships
 ---
+
 Users, friends, and relationships manages information about each user's unique persona, their relationship with their friends, and their recent encounters in VR.
 
-Use the user and friends APIs to retrieve information about your players to customize their experience, help them find their friends, and then join them in social VR experiences with [Rooms](/documentation/platform/latest/concepts/dg-rooms/ "Rooms are virtual places where users come together to interact in your app."). The relationships APIs help users find new friends from their recent VR encounters. 
+Use the user and friends APIs to retrieve information about your players to customize their experience, help them find their friends, and then join them in social VR experiences with [Rooms](/documentation/platform/latest/concepts/dg-rooms/). The relationships APIs help users find new friends from their recent VR encounters. 
 
-## User and Friends - Native & Unity
+## User and Friends - Native &amp; Unity
 
-The following SDK methods can be called from your client app. Detail about each function can be found in the Platform SDK [Reference Content](/documentation/platform/latest/concepts/book-reference/ "The Platform SDK developer reference contains a complete list of the Platform SDK headers, functions, and data structures.").
+The following SDK methods can be called from your client app. Detail about each function can be found in the Platform SDK [Reference Content](/documentation/platform/latest/concepts/book-reference/).
 
 * **Retrieve information about the current user:**
 
@@ -71,13 +72,15 @@ Native - ovr\_User\_LaunchProfile()
 
 Unity - Platform.User.LaunchProfile()
 
-![](/images/documentation-platform-latest-concepts-dg-presence-0.png)  
+![](/images/documentationplatformlatestconceptsdg-presence-0.png)
+
 Launch a profile that displays the Oculus name, ID, online status, recent interactions, and mutual friends for a specified user. The modal also allows a friend request to be sent to the user.
+
+
 
 
 ## User and Friends - Unreal
 
-To retrieve the user's Oculus Id and Oculus Name to display, add the **Get Oculus Identity** node to your blueprint. The Oculus Id is available synchronously after Login() is called, while the Oculus Name is available asynchronously after OnLoginComplete() returns.
+To retrieve the user's Oculus Id and Oculus Name to display, add the **Get Oculus Identity** node to your blueprint. The Oculus Id is available synchronously after `Login()` is called, while the Oculus Name is available asynchronously after `OnLoginComplete()` returns.
 
-For all other actions on this page, please use the native C API with the information found in [Unreal Development Getting Started](/documentation/platform/latest/concepts/pgsg-unreal-gsg/ "The Unreal getting started guide will walk you through the basics of setting up your development environment and checking the user's entitlement.").
-
+For all other actions on this page, please use the native C API with the information found in [Unreal Development Getting Started](/documentation/platform/latest/concepts/pgsg-unreal-gsg/).

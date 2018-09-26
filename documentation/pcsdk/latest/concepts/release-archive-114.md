@@ -1,6 +1,9 @@
 ---
 title: Changes in Version 1.14.x
 ---
+
+
+
 ## Overview of Release 1.14.x
 
 This release introduces improved support for three sensors and the Oculus Performance Profiler.
@@ -13,6 +16,8 @@ This release introduces improved support for three sensors and the Oculus Perfor
 * Improved efficiency when updating the Oculus software.
 * You'll now see where your Touch controllers are located as soon as you enter VR.
 * Many games and experiences that previously required the Xbox One Wireless Controller can now be played using Touch controllers. These apps will use the buttons and triggers on Touch, but won’t support Touch controller tracking during gameplay. Apps are marked “Touch (as gamepad)” in the Oculus Store. 
+
+
 ## API Changes for 1.14.x
 
 Previously, if the app collecting performance statistics did not have focus, the statistics would be zeroed out. Now, the statistics are returned with the process ID of the application that currently has focus (VisibleProcessId). This is useful when building performance tools that are separate from your game or experience.
@@ -32,3 +37,4 @@ The following are known issues:
 * Bandwidth-intensive USB devices, such as web cams and high-end audio interfaces, might not work when using the Rift. To work around this issue, install the device on another USB host controller or a separate computer.
 * For dual-boot systems using DK2 or CB1 HMDs, the OS selection screen might appear on the HMD instead of the monitor. To work around this, try plugging the HMD into a different port or unplug the HMD while booting.
 * If you are running your application from the Unity Editor and you press the controller's home button to return to Oculus Home, you will be prompted to close the application. If you select OK, Unity might remain in a state where it is running, but will never get focus. To work around this, restart Unity.
+

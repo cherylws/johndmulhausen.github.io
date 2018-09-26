@@ -1,30 +1,36 @@
 ---
 title: "Oculus Rift: Mask-Based Foveated Rendering"
 ---
-Oculus Rift supports Mask-Based Foveated Rendering (MBFR) which enables the edges of the eye buffers to be rendered at a lower resolution than the center portion of the eye buffers, based on a superimposed mask.
+
+Oculus Rift supports Mask-Based Foveated Rendering (MBFR) which enables the edges of the eye buffers to be rendered at a lower resolution than the center portion of the eye buffers, based on a superimposed mask. 
 
 ## Overview
 
 Mask-Based Foveated Rendering (MBFR) decreases the shading rate of the peripheral region of the eye buffers by dropping pixels based on a checkboard pattern.
 
-Here is a masked scene that demonstrates the pixel dropping:![](/images/documentation-unreal-latest-concepts-unreal-mbfr-0.png)  
+![](/images/documentationunreallatestconceptsunreal-mbfr-0.png)
+
 There are four rings in the masked image. The center circle preserves all the pixels. The other three rings drop 25%, 50%, and 75% of the pixels, respectively. The pixels are dropped in 2x2 quads.
 
 Here is the reconstructed image:
 
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-1.png)  
+![](/images/documentationunreallatestconceptsunreal-mbfr-1.png)
+
 Here is the full resolution scene that serves as the ground truth in this example:
 
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-2.png)  
+![](/images/documentationunreallatestconceptsunreal-mbfr-2.png)
+
 Here is a side-by-side comparison (magnified). The top is the masked image, the middle is the reconstructed image, and the bottom is the ground truth image.
 
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-3.png)  
+![](/images/documentationunreallatestconceptsunreal-mbfr-3.png)
+
 Here is another comparison:
 
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-4.png)  
+![](/images/documentationunreallatestconceptsunreal-mbfr-4.png)
+
 ## Integration
 
-MBFR is included in the Oculus GitHub UE4 Repository. (See the [Version Compatibility Reference](/documentation/unreal/latest/concepts/unreal-compatibility-matrix/ "This section provides compatibility information for Oculus OVRPlugin and UE4 versions. To access these GitHub repositories, you must be subscribed to the private EpicGames/UnrealEngine repository. If you are not subscribed and logged into your GitHub account, you will get a 404 error. An Unreal license is not required.").) It works with the Unreal Engine 4.19 and 4.20-preview versions.
+MBFR is included in the Oculus GitHub UE4 Repository. (See the [Version Compatibility Reference](/documentation/unreal/latest/concepts/unreal-compatibility-matrix/).) It works with the Unreal Engine 4.19 and 4.20-preview versions.
 
 To activate MBFR in your project:
 
@@ -32,7 +38,10 @@ To activate MBFR in your project:
 2. Without restarting the editor, check “[VR] Enable Mask-based Foveated Rendering” in Rendering/Experimental section
 3. Restart the editor as prompted. The editor will take a while to rebuild the shaders
 4. MBFR will be activated in your project when previewing or running in VR mode
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-5.png)  
+
+
+![](/images/documentationunreallatestconceptsunreal-mbfr-5.png)
+
 Here are some useful console commands for testing MBFR and adjusting the quality levels:
 
 * vr.Foveated.Mask.Enable 1 – Activate MBFR
@@ -43,55 +52,71 @@ Here are some useful console commands for testing MBFR and adjusting the quality
 * vr.Foveated.Mask.MediumResFov – The FOV (in degrees) of the region where 25% of pixels are dropped. Default is 60.
 * vr.Foveated.Mask.LowResFov – The FOV (in degrees) of the region where 50% of pixels are dropped. Default is 78.
 * The region outside the LowResFov will have 75% of the pixels dropped.
+
+
 ## Implementation
 
 **Pixel Dropping**
 
 The pixels to drop are culled through a bit in the stencil buffer. Here are the visibility patterns in each density region.
 
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-6.png)  
+![](/images/documentationunreallatestconceptsunreal-mbfr-6.png)
+
 **Reconstruction**
 
 The dropped pixels are reconstructed in the PostProcessing stage, when the scene textures are fetched.
 
-Mid/high density region
+<u>Mid/high density region</u>
 
 We use the 4 neighbor pixels to reconstruct each dropped pixel in the mid/high density regions, where the pixel dropping rate is less than or equal to 50%.
 
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-7.png)  
+![](/images/documentationunreallatestconceptsunreal-mbfr-7.png)
+
 The naïve formula is to set the dropped pixel A to the linear interpolation of B, C, D and E:
 
 * A = (C + B) * 0.667 + (D + E) * 0.333
+
+
 But it doesn’t work well and causes too much aliasing in the high contrast / high frequency areas. The artifact can be easily observed in the screenshots below. It causes heavy flickering in VR.
 
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-8.png)  
+![](/images/documentationunreallatestconceptsunreal-mbfr-8.png)
+
 The visual quality can be greatly improved by applying the directional weights computed from the neighborhood luminance. It enhances the edges and reduces the aliasing.
 
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-9.png)  
+![](/images/documentationunreallatestconceptsunreal-mbfr-9.png)
+
 Finally, we achieve a good overall reconstruction quality on the high/medium density regions. Here is a side-by-side comparison on the high-density region (dropped 25% pixels; the middle is the reconstructed result and the right is the ground truth):
 
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-10.png)  
+![](/images/documentationunreallatestconceptsunreal-mbfr-10.png)
+
 And two comparisons on the medium-density region (dropped 50% pixels, the middle is the reconstructed result and the right is the ground truth):
 
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-11.png)  
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-12.png)  
-Low density region (75% drop rate)
+![](/images/documentationunreallatestconceptsunreal-mbfr-11.png)
+
+![](/images/documentationunreallatestconceptsunreal-mbfr-12.png)
+
+<u>Low density region (75% drop rate)</u>
 
 We have fewer known pixels in the low-density region, which is furthest out on the peripheral area. We reconstruct each dropped pixel with linear interpolation of the two neighbor pixels.
 
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-13.png)  
+![](/images/documentationunreallatestconceptsunreal-mbfr-13.png)
+
 * A = P * 0.667 + Q * 0.333
 * B = P * 0.667 + T * 0.333
 * C = P * 0.667 + S * 0.333
+
+
 Since we only have ¼ of the effective pixels, the fidelity of the reconstruction is restricted, with significant quality loss and distortion.
 
 Since we only have 1/4 of the effective pixels, the fidelity of reconstruction is restricted, with significant quality loss and distortion. Here is a side-by-side comparison with the pre-distortion images (left: masked, middle: reconstructed, right: original):
 
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-14.png)  
+![](/images/documentationunreallatestconceptsunreal-mbfr-14.png)
+
 Because the low-density region is at the peripheral area, where the effective pixel density is low, it reduces the quality loss, but would not eliminate all the distortion artifacts. Here is approximately the same area on the post-distortion images:
 
-![](/images/documentation-unreal-latest-concepts-unreal-mbfr-15.png)  
-Coarse quality reconstruction
+![](/images/documentationunreallatestconceptsunreal-mbfr-15.png)
+
+<u>Coarse quality reconstruction</u>
 
 The high-fidelity mask reconstruction is GPU expensive, and not every post-processing stage requires this level of precision. So, we also have a coarse-quality mask reconstruction routine which reduces the reconstruction cost to single texture fetch, from 2 or 4 texture fetches in the regular reconstruction. The coarse quality reconstruction is currently used in Bloom, Depth of field, Down-sampling, Velocity flattening, and Screen-space reflection.
 
@@ -112,5 +137,6 @@ Of course, the overall GPU performance is also heavily dependent on the FOVs of 
 * MBFR is relatively stable, temporally and spatially. It can be combined with existing AA techniques, including MSAA and TAA.
 * However, MBFR results in extra performance cost, due to reconstructing the dropped pixels. Most VR projects do not use heavy post processing. But for projects which use heavy post processing with little world rendering, MBFR may not bring any performance benefit.
 * MBFR may not work effectively on Mobile GPUs with tiled on-chip memory.
-* The perceptual visual quality of MBFR can vary significantly, depending on the style of the content. The perceptual quality can be quite good when rendering low-contrast, low-frequency contents, but is generally less optimal when there are a lot of high frequency details in the content.
+* The perceptual visual quality of MBFR can vary significantly, depending on the style of the content. The perceptual quality can be quite good when rendering low-contrast, low-frequency contents, but is generally less optimal when there are a lot of high frequency details in the content. 
 * Tweaking the radius of the foveation density rings may be necessary to balance the performance and perceptual visual quality according to the content being rendered.
+

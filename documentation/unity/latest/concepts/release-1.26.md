@@ -1,12 +1,19 @@
 ---
 title: 1.26 Oculus Utilities for Unity Release Notes
 ---
+
+
+
 ## New Features
 
 * N/A
+
+
 ## Integration Changes
 
 * N/A
+
+
 ## Bug Fixes
 
 * Fixed bug where app would revert from floor-level to eye-level tracking when exiting and re-entering VR mode.
@@ -24,6 +31,8 @@ title: 1.26 Oculus Utilities for Unity Release Notes
 * Optimized OVROverlay texture bandwidth usage when texture data isn't changing.
 * Fixed bug causing head velocity and acceleration to always be 0.
 * Fixed OVROverlay flicker when loading a scene.
+
+
 ## Known Issues
 
 * Unity 2018.1 Rift looks over dark under "Single Pass" stereo rendering method
@@ -68,3 +77,4 @@ title: 1.26 Oculus Utilities for Unity Release Notes
 * Mixed Reality Capture
 	+ ZED Camera users should upgrade their SDK version to 2.3.1. All previous versions are not compatible.
 	
+

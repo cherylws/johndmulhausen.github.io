@@ -1,6 +1,7 @@
 ---
 title: 0.5 Release Notes
 ---
+
 This document provides an overview of new features, improvements, and fixes included in the version 0.5 of the Oculus Mobile SDK.
 
 ## 0.5.1
@@ -15,11 +16,13 @@ Other notable changes were to HMT sensor prediction — specifically clamping of
 
 **Unity Developers**: As with Mobile SDK v 0.5.0, Unity developers using this SDK version must install the Oculus Runtime for Windows or OS X. This requirement will be addressed in a future release of the SDK.
 
-Note: Before installing or integrating this distribution, we **strongly recommend** that you backup your project before attempting any merge operations.## API Changes
+## API Changes
 
 * Sensor Prediction: Make sure Predicted deltaTime can never be negative or become huge.
-* Sensor Prediction: Clamp delta time used for sensor prediction to 1/10th of a second instead of 1/60th so that we don’t under-predict if the target frame rate is not being met.
+* Sensor Prediction: Clamp delta time used for sensor prediction to 1/10th of a second instead of 1/60th so that we donâ€™t under-predict if the target frame rate is not being met.
 * Better handling for a case where SystemActivities resumes without an explicit command. This can happen if the top app crashes or does a finish() instead of launching Home to exit.
+
+
 ## Bug Fixes
 
 * Unity Integration
@@ -31,17 +34,21 @@ Note: Before installing or integrating this distribution, we **strongly recommen
 	+ Bitmapfont - Fix for font info height not being y-scaled.
 	+ Renamed VERTICAL\_BOTTOM to VERTICAL\_BASELINE because it aligns to the first row’s baseline rather than the bottom of the entire text bounds.
 	+ Bitmapfont - Fix for VERTICAL\_CENTER\_FIXEDHEIGHT to correctly account for the ascent / descent when rendering single and multi-line text.
-	+ VrMenu Fader - Update only performed if frame time is > 0.0f.
+	+ VrMenu Fader - Update only performed if frame time is &gt; 0.0f.
 	+ VrMenu - Add ProgressBar component.
 	+ VrMenu - Parent / child rotation order in menus was backwards, causing confusion when local rotations were used.
 	+ VrMenu - Don’t use an old view matrix to reposition menus on a reorient. Since we reorient to identity (with respect to yaw) we should reposition with respect to identity instead of the last frame’s view matrix.
 	+ AppLocal::RecenterYaw() now adjusts lastViewMatrix so that it instantly reflects the recenter of the sensor fusion state.
 	+ FolderBrowser - Allow implementers to create their own panel object.
 	
+
+
 ## Known Issues
 
 * Application version number remains 0.5.0 and was not incremented to 0.5.1. This does not affect app functionality and will be addressed in a future release.
 * For use with the Mobile SDK, we recommend Unity versions 4.6.3. The Mobile SDK is compatible with Unity 5.0.1p2, which addresses a problem with OpenGL ES 3.0, but there is still a known Android ION memory leak. Please check back for updates.
+
+
 ## 0.5.0
 
 ## Overview of Major Changes
@@ -54,13 +61,15 @@ VrPlatform entitlement checking is now disabled by default in Unity; handling fo
 
 Applications built with Mobile SDK 0.5.0 or later will be compatible with the Samsung GALAXY S6.
 
-Note: Before installing or integrating this distribution, we **strongly recommend** that you back up your project before attempting any merge operations.## New Features
+## New Features
 
 * Android Manifest
-	+ Mobile SDK 0.5.0 no longer requires PlatformActivity in the AndroidManifest.xml file. If you have previously worked with an earlier SDK, the following block must be removed: <activity android:name='com.oculusvr.vrlib.PlatformActivity' android:theme='@android:style/Theme.Black.NoTitleBar.Fullscreen' android:launchMode='singleTask' android:screenOrientation='landscape' android:configChanges='screenSize|orientation|keyboardHidden|keyboard'>
-	+ The camera permission is also no longer required and can be removed from your manifest if your app does not rely on it: <uses-permission android:name='android.permission.CAMERA'/'>
+	+ Mobile SDK 0.5.0 no longer requires PlatformActivity in the AndroidManifest.xml file. If you have previously worked with an earlier SDK, the following block must be removed: &lt;activity android:name='com.oculusvr.vrlib.PlatformActivity' android:theme='@android:style/Theme.Black.NoTitleBar.Fullscreen' android:launchMode='singleTask' android:screenOrientation='landscape' android:configChanges='screenSize|orientation|keyboardHidden|keyboard'&gt;
+	+ The camera permission is also no longer required and can be removed from your manifest if your app does not rely on it: &lt;uses-permission android:name='android.permission.CAMERA'/'&gt;
 	+ For additional information on manifest requirements, see the relevant documentation in the Native Development Guide, Unity Integration Guide, and Mobile App Submission Guide.
 	
+
+
 * Native Framework
 	+ Folder Browser
 		- Added support for dynamically loaded categories.
@@ -94,6 +103,8 @@ Note: Before installing or integrating this distribution, we **strongly recommen
 	+ Added libjpeg.a directly to projects in order to avoid dependency on libjpeg source.
 	+ Metadata is now app-extensible. Added functionality for reading and writing extended metadata during app loading and saving.
 	
+
+
 ## API Changes
 
 * VrLib
@@ -107,6 +118,8 @@ Note: Before installing or integrating this distribution, we **strongly recommen
 	+ HMDState sensor acquisition code has been re-written to make it reliable and thread safe.
 	+ Now restores last-known good HMD sensor yaw when recreating the HMD sensor.
 	
+
+
 ## Bug Fixes
 
 * Unity Integration
@@ -118,8 +131,11 @@ Note: Before installing or integrating this distribution, we **strongly recommen
 * OvrGuiSys
 	+ RemoveMenu is now DestroyMenu and will now free the menu.
 	
+
+
 ## Known Issues
 
 * Unity Integration
 	+ For use with the Mobile SDK, we recommend Unity versions 4.6.3, which includes Android 5.0 - Lollipop support as well as important Android bug fixes. While the Mobile SDK is compatible with Unity 5.0.0p2 and higher, several issues are still known to exist, including an Android ION memory leak and compatibility issues with OpenGL ES 3.0. Please check back for updates.
 	
+

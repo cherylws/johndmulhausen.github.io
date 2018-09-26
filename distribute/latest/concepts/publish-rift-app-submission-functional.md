@@ -1,6 +1,7 @@
 ---
 title: Rift Functional VRCs
 ---
+
 These requirements ensure your app functions according to Oculus Store standards.
 
 ## Rift Functional VRCs
@@ -21,3 +22,4 @@ If the app supports a desktop mode, it must launch and be playable on the standa
 The application must respond to the HMD's positional tracking as well as orientation.
 * **[VRC.PC.Functional.8](/distribute/latest/concepts/vrc-pc-functional-8/)**  
 App must not include non-Oculus HMDs or controllers within the title or Store assets.
+

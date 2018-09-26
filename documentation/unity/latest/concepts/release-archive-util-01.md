@@ -1,13 +1,14 @@
 ---
 title: 0.1 Beta Utilities for Unity Release Notes
 ---
+
 This document provides an overview of new features, improvements, and fixes included in the latest version of the Oculus Utilities for Unity.
 
 ## Utilities for Unity 0.1.3.0 Beta
 
 ## Overview of Major Changes
 
-Note: For detailed information about Unity version compatibility, please see [Compatibility and Requirements](/documentation/unity/latest/concepts/unity-req/ "This guide describes Unity Editor version recommendations and system requirements.").This document provides an overview of new features, improvements, and fixes included in the latest version of the Utilities for Unity 5.x. For information on first-party changes to Unity VR support for Oculus, see the Unity Release Notes for the appropriate version.
+This document provides an overview of new features, improvements, and fixes included in the latest version of the Utilities for Unity 5.x. For information on first-party changes to Unity VR support for Oculus, see the Unity Release Notes for the appropriate version.
 
 Utilities for Unity 0.1.3 extends OVRInput support to mobile. OVRInputControl and OVRGamepadController are now deprecated and will be removed in a future release.
 
@@ -17,15 +18,21 @@ Mobile input bindings are now automatically added to InputManager.asset if they 
 
 * Default mobile input bindings are now programmatically generated when projects are imported if they do not already exist.
 * Replacing InputManager.asset is no longer required to enable gamepad support on mobile. 
+
+
 ## API Changes
 
 * Added mobile support OVRInput.
 * Deprecated OVRInputControl and OVRGamepadController.
+
+
 ## Bug Fixes
 
 * Fixed mobile gamepad thumbstick deadzone/drift handling and axis scaling.
 * Fixed mobile gamepad support when multiple gamepads are paired.
 * Fixed mobile gamepad bindings for triggers, D-pad, thumbstick presses, etc.
+
+
 ## Utilities for Unity 0.1.2.0 Beta
 
 ## Overview of Major Changes
@@ -44,21 +51,29 @@ This version adds an alpha preview release of OVRInput, which provides a unified
 * SDKExamples
 	+ Restored MoviePlayerSample
 	
+
+
 ## API Changes
 
 * The Utilities package now requires Unity 5.1 or higher.
 * Added OVRInput API alpha. Refer to documentation for usage.
 * Exposed LeftHand/RightHand anchors for tracked controllers in OVRCameraRig.
+
+
 ## Bug Fixes
 
 * Restored ability to toggle settings such as monoscopic rendering and position tracking.
 * HSWDismissed event is now correctly raised when the HSW is dismissed.
 * Fixed handedness of reported velocity and acceleration values.
 * OVRPlayerController now moves at a consistent speed regardless of scale.
+
+
 ## Known Issues
 
 * Tearing in OS X: Editor preview and standalone players do not vsync properly, resulting in a vertical tear and/or judder on DK2.
 * When switching between a mobile application and System Activities screen, the back button becomes stuck in the "down" state. For more information and workarounds, please see Troubleshooting and Known Issues.
+
+
 ## Utilities for Unity 0.1.0.0 Beta
 
 ## Overview
@@ -78,6 +93,8 @@ This is the initial release of Oculus Utilities for Unity, for use with Unity ve
 * Debug overlay with real-time performance and latency graphs.
 * (Android only) Access to the Oculus platform UI.
 * (Android only) Performance and power management.
+
+
 The Oculus Utilities for Unity expose largely the same API as the Oculus Unity Integration, but they offer all the benefits of Unity's built-in VR support:
 
 * Improved rendering efficiency with less redundant work performed for each eye.
@@ -85,6 +102,8 @@ The Oculus Utilities for Unity expose largely the same API as the Oculus Unity I
 * Improved stability and tighter integration with features like anti-aliasing and shadows.
 * Non-distorted monoscopic preview on the main monitor.
 * Oculus SDK 0.6.0.1 support (PC and mobile).
+
+
 ## API Changes in 0.1.0 Beta
 
 The following Unity API changes were made:
@@ -97,13 +116,16 @@ The following Unity API changes were made:
 * Removed Gear VR MediaSurface functionality. Use Mobile Movie Texture or similar.
 * The integration now uses a single stereo camera instead of two separate cameras for the left and right eyes.
 * Direct mode now works in the Editor.
-* To use VR, you must enable Player Settings -> Virtual Reality Supported.
+* To use VR, you must enable Player Settings -&gt; Virtual Reality Supported.
 * DirectToRift.exe no longer applies.
 * Editor preview is now monoscopic and does not include lens correction.
 * The experimental overlay quad script OVROverlay also works on the PC.
+
+
 ## Known Issues
 
 * Pitch, roll, and translation are off for the tracking reference frame in Unity 5.1.1, especially in apps with multiple scenes.
 * Mac OS X tearing. VSync is currently broken on the Mac, but works when you build for Gear VR.
 * Performance loss. CPU utilization may be slightly higher than in previous versions of Unity.
 * OVRPlayerController might end up in an unexpected rotation after OVRDisplay.RecenterPose() is called. To fix it, call RecenterPose() again.
+

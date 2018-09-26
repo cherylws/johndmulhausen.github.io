@@ -1,6 +1,9 @@
 ---
 title: 1.14 Oculus Utilities for Unity 5 Release Notes
 ---
+
+
+
 ## Oculus Utilities for Unity 5 version 1.14.0
 
 This document provides an overview of new features, improvements, and fixes included in the latest version of the Oculus Utilities for Unity 5. For information on first-party changes to Unity VR support for Oculus, see the Unity Release Notes for the appropriate version. You will find a scripting reference for the included C# scripts in our [Unity Reference Content](/documentation/unity/latest/concepts/book-unity-reference/).
@@ -13,11 +16,11 @@ Beginning with this release, the Utilities package will also include the latest 
 
 When you import Utilities for Unity into a Unity project, if the OVRPlugin version included with the Utilities is later than the version built into your editor, a pop-up dialog will give you the option to update it. We always recommend using the latest available OVRPlugin version.
 
-If you install OVRPlugin from the Utilities package and later wish to roll back to the version included with the Editor for any reason, you may easily do so by selecting **Tools > Oculus > Disable OVR Utilities Plugin**.
+If you install OVRPlugin from the Utilities package and later wish to roll back to the version included with the Editor for any reason, you may easily do so by selecting **Tools &gt; Oculus &gt; Disable OVR Utilities Plugin**.
 
-For more information, please see “OVRPlugin” in [Oculus Utilities for Unity](/documentation/unity/latest/concepts/unity-utilities-overview/#unity-utilities-overview "This section provides an overview of the Utilities package, including its directory structure, the supplied prefabs, and several key C# scripts.").
+For more information, please see “OVRPlugin” in [Oculus Utilities for Unity](/documentation/unity/latest/concepts/unity-utilities-overview/#unity-utilities-overview).
 
-Note: The update feature is currently not supported on OS X/macOS.## New Features
+## New Features
 
 * Added OVRPlugin auto-updating (see above).
 * Added support for preview Single Pass stereo rendering to Unity 5.6 (mobile only), which can provide a significant reduction to CPU overhead. When enabled, objects are rendered to the left buffer and then duplicated with minor adjustment to the right buffer, rather than drawing them in two separate passes. For more information, see [Single Pass Stereo Rendering (Preview, Mobile Only)](/documentation/unity/latest/concepts/unity-single-pass/ "Single Pass stereo rendering is a preview rendering feature for Oculus Go and Gear VR available in Unity 5.6. If your application is CPU-bound or draw call bound, we strongly recommend using Single Pass rendering to improve performance.").
@@ -25,9 +28,13 @@ Note: The update feature is currently not supported on OS X/macOS.## New Feature
 	+ Now allows fixes to be applied to multiple instances of the same issue at once.
 	+ Click on any reported object with a problem to highlight the relevant object in your scene.
 	
+
+
 ## API Changes
 
 * Added OVRInput.RecenterController() to OVRIniput to recenter Gear VR Controller. 
+
+
 ## Known Issues
 
 * Unity 5.6 and later: If you have updated your OVRPlugin version from Utilities, you may see a spurious error message when the Editor first launches saying “Multiple plugins with the same name 'ovrplugin'”. Please disregard.
@@ -56,3 +63,4 @@ Note: The update feature is currently not supported on OS X/macOS.## New Feature
 * Mobile App Submission to Oculus Store 
 	+ All mobile applications using Utilities 1.9 and 1.10 will fail Oculus Store submission due to a bug affecting reserved interaction handling for the Universal Menu. Please remove previously-imported project files as described in [Importing the Oculus Utilities Package](/documentation/unity/latest/concepts/unity-import/ "Oculus Utilities for Unity is an optional Unity Package that includes scripts, prefabs, and other resources to assist with development.") and import the latest Utilities version, and update your Unity editor to a [compatible version](/documentation/unity/latest/concepts/unity-req/ "This guide describes Unity Editor version recommendations and system requirements.") if necessary. 
 	
+

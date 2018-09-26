@@ -1,6 +1,7 @@
 ---
 title: 3D Visualizer
 ---
+
 This guide describes how to install and use the Oculus Spatializer VST plugin with the Oculus Rift.
 
 The Oculus 3D Audio Visualizer with HMD interface allows users to optionally visualize and manipulate sound parameters within VR, using either Oculus Touch or Xbox controllers.
@@ -11,12 +12,14 @@ The sound locations of all Visualizer channels are visible with the HMD display.
 
 ## Use
 
-Note: Be sure your Oculus Rift software and firmware are up to date and running properly.To start visualization of the VST parameters within the HMD, add a plugin to a track/channel.
+To start visualization of the VST parameters within the HMD, add a plugin to a track/channel.
 
-![](/images/documentation-audiosdk-latest-concepts-os-vst-visualizer-0.png)  
+![](/images/documentationaudiosdklatestconceptsos-vst-visualizer-0.png)
+
 And then, put on the HMD.
 
-![](/images/documentation-audiosdk-latest-concepts-os-vst-visualizer-1.png)  
+![](/images/documentationaudiosdklatestconceptsos-vst-visualizer-1.png)
+
 The Touch controllers are visualized as blue (left controller) and red (right controller) spheres which track with controller movement. The Xbox controller may be visualized as a selection sphere directly in front of the user by squeezing the left trigger - it is stationary, as the controller is not tracked.
 
 Squeezing the trigger on your controller initiates the selection pointers. Some settings increase in intensity as you squeeze the trigger.
@@ -33,13 +36,9 @@ The sticks on the controllers control movement within the audio space.
 
 The left joystick moves your camera parallel to your viewing direction. The x-axis of the right joystick rotates you around the y-axis. The y-axis of the right joystick moves the camera up or down.
 
-Left Stick
-
-Pan left and right, move forwards and back.
-
-Right Stick
-
-Pan up and down, rotate left and right.
+| Left Stick | Pan left and right, move forwards and back. |
+|-------------|---------------------------------------------|
+| Right Stick |   Pan up and down, rotate left and right.   |
 
 ## Modifying Audio Track Objects
 
@@ -84,4 +83,3 @@ Click on the joystick button again to turn off room parameter mode, or release t
 ## Automation
 
 Automation is supported for audio position only. In your DAW, enable automation record (varies with each DAW) and move the sounds around using your controller of choice. The sequence will be recorded and can be played back. Automated sequences are stored with the DAW project.
-

@@ -1,23 +1,30 @@
 ---
 title: 1.10 Oculus Utilities for Unity 5 Release Notes
 ---
+
+
+
 ## Oculus Utilities for Unity 5 version 1.10.0
 
 This document provides an overview of new features, improvements, and fixes included in the latest version of the Oculus Utilities for Unity 5. For information on first-party changes to Unity VR support for Oculus, see the Unity Release Notes for the appropriate version. You will find a scripting reference for the included C# scripts in our [Unity Developer Reference](/documentation/game-engines/latest/concepts/book-unity-reference/).
 
-If you have previously imported a Unity integration package, you must delete all Oculus Integration content before importing the new Unity package. For more information, see [Importing the Oculus Utilities Package](/documentation/unity/latest/concepts/unity-import/ "Oculus Utilities for Unity is an optional Unity Package that includes scripts, prefabs, and other resources to assist with development.").
+If you have previously imported a Unity integration package, you must delete all Oculus Integration content before importing the new Unity package. For more information, see [Importing the Oculus Utilities Package](/documentation/unity/latest/concepts/unity-import/).
 
-Utilities 1.10 adds an option to build in APK for submission to the Oculus Store in **Tools** > **Oculus**. It also includes a fix for an issue that caused poor performance or freezing when using multiple VR cameras or VR Compositor underlays with Gear VR. Any mobile application using either of these should update to this version. 
+Utilities 1.10 adds an option to build in APK for submission to the Oculus Store in **Tools** &gt; **Oculus**. It also includes a fix for an issue that caused poor performance or freezing when using multiple VR cameras or VR Compositor underlays with Gear VR. Any mobile application using either of these should update to this version. 
 
 ## New Features
 
-* Added option to **Tools** > **Oculus** to build APK for submission to Oculus Store.
+* Added option to **Tools** &gt; **Oculus** to build APK for submission to Oculus Store.
 * Added Rift support for cubemap overlays to VR Compositor Layers.
+
+
 ## Bug Fixes
 
 * Fixed poor performance or freezing bug when using multiple VR cameras or VR Compositor underlays with Gear VR.
 * Fixed memory leak in OVROverlay.
 * Fixed uncommon issue in which setting mirror to full screen caused app rendering to freeze in Rift.
+
+
 ## Known Issues
 
 * The following versions of Unity require the [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145) or Rift builds will fail to run in VR, and the error “Security error. This plugin is invalid!” will be reported in output\_log.txt:
@@ -35,3 +42,4 @@ Utilities 1.10 adds an option to build in APK for submission to the Oculus Store
 * Touch
 	+ For PCs using Oculus runtime 1.10, OVRInput.GetConnectedControllers() does not mark Touch controllers as disconnected when batteries are removed, and the input mask returns Touch (Left+Right) active when only one controller is on. This issue will resolve automatically when runtime 1.11 is released. 
 	
+

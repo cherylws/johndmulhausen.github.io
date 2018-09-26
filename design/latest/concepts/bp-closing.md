@@ -1,6 +1,7 @@
 ---
 title: Closing Thoughts
 ---
+
 VR users are giving you unprecedented control over their reality and are completely captive to the world you present them. You have an obligation to these users to present a safe and comfortable experience. 
 
 “What makes for effective virtual reality?” is a broad and contextual question. While we’ve provided you some concepts and ideas in this guide; ultimately, the right answer for your application may be entirely different. Virtual reality is still a largely uncharted medium, waiting for creative artists and developers to unlock its full potential.
@@ -14,4 +15,3 @@ VR attempts to replicate one’s experience in the physical world; as such, user
 This guide was written to provide you with the most basic foundations to build an engaging and comfortable VR experience. It’s up to you to create the experiences that are going to transport users to whole new worlds—and we can’t wait for that to happen!
 
 Be sure to visit [developer.oculus.com](/) and the [Developer Blog](/blog/) for the latest information and discussions on designing VR content.
-

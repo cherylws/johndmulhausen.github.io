@@ -1,6 +1,7 @@
 ---
 title: VRC.PC.Functional.3
 ---
+
 Single player apps must pause when the user removes the HMD or opens the Universal Menu.
 
 **Required** - Yes
@@ -13,7 +14,8 @@ Not required for multiplayer/real-time games.
 
 1. Launch the title.
 2. Take off the HMD.
+
+
 ## Expected Result
 
 App should pause or react within 10 seconds.
-

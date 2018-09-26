@@ -1,6 +1,7 @@
 ---
 title: VRC.Mobile.Security.2
 ---
+
 The app must request the minimum number of permissions required to function.
 
 **Required** - Yes
@@ -13,7 +14,8 @@ The review team will be paying close attention to the list of permissions that G
 
 1. Look at permissions requested in the android manifest. From a command line, you can also run "aapt dump badging" and search the output for "uses-permission."
 2. Verify that all permissions are utilized by the application.
+
+
 ## Expected Result
 
 There must be a rationale behind every permission your app requests in the app manifest.
-

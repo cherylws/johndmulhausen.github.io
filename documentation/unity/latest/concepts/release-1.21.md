@@ -1,9 +1,12 @@
 ---
 title: 1.21 Oculus Utilities for Unity Release Notes
 ---
+
+
+
 ## Oculus Utilities for Unity version 1.21.0
 
-For version compatibility information, see [Compatibility and Version Requirements](/documentation/unity/latest/concepts/unity-req/ "This guide describes Unity Editor version recommendations and system requirements.").
+For version compatibility information, see [Compatibility and Version Requirements](/documentation/unity/latest/concepts/unity-req/).
 
 ## Unity 5.x Support
 
@@ -12,7 +15,9 @@ With this release we have deprecated support for Unity 5.4.x and 5.5.x. For deve
 Note that 5.6.4p2 has the following known issues:
 
 * Adaptive Resolution is not working.
-* A Unity issue may cause mobile builds to fail with the error "Failed to Repackage Resources" due to the erroneous insertion of the keyword density into the Android manifest. Until this is fixed in the engine, as a workaround you can install Android Build Tools v.24 or later. Note that Build Tools v24 requires JDK 1.8 or later. For more information, see [this entry](https://issuetracker.unity3d.com/issues/android-build-fails-with-failed-to-repackage-resources-error-when-api-level-23-or-lower-is-used) in Unity’s Issue Tracker.
+* A Unity issue may cause mobile builds to fail with the error "Failed to Repackage Resources" due to the erroneous insertion of the keyword density into the Android manifest. Until this is fixed in the engine, as a workaround you can install Android Build Tools v.24 or later. Note that Build Tools v24 requires JDK 1.8 or later. For more information, see [this entry](https://issuetracker.unity3d.com/issues/android-build-fails-with-failed-to-repackage-resources-error-when-api-level-23-or-lower-is-used) in Unityâ€™s Issue Tracker.
+
+
 We recommend that all developers update to Unity 2017 or later.
 
 ## Oculus Dash Support
@@ -23,14 +28,18 @@ We recommend adding Dash support to your application to provide the best possibl
 
 Note that Dash support is **enabled by default** in Unity 2017.3b11 and later, in versions 2017.3f1-2, and in Unity Dash custom builds. It is off by default in all other versions, and we plan to disable it by default in 2017.3f3 and later.
 
-For more information, please see [Oculus Dash in Unity](/documentation/unity/latest/concepts/unity-dash/ "This guide describes how to add Oculus Dash support to Unity applications.").
+For more information, please see [Oculus Dash in Unity](/documentation/unity/latest/concepts/unity-dash/).
 
 ## New Features
 
 * Added Equirectangular support to VR Compositor Layers (mobile only).
+
+
 ## Bug Fixes
 
 * Unity 2017.2: Fixed issue causing OVRInput.GetDown() to return incorrect values. 
+
+
 ## Known Issues
 
 * Do not use Utilities 1.16.0-beta. If you are using that version, please update to a later version.
@@ -67,3 +76,4 @@ For more information, please see [Oculus Dash in Unity](/documentation/unity/lat
 	+ When Single Pass is enabled, building mobile projects will fail with the error message “Shader error in 'Mobile/Bumped Detail Diffuse'” in certain cases. For more information, see “Known Issues” in [Single Pass Stereo Rendering (Preview, Mobile Only)](/documentation/unity/latest/concepts/unity-single-pass/ "Single Pass stereo rendering is a preview rendering feature for Oculus Go and Gear VR available in Unity 5.6. If your application is CPU-bound or draw call bound, we strongly recommend using Single Pass rendering to improve performance.").
 	+ Two graphics driver issues affect mobile applications with Single Pass enabled using some S8 or S8+ phones with Unity 5.6.0p2-3. They can occur when Standard Shader Quality is set to low, or when you are using tree objects. For more information and workarounds, see “Known Issues” in [Single Pass Stereo Rendering (Preview, Mobile Only)](/documentation/unity/latest/concepts/unity-single-pass/ "Single Pass stereo rendering is a preview rendering feature for Oculus Go and Gear VR available in Unity 5.6. If your application is CPU-bound or draw call bound, we strongly recommend using Single Pass rendering to improve performance.").
 	
+

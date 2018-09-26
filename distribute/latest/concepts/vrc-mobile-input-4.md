@@ -1,6 +1,7 @@
 ---
 title: VRC.Mobile.Input.4
 ---
+
 If the app supports both Gear VR touchpad and Gear VR Controller input, the app must let users switch between them at-will.
 
 **Required** - Yes, Gear VR only
@@ -17,7 +18,8 @@ There are no additional details for this VRC.
 4. Verify that the app responds to the controller.
 5. Interact with the app using touchpad again.
 6. Verify that the app responds to the touchpad.
+
+
 ## Expected Result
 
 The app responds to both input devices automatically, without the user having to change any settings.
-

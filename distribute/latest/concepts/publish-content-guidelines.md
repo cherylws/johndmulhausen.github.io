@@ -1,6 +1,7 @@
 ---
 title: Content Guidelines
 ---
+
 Here are some basic content standards that we apply to all apps and games. The following is not accepted in the Oculus Store:
 
 * Pornography, including content for the purpose of sexual gratification. 
@@ -8,6 +9,8 @@ Here are some basic content standards that we apply to all apps and games. The f
 * Hate speech, bullying, molestation, or harassment.
 * Real-money gambling.
 * Applications directed to children or users under the age of 13.
+
+
  When it comes to mature content (for instance violence, alcohol/drugs, nudity, or adult language), we are likely to accept content that generally falls within the threshold of an R-rating for a movie. Note that even though your application may contain these elements, the use of them in marketing materials on our platform may be limited. These policies are described in more detail in the Store Asset Content Guidelines section below.
 
 ## Comfort Ratings
@@ -36,7 +39,7 @@ Apps in the Oculus Store must not contain other platforms or commerce solutions.
 
 ## Content Ratings
 
-All Rift apps must be rated by the International Age Rating Coalition (IARC). All Mobile apps must be rated by both the IARC and the Game Rating and Administrator Committee (GRAC). You can obtain ratings directly through the Developer Dashboard, in the **Submission Info > Content Ratings** section.
+All Rift apps must be rated by the International Age Rating Coalition (IARC). All Mobile apps must be rated by both the IARC and the Game Rating and Administrator Committee (GRAC). You can obtain ratings directly through the Developer Dashboard, in the **Submission Info &gt; Content Ratings** section.
 
 ## IARC
 
@@ -57,6 +60,8 @@ The trademarks of Oculus, including its name, logo, and those of it or its partn
 * References to Oculus hardware or services, for example in a “Quit to Oculus Home?” dialog box or similar UI.
 * Models or meshes supplied to you by Oculus explicitly for inclusion in your app, for example controller models with the Oculus logo on them. 
 * [The Oculus Brand site](https://en.oculusbrand.com/) contains detailed information about how you're able to use the Oculus name and assets.
+
+
 ## Store Asset Content Guidelines
 
 Oculus has a set of Content Guidelines that prevents objectionable and/or offensive material from release on our Platform. However, even if your game or application pass these Acceptance Criteria, if it contains allowable mature or controversial content, we have a separate set of guidelines for the marketing materials we accept on our platform. Whereas we essentially permit up to R-rated content on our platform, we ask that the marketing materials used in our store remain PG-13.
@@ -83,10 +88,13 @@ The following imagery is restricted in the Oculus Store:
 + Key art and cover images must not contain:
 - Drug usage
 - Racist or Hateful imagery (such as swastikas, Pepe the Frog, or similar images whether they were offensive at the time of submission or became offensive later)
+
+
 Screenshots and trailers may contain the above in context and to a reasonable degree to the extent required to inform the user what is in the content. Use appropriate judgement. For instance, the following would not be allowed:
 
 * A compilation roll of “best headshots”
 * A video app with a variety of content should not focus on only the parts of their product that show scantily clad women
 * News, education, and other non-fictional applications will be given more leeway. For example, a documentary on WWII might be able to include a swastika in historical context
-In addition to the content requirements for assets, we also have specific requirements around composition, such as minimum font sizes and bleed areas. Learn about the composition guidelines in the [Oculus Store Asset Design Guidelines](https://scontent.xx.fbcdn.net/v/t39.2365-6/10000000_2007708799495262_8508290021072044032_n.pdf?_nc_cat=111&oh=5a41a1fd066453853ad1ee4880be6e93&oe=5C5CF91A).
 
+
+In addition to the content requirements for assets, we also have specific requirements around composition, such as minimum font sizes and bleed areas. Learn about the composition guidelines in the [Oculus Store Asset Design Guidelines](https://scontent-sjc3-1.xx.fbcdn.net/v/t39.2365-6/10000000_2007708799495262_8508290021072044032_n.pdf?_nc_cat=111&amp;oh=5a41a1fd066453853ad1ee4880be6e93&amp;oe=5C5CF91A).

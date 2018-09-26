@@ -1,12 +1,17 @@
 ---
 title: Changes in Version 1.19.x
 ---
+
+
+
 ## New Features for 1.19.x
 
 * Oculus Dash functionality—New API support has been added so that you can begin to prepare your applications for the upcoming release of Oculus Dash. See API Changes, below.
 * Cubemap support—A new cubemap layer has been added. A cubemap consists of six rectangles which are placed around the user, as if the user is sitting inside of a room that is cube shaped. Cubemaps appear to be at infinite distance, and provide the background for all other objects in the VR experience. For example, you can use cubemaps to create the sky that will appear behind buildings, trees, and other objects. You don't need to handle occlusion by objects in the foreground. You can simply setup the cubemap, and it will appear in the background everywhere in your scene.
 * Octilinear rendering—Octilinear rendering implements NVIDIA Lens Matched Shading. You can enable octilinear rendering to improve the performance of your applications when they are executed on an NVIDIA GPU. Octilinear rendering is essentially a way to compress the screen buffers, so that about 20% less work is required to render each frame.
 * More flexible graphics submission APIs—The ovr\_SubmitFrame API has been deprecated, and replaced by a set of more flexible graphics submission APIs. The new APIs enable more sophisticated performance optimization, especially in multi-threaded environments. See API Changes, below.
+
+
 ## API Changes
 
 * New Lifecycle functionality related to Dash: 
@@ -18,7 +23,10 @@ title: Changes in Version 1.19.x
 	+ ovr\_BeginFrame: This function should be called from render thread before application begins rendering.
 	+ ovr\_EndFrame: This function should be called from render thread after application has finished rendering, in order to submit the rendered frame to the Oculus compositor.
 	
+
+
 ## Known SDK Issues
 
 * If you encounter intermittent tracking issues, remove the batteries from any Engineering Sample Oculus Remotes that you paired with your headset and contact Developer Relations for replacement remotes.
 * If you bypass the shim and communicate with the DLL directly, without specifying a version to ovr\_Initialize, the DLL has no way of knowing the SDK version with which the application was built. This can result in unpredictable or erratic behavior which might cause the application to crash.
+

@@ -1,6 +1,7 @@
 ---
 title: Set CPU and GPU Levels
 ---
+
 Sets the clock rates for the CPU and GPU on mobile devices.
 
 ## Overview
@@ -21,11 +22,15 @@ For more information on power management see: [Managing Power Consumption](/docu
 
 ## Blueprint
 
-![](/images/documentation-unreal-latest-concepts-unreal-blueprints-set-cpu-and-gpu-levels-0.png)  
+![](/images/documentationunreallatestconceptsunreal-blueprints-set-cpu-and-gpu-levels-0.png)
+
 ## Arguments
 
 * CPU Level: The setting for the CPU clock rate. Allowable values are: 0, 1, 2, or 3.
 * GPU Level: The setting for the GPU clock rate. Allowable values are: 0, 1, 2, or 3.
+
+
 ## Output
 
 * No output.
+

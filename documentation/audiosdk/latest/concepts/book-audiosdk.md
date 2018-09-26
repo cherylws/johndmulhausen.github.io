@@ -1,15 +1,16 @@
 ---
 title: Oculus Audio SDK Guide
 ---
+
 This document describes how to install, configure, and use the Oculus Audio SDK.
 
 The Audio SDK consists of documentation, samples, plugins, source code, libraries, and tools to help developers implement immersive audio in their VR apps.
 
 Thus far, much of the discussion about virtual reality has centered on visual aspects such as pixel density, latency, frame rate, and visual artifacts. However, audio characteristics reinforce visual immersion by providing compelling auditory cues which indicate the positions of objects around the viewer, including those that are outside their field of view.
 
-We strongly recommend beginning with [Introduction to Virtual Reality Audio](/documentation/audiosdk/latest/concepts/audio-intro-overview/ "This document introduces fundamental concepts in audio development for virtual reality (VR) with an emphasis on key factors that deserve development attention.") for a technical discussion of the key concepts and terminology.
+We strongly recommend beginning with [Introduction to Virtual Reality Audio](/documentation/audiosdk/latest/concepts/audio-intro-overview/) for a technical discussion of the key concepts and terminology.
 
-Note: If you are a video producer looking to create spatialized audio for a 360 video, this is the wrong guide. This guide is to help software developers add spatialized audio to VR apps. Instead see [Creating Spatial Audio for 360 Video using FB360 Spatial Workstation](/blog/creating-spatial-audio-for-360-video-using-fb360-spatial-workstation).* **[SDK Contents and Features](/documentation/audiosdk/latest/concepts/audiosdk-guide-intro/)**  
+* **[SDK Contents and Features](/documentation/audiosdk/latest/concepts/audiosdk-guide-intro/)**  
 
 * **[Requirements](/documentation/audiosdk/latest/concepts/audiosdk-reqs/)**  
 
@@ -26,4 +27,5 @@ The Oculus Audio SDK currently supports Windows 7+, Android (Gear VR), Mac OS X,
 * **[Middleware Support](/documentation/audiosdk/latest/concepts/audiosdk-middleware/)**  
 
 * **[Oculus Hardware Capabilities](/documentation/audiosdk/latest/concepts/audiosdk-hardware/)**  
+
 

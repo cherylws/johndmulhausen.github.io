@@ -1,6 +1,7 @@
 ---
 title: 1.0 Release Notes
 ---
+
 This document provides an overview of new features, improvements, and fixes included in the latest version of the Oculus Mobile SDK.
 
 ## 1.0.4
@@ -17,11 +18,13 @@ The VrApi Loader is now Java free, further reducing the number of dependencies a
 
 TimeWarp Debug Graph has been removed. Please use OVRMonitor instead.
 
-For details on migrating to Mobile SDK 1.0.4 from previous versions, see [Migrating to Mobile SDK 1.0.4](/documentation/mobilesdk/latest/concepts/mobile-native-migration/#mobile-native-migration-1-0-4 "This section is intended to help you upgrade from the Oculus Mobile SDK version 1.0.3 to 1.0.4.").
+For details on migrating to Mobile SDK 1.0.4 from previous versions, see [Migrating to Mobile SDK 1.0.4](/documentation/mobilesdk/latest/concepts/mobile-native-migration/#mobile-native-migration-1-0-4).
 
 ## New Features
 
 * Gaze Cursor Timer is now rendered automatically in VrApi as a TimeWarp Layer.
+
+
 ## API Changes
 
 * Back-button long press handling and recenter-on-mount are now handled directly by VrApi. Apps should not implement this logic any longer.
@@ -34,6 +37,8 @@ For details on migrating to Mobile SDK 1.0.4 from previous versions, see [Migrat
 	+ SystemActivities\_Update
 	+ SystemActivities\_PostUpdate
 	
+
+
 ## 1.0.3
 
 **Overview of Major Changes**
@@ -47,6 +52,8 @@ Preliminary testing has shown that multi-view can provide:
 * 25-50% reduction in CPU time consumed by the application
 * 5% reduction in GPU time on the ARM Mali
 * 5%-10% reduction in power draw
+
+
 Obviously the freed up CPU time could be used to issue more draw calls. However, instead of issuing more draw calls, we recommend that applications maintain the freed up CPU time for use by the driver threads to reduce/eliminate screen tears.
 
 While current driver implementations of multi-view primarily reduce the CPU usage, the GPU usage is not always unaffected. On the Exynos based devices, multi-view not only reduces the CPU load, but slightly reduces the GPU load by only computing the view-independent vertex attributes once for both eyes, instead of separately for each eye.
@@ -65,7 +72,9 @@ The current set of supported devices as of the date of this release is:
 * Note 5 / Android M
 * Exynos S7 / Android M
 * Exynos S7+ / Android M
-For detailed instructions on how to structure a native application for multi-view rendering, see [Migrating to Mobile SDK 1.0.3](/documentation/mobilesdk/latest/concepts/mobile-native-migration/#mobile-native-migration-1-0-3 "This section is intended to help you upgrade from the Oculus Mobile SDK version 1.0.0 to 1.0.3.").
+
+
+For detailed instructions on how to structure a native application for multi-view rendering, see [Migrating to Mobile SDK 1.0.3](/documentation/mobilesdk/latest/concepts/mobile-native-migration/#mobile-native-migration-1-0-3).
 
 We are working with Unity and Epic to support multi-view in Unity and Unreal Engine.
 
@@ -89,6 +98,8 @@ Various build steps have been moved from the Python build scripts into Gradle.
 * VrAppFramework now supports multi-view rendering path.
 * VrAppFramework now uses explicit EGL objects.
 * GlTexture now supports RGBA ASTC compressed textures.
+
+
 ## API Changes
 
 * VrAppInterface::OneTimeInit and VrAppInterface::NewIntent have been replaced by VrAppInterface::EnteredVrMode. This function is called right after an application entered VR mode.
@@ -97,13 +108,19 @@ Various build steps have been moved from the Python build scripts into Gradle.
 * VrAppInterface::Frame now takes an ovFrameInput structure and returns an ovrFrameResult structure.
 * VrAppInterface::OnKeyEvent was removed. Key events are now explicitly handled in VrAppInterface::Frame.
 * VrApi ovrModeParmFlags now provide VRAPI\_MODE\_FLAG\_NATIVE\_WINDOW for specifying the ANativeWindow explicitly.
+
+
 ## Bug Fixes
 
 * Fixed docked / mounted queries to be accurate without requiring an initial event.
 * Sample apps no longer prompt for an SD card on devices that donâ€™t support external memory.
+
+
 ## Known Issues
 
 * When converting your app to be multi-view compliant, ensure that your System Activities version is at least 1.0.3.1 or you will receive a required system update message.
+
+
 ## 1.0.0.1
 
 ## Overview of Major Changes
@@ -117,6 +134,8 @@ This minor patch release fixes problems with OS X development and splits Oculus 
 	+ Exposed experimental layer texel density and complexity visualizers (supported by apps built with Oculus Mobile SDK 1.0 or later).
 	+ Now available as a separate downloadable package from the full Mobile SDK download.
 	
+
+
 ## Bug Fixes
 
 * Fixed OS X "No such file or directory" build problem.
@@ -124,6 +143,8 @@ This minor patch release fixes problems with OS X development and splits Oculus 
 	+ Improved network stability on Windows
 	
 * Increased VR thread stack size.
+
+
 ## 1.0.0
 
 ## Overview of Major Changes
@@ -132,7 +153,7 @@ VrApi is now dynamically loaded from a separate APK, allowing it to be updated w
 
 VrApi now presents the core minimal API for VR rendering. System-level functionality not necessary for VR rendering has been moved to a VrAppSupport/SystemUtils library. This library primarily deals with loading, and with receiving events from the Universal Menu.
 
-Various OpenGL objects may now be explicitly passed to the VrApi. In this case, functions such as vrapi\_EnterVrMode and vrapi\_SubmitFrame do not need to be called from a thread with a specific OpenGL context current.
+Various OpenGL objects may now be explicitly passed to the VrApi. In this case, functions such as vrapi_EnterVrMode and vrapi_SubmitFrame do not need to be called from a thread with a specific OpenGL context current.
 
 All native applications are now built and developed using Gradle and Android Studio instead of ANT and Eclipse. It is important to note that while the command-line Gradle build path is mature, Android Studio support for native development should still be considered experimental. Feedback on our [developer forums](https://forums.oculus.com/developer) is appreciated!
 
@@ -149,6 +170,8 @@ If the auto-update function has not delivered the latest SystemActivities to you
 * Added support for Gradle and experimental support for Android Studio.
 * Added support for the Samsung Galaxy S6 Edge+ and Note 5.
 * TimeWarp Debug Graph may now be toggled on and off during runtime via VrApi Frame flags.
+
+
 ## API Changes
 
 * vrapi\_Initialize now returns an ovrInitializeStatus.
@@ -156,8 +179,11 @@ If the auto-update function has not delivered the latest SystemActivities to you
 * ovr\_DeviceIsDocked, ovr\_HeadsetIsMounted, ovr\_GetPowerLevelStateThrottled and ovr\_GetPowerLevelStateMinimum have been replaced with vrapi\_GetSystemStatusInt and vrapi\_GetSystemStatusFloat.
 * Various functions from VrApi\_Android.h have been moved to the VrAppSupport/SystemUtils library.
 * Various performance metrics can now be queried through vrapi\_GetSystemStatusInt and vrapi\_GetSystemStatusFloat.
+
+
 ## Bug Fixes
 
 * Fixed reorient on mount.
 * Fixed spurious incorrect long-press event after a short-press plus a long frame.
 * Fixed invalid input clock levels resulting in dynamic clock frequency mode.
+

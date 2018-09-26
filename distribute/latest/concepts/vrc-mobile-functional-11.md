@@ -1,6 +1,7 @@
 ---
 title: VRC.Mobile.Functional.11
 ---
+
 Apk filesize must be less than 1gb, but can come with an expansion file up to 4gb.
 
 **Required** - Yes
@@ -16,4 +17,3 @@ See our [Expansion File Support](/blog/tech-note-expansion-file-support-for-gear
 ## Expected Result
 
 The apk file must be under 1gb, and the obb file must be under 4gb.
-

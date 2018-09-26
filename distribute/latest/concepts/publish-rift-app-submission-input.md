@@ -1,6 +1,7 @@
 ---
 title: Rift Input VRCs
 ---
+
 These requirements ensure your app provides a user experience consistent with Oculus user interaction standards.
 
 ## Rift Input VRCs
@@ -25,3 +26,4 @@ When picking up objects within the app, use the Touch controller's grip button r
 If an app is “focus aware,” it must continue rendering while Dash is up, but hide any user hands or controllers and ignore all input.
 * **[VRC.PC.Input.10](/distribute/latest/concepts/vrc-pc-input-10/)**  
 In-application hands and controllers should line up with the user’s real-world counterparts in position and orientation as closely as possible.
+

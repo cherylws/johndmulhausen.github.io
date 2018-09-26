@@ -1,6 +1,7 @@
 ---
 title: Release Notes
 ---
+
 This section describes changes for each version release.
 
 * **[1.29 Oculus Utilities for Unity Release Notes](/documentation/unity/latest/concepts/release-1.29/)**  
@@ -59,3 +60,4 @@ This document provides an overview of new features, improvements, and fixes incl
 This document provides an overview of new features, improvements, and fixes included in the Oculus Unity Integration that shipped with version 0.4 of the Oculus Mobile SDK.
 * **[Unity Sample Framework Release Notes](/documentation/unity/latest/concepts/unity-sampleframework-release-archive/)**  
 This section describes changes for each version release of the Unity Sample Framework Unity Project.
+

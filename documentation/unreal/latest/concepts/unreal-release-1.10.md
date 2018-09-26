@@ -1,6 +1,9 @@
 ---
 title: Oculus Unreal Engine 4 Integration 1.10 Release Notes
 ---
+
+
+
 ## 1.10.0
 
 These release notes describe changes to Oculus's Unreal Engine 4.12, 4.13, and 4.14 available from the Oculus GitHub repository.
@@ -13,12 +16,17 @@ New Features
 	+ Added ability to find matchmaking rooms in Browse mode.
 	+ Added Blueprints to Create and Find matchmaking rooms.
 	
+
+
 Bug Fixes
 
 * Fixed Oculus Blueprints error calling Activate() twice.
 * Fixed crash when Oculus Cloud Saves used when the application is not installed.
+
+
 Known Issues
 
-* A significant drop in framerate occurs when UE4 is not in focus in VR preview mode. To avoid this issue, uncheck the Use Less CPU when in **Background** in **Edit** > **Editor Preferences** > **General** (left sidebar) > **Miscellaneous** (left sidebar) > **Performance**.
+* A significant drop in framerate occurs when UE4 is not in focus in VR preview mode. To avoid this issue, uncheck the Use Less CPU when in **Background** in **Edit** &gt; **Editor Preferences** &gt; **General** (left sidebar) &gt; **Miscellaneous** (left sidebar) &gt; **Performance**.
 * Exclusive Mode issues: Multiple initializations of the DXGISwapChain may cause flickering as the screen switches modes and a black screen when rendering to the Rift with a different GPU from the one the game is using to render the eye buffers.
-* Stereo Layer Depth Ordering: Doesn’t support head-locked layers, only world-locked and tracker-locked.
+* Stereo Layer Depth Ordering: Doesnâ€™t support head-locked layers, only world-locked and tracker-locked.
+

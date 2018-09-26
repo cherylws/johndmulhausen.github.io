@@ -1,21 +1,30 @@
 ---
 title: 1.24 Oculus Utilities for Unity Release Notes
 ---
+
+
+
 ## Oculus Utilities for Unity version 1.24.0
 
 ## New Features
 
 * The Oculus Unity Integration now supports 64bit development.
+
+
 ## Integration Changes
 
 * Removed support for OVRTouchpad, use OVRInput instead. This will remove support for Android MotionEvents.
 * Updates to the Android Manifest settings to support the latest mobile APIs.
+
+
 ## Bug Fixes
 
 * Fixed a bug where GetThreadState returned an error when called before any updates are made.
 * Fixed a bug where UnityEngine.GL rendered over a scene, switched to using MeshRender that respects depth and the render queue.
 * Fixed an issue where ovrpLayerSubmitFlag\_HeadLocked was set when rotation tracking was disabled.
 * Fixed a bug where Unity may crash when an incompatible version of the ZED SDK is installed.
+
+
 ## Known Issues
 
 * If you experience long UI stalls or poor performance with the Unity Editor when targeting Oculus Rift on Windows 10, please run Windows Update to ensure that you have the latest version of Windows 10.
@@ -59,3 +68,4 @@ title: 1.24 Oculus Utilities for Unity Release Notes
 	+ When Single Pass is enabled, building mobile projects will fail with the error message “Shader error in 'Mobile/Bumped Detail Diffuse'” in certain cases. For more information, see “Known Issues” in [Single Pass Stereo Rendering (Preview, Mobile Only)](/documentation/unity/latest/concepts/unity-single-pass/ "Single Pass stereo rendering is a preview rendering feature for Oculus Go and Gear VR available in Unity 5.6. If your application is CPU-bound or draw call bound, we strongly recommend using Single Pass rendering to improve performance.").
 	+ Two graphics driver issues affect mobile applications with Single Pass enabled using some S8 or S8+ phones with Unity 5.6.0p2-3. They can occur when Standard Shader Quality is set to low, or when you are using tree objects. For more information and workarounds, see “Known Issues” in [Single Pass Stereo Rendering (Preview, Mobile Only)](/documentation/unity/latest/concepts/unity-single-pass/ "Single Pass stereo rendering is a preview rendering feature for Oculus Go and Gear VR available in Unity 5.6. If your application is CPU-bound or draw call bound, we strongly recommend using Single Pass rendering to improve performance.").
 	
+

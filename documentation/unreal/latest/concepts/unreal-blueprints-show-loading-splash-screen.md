@@ -1,11 +1,12 @@
 ---
 title: Show Loading Splash Screen
 ---
+
 Immediately displays the currently defined splash screen.
 
 ## Overview
 
-This blueprint immediately displays the splash screen, which has been defined by one or more calls to [Add Loading Splash Screen](/documentation/unreal/latest/concepts/unreal-blueprints-add-loading-splash-screen/ "Adds a splash screen with parameters to the application."). 
+This blueprint immediately displays the splash screen, which has been defined by one or more calls to [Add Loading Splash Screen](/documentation/unreal/latest/concepts/unreal-blueprints-add-loading-splash-screen/). 
 
 For more information about splash screens, see:
 
@@ -18,12 +19,18 @@ For more information about splash screens, see:
 * [Is Loading Icon Enabled](/documentation/unreal/latest/concepts/unreal-blueprints-is-loading-icon-enabled/)
 * [Show Loading Icon](/documentation/unreal/latest/concepts/unreal-blueprints-show-loading-icon/ "Immediately displays a specified defined texture as a splash screen.")
 * [Show Loading Splash Screen](/documentation/unreal/latest/concepts/unreal-blueprints-show-loading-splash-screen/ "Immediately displays the currently defined splash screen.")
+
+
 ## Blueprint
 
-![](/images/documentation-unreal-latest-concepts-unreal-blueprints-show-loading-splash-screen-0.png)  
+![](/images/documentationunreallatestconceptsunreal-blueprints-show-loading-splash-screen-0.png)
+
 ## Arguments
 
 * No arguments.
+
+
 ## Output
 
 * No output.
+

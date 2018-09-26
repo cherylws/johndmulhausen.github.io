@@ -1,6 +1,7 @@
 ---
 title: Mobile Asset VRCs
 ---
+
 These requirements ensure your app meets the asset and content guidelines for shipping in the Oculus Store.
 
 ## Mobile Asset VRCs
@@ -23,3 +24,4 @@ Trailer must not be longer than 2 minutes.
 Artwork asset text should not use a font smaller than 24 pt.
 * **[VRC.Mobile.Asset.9](/distribute/latest/concepts/vrc-mobile-asset-9/)**  
 If app is supported on both Gear VR and Oculus Go, any references in the app description and trailer should mention both devices.
+

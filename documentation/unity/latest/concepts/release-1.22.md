@@ -1,6 +1,9 @@
 ---
 title: 1.22 Oculus Utilities for Unity Release Notes
 ---
+
+
+
 ## Oculus Utilities for Unity version 1.22.0
 
 Oculus Utilities for Unity 1.22 includes an update to how the Occlusion Mesh is handled and provides a significant GPU performance improvement.
@@ -10,12 +13,16 @@ Version 1.22 also increased the recommended MSAA level to 4x to reduce aliasing 
 ## New Features
 
 * Increased the recommended MSAA level to 4x to reduce aliasing issues and improve quality.
+
+
 ## Bug Fixes
 
 * Improved Occlusion Mesh handling that provides a significant GPU performance improvement.
 * Fixed an UnderlayQuad crash caused by insufficient mip levels.
 * Fixed an issue in version 2017.3.x where the active controller switches to gamepad when using the GearVR Controller or HMT input.
 * Fixed an issue where OVRPlugin's PreIntialize() failed to return an error on initialization failure.
+
+
 ## Known Issues
 
 * Do not use Utilities 1.16.0-beta. If you are using that version, please update to a later version.
@@ -52,3 +59,4 @@ Version 1.22 also increased the recommended MSAA level to 4x to reduce aliasing 
 	+ Two graphics driver issues affect mobile applications with Single Pass enabled using some S8 or S8+ phones with Unity 5.6.0p2-3. They can occur when Standard Shader Quality is set to low, or when you are using tree objects. For more information and workarounds, see “Known Issues” in [Single Pass Stereo Rendering (Preview, Mobile Only)](/documentation/unity/latest/concepts/unity-single-pass/ "Single Pass stereo rendering is a preview rendering feature for Oculus Go and Gear VR available in Unity 5.6. If your application is CPU-bound or draw call bound, we strongly recommend using Single Pass rendering to improve performance.").
 	+ If you add OVROverlay to any Quad (for example the OverlayUIDemo scene in the Sample Framework) and enable single-pass on Android, the texture image may appear halved (without mipmapping) and shifted to the upper-right quadrant.
 	
+

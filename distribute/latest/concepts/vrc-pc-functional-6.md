@@ -1,6 +1,7 @@
 ---
 title: VRC.PC.Functional.6
 ---
+
 If the app supports a desktop mode, it must launch and be playable on the standard display without the use of the HMD or Oculus Touch controllers.
 
 **Required** - Yes
@@ -13,7 +14,8 @@ For specific recommendations on switching between 2D desktop mode and VR modes, 
 
 1. Launch the title in 2d mode.
 2. Play through at least one level of the content.
+
+
 ## Expected Result
 
 App must not require HMD or Touch controllers.
-

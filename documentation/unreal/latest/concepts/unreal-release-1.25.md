@@ -1,13 +1,14 @@
 ---
 title: Oculus Unreal Engine 4 Integration 1.25 Release Notes
 ---
+
 These release notes describe changes to Oculus's Unreal Engine 4.19 available from the Oculus GitHub repository.
 
 ## 1.25.0
 
 New Features
 
-* **Fixed Foveated Rendering (FFR) on Oculus Go** – FFR enables the edges of the eye buffers to be rendered at a lower resolution than the center portion of the eye buffers. FFR is available only on Oculus Go. Unreal provides support for FFR which can easily be accessed through a set of Blueprints. For a general introduction to FFR, please see the blog article [Optimizing Oculus Go for Performance](/blog/optimizing-oculus-go-for-performance/). The effect of using FFR is nearly imperceptible, but it provides important benefits, including:
+* **Fixed Foveated Rendering (FFR) on Oculus Go** – FFR enables the edges of the eye buffers to be rendered at a lower resolution than the center portion of the eye buffers. FFR is available only on Oculus Go. Unreal provides support for FFR which can easily be accessed through a set of Blueprints. For a general introduction to FFR, please see the blog article [Optimizing Oculus Go for Performance](https://developer.oculus.com/blog/optimizing-oculus-go-for-performance/). The effect of using FFR is nearly imperceptible, but it provides important benefits, including:
 
 
 	+ Significantly improves GPU fill performance
@@ -36,13 +37,18 @@ New Features
 	+ Get Oculus Touchpad X-Axis
 	+ Get Oculus Touchpad Y-Axis
 	
+
+
 Bug Fixes
 
 * Not applicable
+
+
 Known Issues
 
 * There's a bug affecting the ovr\_SetBoundaryLookAndFeel API by which color set operations to the visualized boundary grid don't work if they're called while the HMD is not being worn.
-* A significant drop in frame rate occurs when UE4 is not in focus in VR preview mode. To avoid this issue, uncheck the Use Less CPU when in **Background** in **Edit** > **Editor Preferences** > **General** (left sidebar) > **Miscellaneous** (left sidebar) > **Performance**.
+* A significant drop in frame rate occurs when UE4 is not in focus in VR preview mode. To avoid this issue, uncheck the Use Less CPU when in **Background** in **Edit** &gt; **Editor Preferences** &gt; **General** (left sidebar) &gt; **Miscellaneous** (left sidebar) &gt; **Performance**.
 * Exclusive Mode issues: Setting the mirror window to full-screen exclusive mode will not work correctly if the monitor and HMD are connected to different GPUs.
-* Stereo Layer Depth Ordering: Doesn’t support head-locked layers, only world-locked and tracker-locked.
+* Stereo Layer Depth Ordering: Doesnâ€™t support head-locked layers, only world-locked and tracker-locked.
 * Hybrid Monoscopic Rendering: In Unreal version 4.15, this feature is available for mobile only.
+

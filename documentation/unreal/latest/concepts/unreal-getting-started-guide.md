@@ -1,6 +1,7 @@
 ---
 title: Getting Started Guide
 ---
+
 This section describes how to get started using the Oculus-Unreal integration platform, and begin developing VR applications in UE4.
 
 The following sections cover everything you need to know to start developing Unreal applications for Oculus Go, Oculus Rift, and Gear VR.
@@ -15,3 +16,4 @@ This guide covers everything you need to know to get started developing Unreal a
 This guide reviews the basics for developing Oculus applications in Unreal.
 * **[Building UE4 from Source](/documentation/unreal/latest/concepts/unreal-building-ue4-from-source/)**  
 The following section describes how to download, compile, and launch UE4 from the Oculus GitHub repository using Visual Studio **2015 or 2017**.
+

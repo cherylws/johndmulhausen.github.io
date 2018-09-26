@@ -1,6 +1,7 @@
 ---
 title: 0.4 Mobile Unity Integration Release Notes
 ---
+
 This document provides an overview of new features, improvements, and fixes included in the Oculus Unity Integration that shipped with version 0.4 of the Oculus Mobile SDK.
 
 ## Mobile Unity Integration 0.4.3
@@ -8,6 +9,8 @@ This document provides an overview of new features, improvements, and fixes incl
 ## New Features
 
 * New Mobile Unity Integration Based on Oculus PC SDK 0.4.4
+
+
 ## Mobile Unity Integration 0.4.2
 
 ## Overview of Major Changes
@@ -21,6 +24,8 @@ We would like to highlight the inclusion of the new Mobile Unity Integration wit
 * Fix for camera height discrepancies between the Editor and Gear VR device.
 * Moonlight Debug Util class names now prefixed with OVR to prevent namespace pollution.
 * Provide callback for configuring VR Mode Parms on OVRCameraController; see OVRModeParms.cs for an example.
+
+
 ## Mobile Unity Integration 0.4.1
 
 ## Overview of Major Changes
@@ -30,6 +35,8 @@ Added support for Android 5.0 (Lollipop) and Unity Free.
 ## New Features
 
 * Added Unity Free support for Gear VR developers.
+
+
 ## Mobile Unity Integration 0.4.0
 
 ## Overview of Major Changes
@@ -40,6 +47,8 @@ First public release of the Oculus Mobile SDK.
 
 * Unity vignette rendering updated to match native (slightly increases effective FOV).
 * Unity volume pop-up distance to match native.
+
+
 ## Migrating From Earlier Versions
 
 The 0.4.3+ Unity Integration’s API is significantly different from prior versions. This section will help you upgrade.
@@ -48,11 +57,27 @@ The 0.4.3+ Unity Integration’s API is significantly different from prior versi
 
 The following are changes to Unity components:
 
-Unity ComponentsOVRDevice → OVRManagerUnity foundation singleton.OVRCameraController → OVRCameraRigPerforms tracking and stereo rendering.OVRCameraRemoved. Use eye anchor Transforms instead.The following are changes to helper classes:
+|       OVRDevice  OVRManager       |         Unity foundation singleton.         |
+|-----------------------------------|---------------------------------------------|
+| OVRCameraController  OVRCameraRig |   Performs tracking and stereo rendering.   |
+|             OVRCamera             | Removed. Use eye anchor Transforms instead. |
 
-Helper ClassesOVRDisplayHMD pose and rendering status.OVRTrackerInfrared tracking camera pose and status.OVR.Hmd → Ovr.HmdPure C# wrapper for LibOVR.The following are changes to events:
+The following are changes to helper classes:
 
-EventsHMD added/removedFired from OVRCameraRig.Update() on HMD connect and disconnect.Tracking acquired/lostFired from OVRCameraRig.Update() when entering and exiting camera view.HSWDismissedFired from OVRCameraRig.Update() when the Health and Safety Warning is no longer visible.Get/Set*(ref *) methodsReplaced by properties.## Behavior Changes
+|    OVRDisplay    |      HMD pose and rendering status.      |
+|------------------|-------------------------------------------|
+|    OVRTracker    | Infrared tracking camera pose and status. |
+| OVR.Hmd  Ovr.Hmd |        Pure C# wrapper for LibOVR.        |
+
+The following are changes to events:
+
+|    HMD added/removed    |              Fired from OVRCameraRig.Update() on HMD connect and disconnect.              |
+|-------------------------|-------------------------------------------------------------------------------------------|
+| Tracking acquired/lost |          Fired from OVRCameraRig.Update() when entering and exiting camera view.          |
+|      HSWDismissed      | Fired from OVRCameraRig.Update() when the Health and Safety Warning is no longer visible. |
+| Get/Set*(ref *) methods |                                  Replaced by properties.                                  |
+
+## Behavior Changes
 
 * OVRCameraRig’s position is always the initial center eye position.
 * Eye anchor Transforms are tracked in OVRCameraRig’s local space.
@@ -60,20 +85,19 @@ EventsHMD added/removedFired from OVRCameraRig.Update() on HMD connect and disco
 * IPD and FOV are fully determined by profile (PC only).
 * Layered rendering: multiple OVRCameraRigs are fully supported (not advised for mobile).
 * OVRCameraRig.*EyeAnchor Transforms give the relevant poses.
+
+
 ## Upgrade Procedure
 
 To upgrade, follow these steps:
 
 1. Ensure you didn’t modify the structure of the OVRCameraController prefab. If your eye cameras are on Game Objects named “CameraLeft” and “CameraRight” which are children of the OVRCameraController Game Object (the default), then the prefab should cleanly upgrade to OVRCameraRig and continue to work properly with the new integration.
 2. Write down or take a screenshot of your settings from the inspectors for OVRCameraController, OVRPlayerController, and OVRDevice. You will have to re-apply them later.
-3. Remove the old integration by deleting the following from your project:
-	* OVR folder
-	* OVR Internal folder (if applicable)
-	* Any file in the Plugins folder with “Oculus” or “OVR” in the name
-	* Android-specific assets in the Plugins/Android folder, including: vrlib.jar, libOculusPlugin.so, res/raw and res/values folders
-	
+3. Remove the old integration by deleting the following from your project:* OVR folder * OVR Internal folder (if applicable) * Any file in the Plugins folder with “Oculus” or “OVR” in the name * Android-specific assets in the Plugins/Android folder, including: vrlib.jar, libOculusPlugin.so, res/raw and res/values folders 
+
+
 4. Import the new integration.
-5. Click Assets -> Import Package -> Custom Package…
+5. Click Assets -&gt; Import Package -&gt; Custom Package…
 6. Open OculusUnityIntegration.unitypackage
 7. Click Import All.
 8. Fix any compiler errors in your scripts. Refer to the API changes described above. Note that the substitution of prefabs does not take place until after all script compile errors have been fixed.
@@ -86,6 +110,70 @@ To upgrade, follow these steps:
 	2. **Adjust the camera's x/z-position.** If you previously used an OVRCameraController without an OVRPlayerController, add 0.09 to the camera z-position relative to its y rotation (i.e. +0.09 to z if it has 0 y-rotation, -0.09 to z if it has 180 y-rotation, +0.09 to x if it has 90 y-rotation, -0.09 to x if it has 270 y-rotation). If you previously used an OVRPlayerController, no action is needed.
 	
 10. Re-start Unity
+
+
 ## Common Script Conversions
 
-OVRCameraController -> OVRCameraRig cameraController.GetCameraPosition() -> cameraRig.rightEyeAnchor.position cameraController.GetCameraOrientation() -> cameraRig.rightEyeAnchor.rotation cameraController.NearClipPlane -> cameraRig.rightEyeCamera.nearClipPlane cameraController.FarClipPlane -> cameraRig.rightEyeCamera.farClipPlane cameraController.GetCamera() -> cameraRig.rightEyeCamera ---------------------------------------------------------------------- if ( cameraController.GetCameraForward( ref cameraForward ) && cameraController.GetCameraPosition( ref cameraPosition ) ) { ... to if (OVRManager.display.isPresent) { // get the camera forward vector and position Vector3 cameraPosition = cameraController.centerEyeAnchor.position; Vector3 cameraForward = cameraController.centerEyeAnchor.forward; ... ---------------------------------------------------------------------- OVRDevice.ResetOrientation(); to OVRManager.display.RecenterPose(); ---------------------------------------------------------------------- cameraController.ReturnToLauncher(); to OVRManager.instance.ReturnToLauncher(); ---------------------------------------------------------------------- OVRDevice.GetBatteryTemperature(); OVRDevice.GetBatteryLevel(); to OVRManager.batteryTemperature OVRManager.batteryLevel ---------------------------------------------------------------------- OrientationOffset Set rotation on the TrackingSpace game object instead. ---------------------------------------------------------------------- FollowOrientation ---------------------------------------------------------------------- FollowOrientation is no longer necessary since OVRCameraRig applies tracking in local space. You are free to script the rig’s pose or make it a child of another Game Object.
+```
+OVRCameraController -&gt; OVRCameraRig
+   cameraController.GetCameraPosition() -&gt; cameraRig.rightEyeAnchor.position
+   cameraController.GetCameraOrientation() -&gt; cameraRig.rightEyeAnchor.rotation
+   cameraController.NearClipPlane -&gt; cameraRig.rightEyeCamera.nearClipPlane
+   cameraController.FarClipPlane -&gt; cameraRig.rightEyeCamera.farClipPlane
+   cameraController.GetCamera() -&gt; cameraRig.rightEyeCamera
+   
+   ----------------------------------------------------------------------
+   if ( cameraController.GetCameraForward( ref cameraForward ) &amp;&amp;
+   cameraController.GetCameraPosition( ref cameraPosition ) ) 
+   {
+   ...
+   
+   to
+   
+   if (OVRManager.display.isPresent)
+   {
+   
+        // get the camera forward vector and position
+        Vector3 cameraPosition = cameraController.centerEyeAnchor.position;
+        Vector3 cameraForward = cameraController.centerEyeAnchor.forward;
+   ...
+  ----------------------------------------------------------------------
+   
+   OVRDevice.ResetOrientation();
+   to
+   OVRManager.display.RecenterPose();
+   
+   ----------------------------------------------------------------------
+   
+   cameraController.ReturnToLauncher();
+   
+   to
+   
+   OVRManager.instance.ReturnToLauncher();
+   
+   ----------------------------------------------------------------------
+   
+   OVRDevice.GetBatteryTemperature();
+   OVRDevice.GetBatteryLevel();
+   
+   to
+   
+   OVRManager.batteryTemperature
+   OVRManager.batteryLevel
+   
+   ----------------------------------------------------------------------
+   
+   OrientationOffset
+   
+   Set rotation on the TrackingSpace game object instead.
+   
+   ----------------------------------------------------------------------
+   
+   FollowOrientation
+   
+   ----------------------------------------------------------------------
+
+   FollowOrientation is no longer necessary since OVRCameraRig applies tracking 
+   in local space. You are free to script the rig’s pose or make it a child of 
+   another Game Object.
+```

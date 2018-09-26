@@ -1,6 +1,7 @@
 ---
 title: Guidelines for VR Performance Optimization
 ---
+
 This section covers the general principles that you should follow in order to effectively optimize your VR applications.
 
 ## Overview
@@ -19,7 +20,7 @@ For many people, it is easy to get a bit pedantic or obsessive about things that
 
 ## Techniques for Hitting Frame Rate
 
-With VR, every frame must be typically drawn twice, once for each eye. That typically means that every draw call is issued twice, every mesh is drawn twice, and every texture is bound twice. There is also a small amount of overhead that is required to apply distortion and TimeWarp to the final output frame (approximately 2 ms per frame). Since the Rift refreshes frames at 90 Hz, it can be challenging to hit frame rate consistently. 
+With VR, every frame must be typically drawn twice, once for each eye. That typically means that every draw call is issued twice, every mesh is drawn twice, and every texture is bound twice. There is also a small amount of overhead that is required to apply distortion and TimeWarp to the final output frame (approximately 2 ms per frame). Since the Rift refreshes frames at 90 Hz, it can be challenging to hit fame rate consistently. 
 
 The following general guidelines can help you to meet frame rate:
 
@@ -34,15 +35,26 @@ The following general guidelines can help you to meet frame rate:
 * Change one thing at a time: resolution, hardware resources, image quality, etc. 
 * Some artifacts are worse than others. Dropped frames that cause discomfort are not worth better quality graphics. 
 * Don’t rely on Asynchronous SpaceWarp (ASW) to hit rendering frame rate. ASW generates intermediate frames based on very recent head pose information, if your application begins to drop frames. It works by distorting the previous frame to match the more recent head pose. While ASW will help smooth out a few dropped frames now and then, applications must meet a consistent 90 frames per second (FPS) on a recommended spec machine and maintain 45 frames per second on a minimum spec machine to qualify for the Oculus Store. 
+
+
 * Due to higher resolution and GPU load, the CPU tends to be less of a bottleneck on the Rift, when compared with mobile VR devices. 
 * Graphical styles with simple shaders and relatively few polygons can often provide just as good of a VR experience as photorealistic graphics, which typically require significantly more processing in order to render each frame. 
 * Use techniques such as Level of Detail (LOD), culling, and batching. 
 * Cut the shading rate by scaling eye buffers, and using Oculus octilinear rendering (which leverages NVIDIA Lens Matched Shading). 
 * Use projector shadows to save bandwidth. 
-* Consider the resolution and number of cascades you use when you render to the cascaded shadow map, because they can cost a lot of bandwidth. In addition, try not to use expensive filtering. However, reducing the resolution and number of cascades can quickly result in lower quality graphics, so also consider using projector shadows.
+* When you are rendering to the cascaded shadow map, which can cost a lot in terms of bandwidth, consider the resolution and the number of cascades you are using. Try not to use expensive filtering. However, this approach pretty quickly ends up producing lower quality graphics. So you might use projector shadows. 
 * Use simplified shader math and baked shading if necessary.
+
+
 ## Common Causes of Performance Problems
 
 Performance problems are most commonly caused by the following issues (in order of severity):
 
-**Performance Problem****Resource Costs**Scenes that require dependent renders, including shadows and reflectionsCPU, GPUBinding of Vertex Buffer Objects (VBOs) in order to issue draw callsCPU, Graphics DriverTransparency, multi-pass shaders, per-pixel lighting, and other effects that fill large numbers of pixelsGPULarge texture loads, blits, and other forms of memcpyGPU, Memory ControllerSkinned animationCPU, GPUUnity garbage collection overheadCPU
+|                                          **Performance Problem**                                          |   **Resource Costs**   |
+|-----------------------------------------------------------------------------------------------------------|------------------------|
+|                 Scenes that require dependent renders, including shadows and reflections                 |        CPU, GPU        |
+|                   Binding of Vertex Buffer Objects (VBOs) in order to issue draw calls                   |  CPU, Graphics Driver  |
+| Transparency, multi-pass shaders, per-pixel lighting, and other effects that fill large numbers of pixels |          GPU          |
+|                           Large texture loads, blits, and other forms of memcpy                           | GPU, Memory Controller |
+|                                             Skinned animation                                             |        CPU, GPU        |
+|                                     Unity garbage collection overhead                                     |          CPU          |

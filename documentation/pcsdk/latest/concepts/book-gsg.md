@@ -1,6 +1,7 @@
 ---
 title: PC SDK Getting Started Guide
 ---
+
 Welcome to the PC SDK Getting Started Guide.
 
 To get started with the SDK:
@@ -10,6 +11,8 @@ To get started with the SDK:
 * Install the SDK. See [Oculus Rift SDK Setup](/documentation/pcsdk/latest/concepts/dg-sdk-setup/#dg_hardware_setup "This section describes how to set up the SDK.").
 * Get started with the demos. See [Getting Started with the Demos](/documentation/pcsdk/latest/concepts/gsg-intro-oneworld/#gsg-intro-oneworld "Now that the Rift is plugged in, the drivers are installed, and the SDK is installed, you are ready to begin using the SDK.").
 * Launch third-party apps directly within the Oculus environment (Skyline and Home). See [Launching Third-Party Applications](/documentation/pcsdk/latest/concepts/gsg-third-party-apps/ "Rift applications may be accessed and launched from your Library in Home or the Oculus application, after you launch them for the first time, even if you acquired them from outside the Oculus Store.").
+
+
 * **[Getting Started with the SDK](/documentation/pcsdk/latest/concepts/gsg-intro/#gsg_intro)**  
 This guide describes how to install the SDK and try the demos. 
 * **[Oculus Rift SDK Setup](/documentation/pcsdk/latest/concepts/dg-sdk-setup/#dg_hardware_setup)**  
@@ -18,3 +21,4 @@ This section describes how to set up the SDK.
 Now that the Rift is plugged in, the drivers are installed, and the SDK is installed, you are ready to begin using the SDK. 
 * **[Launching Third-Party Applications](/documentation/pcsdk/latest/concepts/gsg-third-party-apps/)**  
 Rift applications may be accessed and launched from your Library in Home or the Oculus application, after you launch them for the first time, even if you acquired them from outside the Oculus Store.
+

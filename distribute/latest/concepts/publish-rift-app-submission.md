@@ -1,6 +1,7 @@
 ---
 title: Rift Virtual Reality Check (VRC) Guidelines
 ---
+
 Your Rift app must meet or exceed these guidelines to be considered for distribution on the Oculus Store.
 
 The [VRC Validator](/documentation/pcsdk/latest/concepts/dg-vrcvalidator/) is available and can be used to verify that your app meets the requirements outlined in this section.
@@ -11,8 +12,10 @@ The Rift test plan is the exact criteria we use to test your app during the tech
 
 Download the Rift test plan:
 
-* [.xls](/test-plan/export/rift)
-* [.csv](/test-plan/export/rift/csv)
+* [.xls](https://developer.oculus.com/test-plan/export/rift)
+* [.csv](https://developer.oculus.com/test-plan/export/rift/csv)
+
+
 ## Rift VRCs
 
 * **[Rift Compatibility and SDK VRCs](/distribute/latest/concepts/publish-rift-app-submission-compatibility/)**  
@@ -31,3 +34,4 @@ These requirements ensure your app provides a user experience consistent with Oc
 These requirements ensure your app meets the requirements for positional tracking and selected gameplay modes.
 * **[Rift Asset VRCs](/distribute/latest/concepts/publish-rift-app-submission-asset/)**  
 These requirements ensure your app meets the asset and content guidelines for shipping in the Oculus Store.
+

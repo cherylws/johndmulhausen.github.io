@@ -1,6 +1,7 @@
 ---
 title: Mixing Scenes for Virtual Reality
 ---
+
 As with sound design, mixing a scene for VR is an art as well as a science, and the following recommendations may include caveats.
 
 ## Creative Control
@@ -41,6 +42,8 @@ Not all sounds need to be spatialized. Plenty of sounds are static or head relat
 * Background music
 * Narration
 * Body sounds, such as breathing or heart beats
+
+
 Such sounds should be segregated during authoring as they will probably be stereo, and during mixing so they are not inadvertently pushed through the 3D positional audio pipeline.
 
 ## Performance
@@ -62,6 +65,8 @@ This means:
 * Avoidance of user fatigue
 * Suitable volume levels comfortable for long-term listening
 * Room and environmental effects
+
+
 ## Audible Artifacts
 
 As a 3D sound moves through space, different HRTFs and attenuation functions may become active, potentially introducing discontinuities at audio buffer boundaries. These discontinuities will often manifest as clicks, pops or ripples. They may be masked to some extent by reducing the speed of traveling sounds and by ensuring that your sounds have broad spectral content.
@@ -75,4 +80,3 @@ High system latency becomes an issue as the relative speed between an audio sour
 ## Effects
 
 Effects such as filtering, equalization, distortion, flanging, and so on can be an important part of the virtual reality experience. For example, a low pass filter can emulate the sound of swimming underwater, where high frequencies lose energy much more quickly than in air, or distortion may be used to simulate disorientation.
-

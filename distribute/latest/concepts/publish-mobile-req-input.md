@@ -1,6 +1,7 @@
 ---
 title: Mobile Input VRCs
 ---
+
 These requirements ensure your app provides a user experience consistent with Oculus user interaction standards.
 
 ## Mobile Input VRCs
@@ -19,3 +20,4 @@ The app must use the built-in volume control UI when the user presses the volume
 The app must detect if the 3DOF controller is set to left-handed or right-handed, and it must function equally well when used with either configuration.
 * **[VRC.Mobile.Input.7](/distribute/latest/concepts/vrc-mobile-input-7/)**  
 The app should detect what device it's running on and use the correct controller graphics and terminology.
+

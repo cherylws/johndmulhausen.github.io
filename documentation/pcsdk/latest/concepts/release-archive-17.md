@@ -1,6 +1,7 @@
 ---
 title: Changes For Release 1.7.x
 ---
+
 This section describes changes to the Oculus SDK, the Oculus App, Oculus Home, and the runtime.
 
 ## Overview of Release 1.7.0
@@ -10,6 +11,8 @@ This release supports a new Touch controller button and introduces buffered hapt
 ## New Features for 1.7.0
 
 * The values for IndexTrigger, HandTrigger, and Thumbstick include deadzones. Added IndexTriggerNoDeadzone, HandTriggerNoDeadzone, and ThumbstickNoDeadzone, which return values for the trigger, hand trigger, and thumbstick without deadzones. 
+
+
 ## API Changes for 1.7.0
 
 There are no breaking changes to version 1.7.0. 
@@ -28,7 +31,8 @@ The following are known issues:
 * Bandwidth-intensive USB devices, such as web cams and high-end audio interfaces, might not work when using the Rift. To work around this issue, install the device on another USB host controller or a separate computer.
 * For dual-boot systems using DK2 or CB1 HMDs, the OS selection screen might appear on the HMD instead of the monitor. To work around this, try plugging the HMD into a different port or unplug the HMD while booting.
 * If you are running your application from the Unity Editor and you press the controller's home button to return to Oculus Home, you will be prompted to close the application. If you select OK, Unity might remain in a state where it is running, but will never get focus. To work around this, restart Unity.
-## Migrating from SDK 1.6.x to SDK 1.7.0
+
+
+## Migrating from SDK 1.6.x to SDK 1.7.0 
 
 There are no breaking SDK changes or migration requirements other than installing the new SDK.
-

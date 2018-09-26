@@ -1,6 +1,7 @@
 ---
 title: Release Notes
 ---
+
 This section describes changes for each version release.
 
 * **[1.17 Release Notes](/documentation/mobilesdk/latest/concepts/release-1.17/)**  
@@ -33,3 +34,4 @@ This section describes changes to System Activities.
 This section describes changes to System Driver (previously named VrApi).
 * **[Oculus Remote Monitor Release Notes](/documentation/mobilesdk/latest/concepts/ovrmonitor-release-archive/)**  
 This section describes changes to Oculus Remote Monitor.
+

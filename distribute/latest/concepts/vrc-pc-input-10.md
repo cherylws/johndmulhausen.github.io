@@ -1,7 +1,8 @@
 ---
 title: VRC.PC.Input.10
 ---
-In-application hands and controllers should line up with the userâ€™s real-world counterparts in position and orientation as closely as possible.
+
+In-application hands and controllers should line up with the user’s real-world counterparts in position and orientation as closely as possible.
 
 **Required** - Yes
 
@@ -16,4 +17,3 @@ While using your app, hold your hands in front of your face and raise your heads
 ## Expected Result
 
 In-application hands should match your real-world hands.
-

@@ -1,6 +1,7 @@
 ---
 title: Social Applications and Revenue
 ---
+
 All Oculus headsets can access the Oculus Platform which supports social gaming and applications, as well as revenue generation functions. 
 
 ## Overview
@@ -12,6 +13,8 @@ The [Oculus Platform](/documentation/platform/latest/concepts/book-plat-sdk-intr
 * **Engagement** - Engaged users return more frequently and spend more time in VR. Incentivize users to return, interact, and invest in your application.
 * **Revenue** - Maximize the return on your application by offering the right items and experiences at the right time in VR.
 * **Security** - Protect your application and users with the robust security of the Oculus Platform authentication.
+
+
 It is not possible to access the Oculus Platform features via Blueprints at this time. However, you can add these features to your applications as described in the Unreal sections of the [Oculus Platform](/documentation/platform/latest/concepts/book-plat-sdk-intro/) documentation. Several useful links are provided below.
 
 ## Achievements
@@ -36,5 +39,4 @@ To add achievements to your Unreal applications, see "Integrating Achievements -
 
 Create trophies, badges, awards, and more to challenge your users to reach a goal or objective. Users can see the achievements their friends have earned creating a competition among friends.
 
-To add achievements to your Unreal applications, see "Integrating IAP - Unity & Unreal" and "Integrating IAP- Unreal" in [Achievements](/documentation/platform/latest/concepts/dg-achievements/).
-
+To add achievements to your Unreal applications, see "Integrating IAP - Unity &amp; Unreal" and "Integrating IAP- Unreal" in [Achievements](/documentation/platform/latest/concepts/dg-achievements/).

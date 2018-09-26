@@ -1,6 +1,7 @@
 ---
 title: 3D Visualizer
 ---
+
 This guide describes how to install and use the Oculus Spatializer AAX plugin with the Oculus Rift.
 
 The Oculus 3D Audio Visualizer with HMD interface allows users to optionally visualize and manipulate sound parameters within VR, using either Oculus Touch or Xbox controllers.
@@ -11,9 +12,10 @@ The sound locations of all Visualizer channels are visible with the HMD display.
 
 ## Use
 
-Note: Be sure your Oculus Rift software and firmware are up to date and running properly.To begin visualization of the VST parameters within the HMD, add a plugin to a channel.
+To begin visualization of the VST parameters within the HMD, add a plugin to a channel.
 
-![](/images/documentation-audiosdk-latest-concepts-os-aax-visualizer-0.png)  
+![](/images/documentationaudiosdklatestconceptsos-aax-visualizer-0.png)
+
 Touch controllers are visualized as blue (left controller) and red (right controller) spheres which track with controller movement. The Xbox controller may be visualized as a selection sphere directly in front of the user by pressing the left index trigger - it is stationary, as the controller is not tracked.
 
 Use the index triggers to initiate a selection pointer. Some settings respond to the strength of the pointer (see below for details). The strength value is controlled by the amount the trigger is pressed.
@@ -73,4 +75,3 @@ Click on the joystick button again to turn off room parameter mode, or release t
 ## Automation
 
 Automation is supported for audio position only. In your DAW, enable automation record (varies with each DAW) and move the sounds around using your controller of choice. The sequence will be recorded and can be played back. Automated sequences are stored with the DAW project.
-

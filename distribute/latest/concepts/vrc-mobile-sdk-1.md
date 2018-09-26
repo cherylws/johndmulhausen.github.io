@@ -1,6 +1,7 @@
 ---
 title: VRC.Mobile.SDK.1
 ---
+
 The app meets all graphics and performance guidelines running on supported mobile VR devices.
 
 **Required** - Yes
@@ -16,4 +17,3 @@ Not applicable for this VRC.
 ## Expected Result
 
 Not applicable for this VRC. 
-

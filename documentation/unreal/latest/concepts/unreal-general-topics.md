@@ -1,6 +1,7 @@
 ---
 title: User Experience
 ---
+
 This section describes several Oculus features that help to improve the user experience of your applications.
 
 * **[Splash Screens](/documentation/unreal/latest/concepts/unreal-loading-screens/)**  
@@ -19,3 +20,4 @@ This guide describes how to add and configure mixed reality capture support for 
 All Oculus headsets can access the Oculus Platform which supports social gaming and applications, as well as revenue generation functions. 
 * **[Unreal Samples](/documentation/unreal/latest/concepts/unreal-samples/)**  
 Oculus provides samples which illustrate basic VR concepts in Unreal such as Touch, haptics, and the Boundary Component API for interacting with the Guardian System. 
+

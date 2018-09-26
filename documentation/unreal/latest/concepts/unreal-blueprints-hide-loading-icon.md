@@ -1,6 +1,9 @@
 ---
 title: Hide Loading Icon
 ---
+
+
+
 ## Overview
 
 This blueprint is equivalent to [Hide Loading Splash Screen](/documentation/unreal/latest/concepts/unreal-blueprints-hide-loading-splash-screen/), which is the preferred name. Please see that blueprint for more information.
@@ -16,6 +19,8 @@ For more information about splash screens, see:
 * [Is Loading Icon Enabled](/documentation/unreal/latest/concepts/unreal-blueprints-is-loading-icon-enabled/)
 * [Show Loading Icon](/documentation/unreal/latest/concepts/unreal-blueprints-show-loading-icon/ "Immediately displays a specified defined texture as a splash screen.")
 * [Show Loading Splash Screen](/documentation/unreal/latest/concepts/unreal-blueprints-show-loading-splash-screen/ "Immediately displays the currently defined splash screen.")
+
+
 ## Blueprint
 
-![](/images/documentation-unreal-latest-concepts-unreal-blueprints-hide-loading-icon-0.png)  
+![](/images/documentationunreallatestconceptsunreal-blueprints-hide-loading-icon-0.png)

@@ -1,6 +1,7 @@
 ---
 title: Optimizing Your Application
 ---
+
 To provide the best user experience, your application must meet or exceed the minimum requirements to be considered for publication on the Oculus Store. 
 
 For more information about publishing requirements, see our [Publishing](/distribute/latest/) documentation.
@@ -21,3 +22,4 @@ The Performance Head-Up Display (HUD) enables you or your users to view performa
 Asynchronous TimeWarp (ATW) can mask latency and judder issues that would normally be apparent. To help you identify when your application or experience isn't performing and to test your game or experience before submitting it, Oculus provides performance indicators.
 * **[Compositor Mirror](/documentation/pcsdk/latest/concepts/dg-compositor-mirror/)**  
 The Compositor Mirror tool displays the content that appears within the Rift headset on your computer monitor. It has several display options that are useful for development, troubleshooting, and presentations.
+

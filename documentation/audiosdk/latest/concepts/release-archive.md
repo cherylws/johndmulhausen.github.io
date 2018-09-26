@@ -1,6 +1,7 @@
 ---
 title: Release Notes
 ---
+
 This section describes changes for each version release.
 
 * **[Audio SDK 1.29 Release Notes](/documentation/audiosdk/latest/concepts/release/)**  
@@ -33,3 +34,4 @@ This document provides an overview of new features, improvements, and fixes incl
 This document provides an overview of new features, improvements, and fixes included in the latest version of the Oculus Audio SDK.
 * **[Audio SDK 0.10 Release Notes](/documentation/audiosdk/latest/concepts/release-archive-0.1/)**  
 This document provides an overview of new features, improvements, and fixes included in the latest version of the Oculus Audio SDK.
+

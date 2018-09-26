@@ -229,26 +229,23 @@ leftnav:
           - path: /documentation/pcsdk/latest/concepts/book-gsg/
             title: PC SDK Getting Started Guide
             section:
-            - path: /documentation/pcsdk/latest/concepts/gsg-intro/#gsg_intro
+            - path: /documentation/pcsdk/latest/concepts/gsg-intro/
               title: Getting Started with the SDK
-            - path: /documentation/pcsdk/latest/concepts/dg-sdk-setup/#dg_hardware_setup
+            - path: /documentation/pcsdk/latest/concepts/dg-sdk-setup/
               title: Oculus Rift SDK Setup
-            - path: /documentation/pcsdk/latest/concepts/gsg-intro-oneworld/#gsg-intro-oneworld
-              title: Getting Started with the Demos
+            - path: /documentation/pcsdk/latest/concepts/gsg-intro-oneworld/
             - path: /documentation/pcsdk/latest/concepts/gsg-third-party-apps/
               title: Launching Third-Party Applications
           - path: /documentation/pcsdk/latest/concepts/book-dg/
             title: PC SDK Developer Guide
             section:
-            - path: /documentation/pcsdk/latest/concepts/dg-libovr/#dg_libovr
+            - path: /documentation/pcsdk/latest/concepts/dg-libovr/
               title: LibOVR Integration
-            - path: /documentation/pcsdk/latest/concepts/dg-sensor/#dg_sensor
+            - path: /documentation/pcsdk/latest/concepts/dg-sensor/
               title: Initialization and Sensor Enumeration
-            - path: /documentation/pcsdk/latest/concepts/dg-render/#dg_render
+            - path: /documentation/pcsdk/latest/concepts/dg-render/
               title: Rendering to the Oculus Rift
-            - path: /documentation/pcsdk/latest/concepts/dg-render-advanced/#dg_render_advanced
-              title: Advanced Rendering Configuration
-            - path: /documentation/pcsdk/latest/concepts/dg-dash/
+            - path: /documentation/pcsdk/latest/concepts/dg-render-advanced/
               title: Oculus Dash
             - path: /documentation/pcsdk/latest/concepts/dg-vr-focus/
               title: VR Focus Management
@@ -326,9 +323,9 @@ leftnav:
         - path: /documentation/mobilesdk/latest/concepts/book-intro/
           title: Mobile SDK Getting Started Guide
           section:
-          - path: /documentation/mobilesdk/latest/concepts/mobile-game-engine/#mobile-game-engine
+          - path: /documentation/mobilesdk/latest/concepts/mobile-game-engine/
             title: Mobile Development with Unity and Unreal
-          - path: /documentation/mobilesdk/latest/concepts/mobile-reqs/#mobile-reqs
+          - path: /documentation/mobilesdk/latest/concepts/mobile-reqs/
             title: System and Hardware Requirements
           - path: /documentation/mobilesdk/latest/concepts/mobile-device-setup/
             title: Device Setup - Gear VR
@@ -339,7 +336,7 @@ leftnav:
           - path: /documentation/mobilesdk/latest/concepts/book-mobile-basics/
             title: Mobile Development Basics
             section:
-            - path: /documentation/mobilesdk/latest/concepts/mobile-submission-sig-file/#mobile-submission-sig-file
+            - path: /documentation/mobilesdk/latest/concepts/mobile-submission-sig-file/
               title: Oculus Signature File (osig) and Application Signing
             - path: /documentation/mobilesdk/latest/concepts/mobile-studio-basics/
               title: Android Studio Basics
@@ -348,24 +345,24 @@ leftnav:
           - path: /documentation/mobilesdk/latest/concepts/book-native/
             title: Native Development Overview
             section:
-            - path: /documentation/mobilesdk/latest/concepts/mobile-native-source-overview/#mobile-native-source-overview
+            - path: /documentation/mobilesdk/latest/concepts/mobile-native-source-overview/
               title: Native Source Code
             - path: /documentation/mobilesdk/latest/concepts/mobile-native-samples/
               title: Native Samples
             - path: /documentation/mobilesdk/latest/concepts/mobile-native-manifest/
               title: Android Manifest Settings
-            - path: /documentation/mobilesdk/latest/concepts/mobile-umenu-intro/#mobile-umenu-intro
+            - path: /documentation/mobilesdk/latest/concepts/mobile-umenu-intro/
               title: Reserved User Interactions
           - path: /documentation/mobilesdk/latest/concepts/book-engine-integration/
             title: Native Engine Integration
             section:
-            - path: /documentation/mobilesdk/latest/concepts/mobile-vrapi/#mobile-vrapi
+            - path: /documentation/mobilesdk/latest/concepts/mobile-vrapi/
               title: VrApi
             - path: /documentation/mobilesdk/latest/concepts/mobile-vrapi-input-api/
               title: VrApi Input API
-            - path: /documentation/mobilesdk/latest/concepts/mobile-timewarp-overview/#mobile-timewarp-overview
+            - path: /documentation/mobilesdk/latest/concepts/mobile-timewarp-overview/
               title: Asynchronous TimeWarp (ATW)
-            - path: /documentation/mobilesdk/latest/concepts/mobile-power-overview/#mobile-power-overview
+            - path: /documentation/mobilesdk/latest/concepts/mobile-power-overview/
               title: Power Management
             - path: /documentation/mobilesdk/latest/concepts/mobile-advanced-rendering/
               title: Advanced Rendering
@@ -379,7 +376,7 @@ leftnav:
           - path: /documentation/mobilesdk/latest/concepts/book-native-appframework/
             title: Native Application Framework
             section:
-            - path: /documentation/mobilesdk/latest/concepts/mobile-new-apps-intro/#mobile-new-apps-intro
+            - path: /documentation/mobilesdk/latest/concepts/mobile-new-apps-intro/
               title: Creating New Apps with the Framework Template
             - path: /documentation/mobilesdk/latest/concepts/mobile-native-appframework-ui-input/
               title: UI and Input Handling
@@ -392,7 +389,7 @@ leftnav:
         - path: /documentation/mobilesdk/latest/concepts/book-assets/
           title: Media and Assets
           section:
-          - path: /documentation/mobilesdk/latest/concepts/mobile-media-overview/#mobile-media-overview
+          - path: /documentation/mobilesdk/latest/concepts/mobile-media-overview/
             title: Mobile VR Media Overview
           - path: /documentation/mobilesdk/latest/concepts/mobile-vr-mediaapps/
             title: Native VR Media Applications
@@ -406,16 +403,16 @@ leftnav:
                 title: Android System Properties
               - path: /documentation/mobilesdk/latest/concepts/mobile-testing-capture/
                 title: Screenshot and Video Capture
-            - path: /documentation/mobilesdk/latest/concepts/mobile-remote-monitor/#mobile-remote-monitor
+            - path: /documentation/mobilesdk/latest/concepts/mobile-remote-monitor/
               title: Oculus Remote Monitor
             - path: /documentation/mobilesdk/latest/concepts/mobile-ovrmetricstool/
               title: OVR Metrics Tool
             - path: /documentation/mobilesdk/latest/concepts/book-anddebug/
               title: Android Debugging
               section:
-              - path: /documentation/mobilesdk/latest/concepts/mobile-adb/#mobile-android-debug-intro
+              - path: /documentation/mobilesdk/latest/concepts/mobile-adb/
                 title: Adb
-              - path: /documentation/mobilesdk/latest/concepts/mobile-logcat/#mobile-logcat
+              - path: /documentation/mobilesdk/latest/concepts/mobile-logcat/
                 title: Logcat
               - path: /documentation/mobilesdk/latest/concepts/book-perfanalysis/
                 title: Application Performance Analysis
@@ -435,7 +432,7 @@ leftnav:
                   title: Native Debugging with Android Studio
                 - path: /documentation/mobilesdk/latest/concepts/mobile-studio-ndk-gdb/
                   title: Native Debugging with ndk-gdb
-        - path: /documentation/mobilesdk/latest/concepts/mobile-native-migration/#mobile-native-migration
+        - path: /documentation/mobilesdk/latest/concepts/mobile-native-migration/
           title: Mobile Native SDK Migration Guide
         - path: /documentation/mobilesdk/latest/concepts/release-archive/
           title: Release Notes
@@ -541,7 +538,7 @@ leftnav:
             title: Importing the Oculus Utilities Package
           - path: /documentation/unity/latest/concepts/unity-build-pc/
             title: Building Rift Applications
-          - path: /documentation/unity/latest/concepts/unity-build-android/#unity-build-android
+          - path: /documentation/unity/latest/concepts/unity-build-android/
             title: Building Mobile Applications
           - path: /documentation/unity/latest/concepts/unity-tutorial/
             title: "Tutorial: Build Your First VR App"
@@ -552,14 +549,14 @@ leftnav:
         - path: /documentation/unity/latest/concepts/book-unity-dg/
           title: Unity Developer Guide
           section:
-          - path: /documentation/unity/latest/concepts/unity-asymmetric-fov-faq/#unity-asymmetric-fov-faq
+          - path: /documentation/unity/latest/concepts/unity-asymmetric-fov-faq/
             title: Asymmetric FOV FAQ
-          - path: /documentation/unity/latest/concepts/unity-utilities-overview/#unity-utilities-overview
+          - path: /documentation/unity/latest/concepts/unity-utilities-overview/
             title: Oculus Utilities for Unity
           - path: /documentation/unity/latest/concepts/unity-input/
             title: Input
             section:
-            - path: /documentation/unity/latest/concepts/unity-ovrinput/#unity-ovrinput
+            - path: /documentation/unity/latest/concepts/unity-ovrinput/
               title: OVRInput
             - path: /documentation/unity/latest/concepts/unity-ovrboundary/
               title: OVRBoundary Guardian System API
@@ -576,7 +573,7 @@ leftnav:
                 title: Single Pass Stereo Rendering (Preview, Mobile Only)
               - path: /documentation/unity/latest/concepts/unity-single-pass-known-issues/
                 title: Single Pass Known Issues
-          - path: /documentation/unity/latest/concepts/unity-mobile-performance-intro/#unity-mobile-performance-intro
+          - path: /documentation/unity/latest/concepts/unity-mobile-performance-intro/
             title: Mobile Development
           - path: /documentation/unity/latest/concepts/unity-audio/
             title: Unity Audio
@@ -590,7 +587,7 @@ leftnav:
             title: Cubemap Screenshots
           - path: /documentation/unity/latest/concepts/unity-best-practices-intro/
             title: Best Practices for Rift and Mobile
-          - path: /documentation/unity/latest/concepts/unity-perf/#unity-perf
+          - path: /documentation/unity/latest/concepts/unity-perf/
             title: Testing and Performance Analysis
           - path: /documentation/unity/latest/concepts/unity-troubleshooting/
             title: Troubleshooting and Known Issues
@@ -710,25 +707,25 @@ leftnav:
                 title: "Preparing for Development: Rift"
               - path: /documentation/unity/latest/concepts/unity-integration-mobileprep/
                 title: "Preparing for Development: Mobile"
-            - path: /documentation/unity/latest/concepts/unity-integration-gsg/#unity-integration-gsg
+            - path: /documentation/unity/latest/concepts/unity-integration-gsg/
               title: Getting Started
-            - path: /documentation/unity/latest/concepts/unity-integration-overview/#unity-integration-integration
+            - path: /documentation/unity/latest/concepts/unity-integration-overview/
               title: A Detailed Look at the Unity Integration
-            - path: /documentation/unity/latest/concepts/unity-integration-ovrinput/#unity-integration-ovrinput
+            - path: /documentation/unity/latest/concepts/unity-integration-ovrinput/
               title: OVRInput
-            - path: /documentation/unity/latest/concepts/unity-integration-build/#unity-integration-build
+            - path: /documentation/unity/latest/concepts/unity-integration-build/
               title: Configuring for Build
-            - path: /documentation/unity/latest/concepts/unity-integration-build-android/#unity-integration-build-android
+            - path: /documentation/unity/latest/concepts/unity-integration-build-android/
               title: "Mobile Build Target: Android"
-            - path: /documentation/unity/latest/concepts/unity-integration-sample/#unity-integration-sample
+            - path: /documentation/unity/latest/concepts/unity-integration-sample/
               title: Sample Unity Application Demos
             - path: /documentation/unity/latest/concepts/unity-integration-troubleshooting/
               title: Troubleshooting and Known Issues
-            - path: /documentation/unity/latest/concepts/unity-integration-perf/#unity-integration-perf
+            - path: /documentation/unity/latest/concepts/unity-integration-perf/
               title: Debugging and Performance Analysis in Unity
-            - path: /documentation/unity/latest/concepts/unity-integration-mobile-performance-intro/#unity-integration-mobile-performance-intro
+            - path: /documentation/unity/latest/concepts/unity-integration-mobile-performance-intro/
               title: "Best Practices: Mobile"
-            - path: /documentation/unity/latest/concepts/unity-integration-tutorial-rollaball-intro/#unity-integration-tutorial-rollaball-intro
+            - path: /documentation/unity/latest/concepts/unity-integration-tutorial-rollaball-intro/
               title: "Tutorial: Build a Simple VR Unity Game"
             - path: /documentation/unity/latest/concepts/unity-integration-faq/
               title: Getting Started FAQ
@@ -949,9 +946,9 @@ leftnav:
           section:
           - path: /documentation/audiosdk/latest/concepts/audio-intro-overview/
             title: Overview
-          - path: /documentation/audiosdk/latest/concepts/audio-intro-localization/#audio-intro-localization
+          - path: /documentation/audiosdk/latest/concepts/audio-intro-localization/
             title: Localization and the Human Auditory System
-          - path: /documentation/audiosdk/latest/concepts/audio-intro-spatialization/#audio-intro-spatialization
+          - path: /documentation/audiosdk/latest/concepts/audio-intro-spatialization/
             title: 3D Audio Spatialization
           - path: /documentation/audiosdk/latest/concepts/audio-intro-devices/
             title: Listening Devices
@@ -970,7 +967,7 @@ leftnav:
             title: SDK Contents and Features
           - path: /documentation/audiosdk/latest/concepts/audiosdk-reqs/
             title: Requirements
-          - path: /documentation/audiosdk/latest/concepts/audiosdk-features/#audiosdk-features
+          - path: /documentation/audiosdk/latest/concepts/audiosdk-features/
             title: Features
           - path: /documentation/audiosdk/latest/concepts/audiosdk-sound-transport/
             title: Sound Transport Time
@@ -1014,7 +1011,7 @@ leftnav:
             title: Installing to the Wwise Authoring Tool
           - path: /documentation/audiosdk/latest/concepts/osp-wwise-unity-install/
             title: Adding Target Platform Plugins to Wwise Unity Projects
-          - path: /documentation/audiosdk/latest/concepts/osp-wwise-usage/#osp-wwise-usage
+          - path: /documentation/audiosdk/latest/concepts/osp-wwise-usage/
             title: How to Use the Oculus Spatializer in Wwise
           - path: /documentation/audiosdk/latest/concepts/osp-wwise-integration/
             title: Integrating the Oculus Spatializer
@@ -1081,7 +1078,7 @@ leftnav:
         - path: /documentation/audiosdk/latest/concepts/book-audio-profiler/
           title: Oculus Audio SDK Profiler
           section:
-          - path: /documentation/audiosdk/latest/concepts/audio-profiler-overview/#audio-profiler-overview
+          - path: /documentation/audiosdk/latest/concepts/audio-profiler-overview/
             title: Overview
           - path: /documentation/audiosdk/latest/concepts/audio-profiler-setup/
             title: Setup
@@ -1090,7 +1087,7 @@ leftnav:
         - path: /documentation/audiosdk/latest/concepts/book-audio-loudness-meter/
           title: Oculus Audio Loudness Meter
           section:
-          - path: /documentation/audiosdk/latest/concepts/audio-loudness-meter-overview/#audio-loudness-meter-overview
+          - path: /documentation/audiosdk/latest/concepts/audio-loudness-meter-overview/
             title: Overview
           - path: /documentation/audiosdk/latest/concepts/audio-loudness-meter-setup/
             title: Setup
@@ -1223,11 +1220,11 @@ leftnav:
           - path: /documentation/avatarsdk/latest/concepts/avatars-dev-intro/
             title: Avatar Developer Guide
             section:
-            - path: /documentation/avatarsdk/latest/concepts/avatars-gsg-unity/#avatars-gsg-unity
+            - path: /documentation/avatarsdk/latest/concepts/avatars-gsg-unity/
               title: Unity Developer Guide - Rift
-            - path: /documentation/avatarsdk/latest/concepts/avatars-gsg-unity-mobile/#avatars-gsg-unity-gearvr
+            - path: /documentation/avatarsdk/latest/concepts/avatars-gsg-unity-mobile/
               title: Unity Developer Guide - Mobile
-            - path: /documentation/avatarsdk/latest/concepts/avatars-gsg-unreal/#avatars-gsg-unreal
+            - path: /documentation/avatarsdk/latest/concepts/avatars-gsg-unreal/
               title: Unreal Getting Started - Rift
         - path: /documentation/avatarsdk/latest/concepts/avatars-ovravatar-reference/
           title: Avatar SDK C/C++ Developer Reference
@@ -1243,7 +1240,7 @@ leftnav:
               title: Unity (Rift) Getting Started
             - path: /documentation/avatarsdk/latest/concepts/legacy-avatars-gsg-unity-gearvr/
               title: Unity (Gear VR) Getting Started
-            - path: /documentation/avatarsdk/latest/concepts/legacy-avatars-gsg-native-intro/#avatars-gsg-native
+            - path: /documentation/avatarsdk/latest/concepts/legacy-avatars-gsg-native-intro/
               title: Native C/C++ (Rift) Getting Started
             - path: /documentation/avatarsdk/latest/concepts/legacy-avatars-gsg-native-gearvr-intro/
               title: Native C/C++ (Gear VR) Getting Started
@@ -1252,11 +1249,11 @@ leftnav:
           - path: /documentation/avatarsdk/latest/concepts/legacy-avatars-sdk-intro/
             title: Avatar Developer Guide
             section:
-            - path: /documentation/avatarsdk/latest/concepts/legacy-avatars-sdk-unity/#avatars-sdk-unity
+            - path: /documentation/avatarsdk/latest/concepts/legacy-avatars-sdk-unity/
               title: Using Unity Features
             - path: /documentation/avatarsdk/latest/concepts/legacy-avatars-sdk-unity-example-social/
               title: Unity Social Starter Example
-            - path: /documentation/avatarsdk/latest/concepts/legacy-avatars-sdk-native-intro/#avatars-sdk-native-intro
+            - path: /documentation/avatarsdk/latest/concepts/legacy-avatars-sdk-native-intro/
               title: Adding C++ Avatar Support
       - path: /documentation/vrweb/latest
         title: VR Web
@@ -1280,7 +1277,7 @@ leftnav:
             title: Using the controller
           - path: /documentation/vrweb/latest/concepts/carmel-navigation/
             title: Browser Navigation in VR
-          - path: /documentation/vrweb/latest/concepts/carmel-360-photos/#carmel-360-photos
+          - path: /documentation/vrweb/latest/concepts/carmel-360-photos/
             title: Displaying 360 Photos
         - path: /documentation/vrweb/latest/concepts/reactvr-intro/
           title: React 360
@@ -1348,7 +1345,7 @@ leftnav:
           title: Copying Builds Between Release Channels
         - path: /distribute/latest/tasks/publish-release-channels-add-custom/
           title: Adding Custom Release Channels
-      - path: /distribute/latest/concepts/publish-content-updating/#publish-content-updating
+      - path: /distribute/latest/concepts/publish-content-updating/
         title: Updating Published Apps
     - path: /distribute/latest/concepts/publish-prep-app/
       title: Store Review Policies

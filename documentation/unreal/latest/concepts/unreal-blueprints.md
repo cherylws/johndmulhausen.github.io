@@ -1,9 +1,10 @@
 ---
 title: Blueprints Reference
 ---
+
 This section serves as a reference guide for the Blueprints in the Online Subsystem Oculus library. 
 
-To access these Blueprints, you must enable the **Online Subsystem Oculus** in **Edit > Plugin > Online Platform.**
+To access these Blueprints, you must enable the **Online Subsystem Oculus** in **Edit &gt; Plugin &gt; Online Platform.**
 
 **User and Account Blueprints**
 
@@ -11,6 +12,8 @@ To access these Blueprints, you must enable the **Online Subsystem Oculus** in *
 Returns the current device's name.
 * **[Get User Profile](/documentation/unreal/latest/concepts/unreal-blueprints-get-user-profile/)**  
  Returns current user profile.
+
+
 **Splash Screen Blueprints**
 
 * **[Add Loading Splash Screen](/documentation/unreal/latest/concepts/unreal-blueprints-add-loading-splash-screen/)**  
@@ -19,6 +22,8 @@ Adds a splash screen with parameters to the application.
 Removes all splash screens from the application. 
 * **[Enable Auto-Loading Splash Screen](/documentation/unreal/latest/concepts/unreal-blueprints-enable-auto-loading-splash-screen/)**  
 Enables/disables the splash screen to be automatically shown when loading a new level. 
+
+
 **Position and Orientation Blueprints**
 
 * **[Enable Orientation Tracking](/documentation/unreal/latest/concepts/unreal-blueprints-enable-orientation-tracking/)**  
@@ -37,6 +42,8 @@ Determines whether or not a device (such as a controller) is being tracked by th
 Specifies the current rotation and position of the headset, with respect to the base rotation and position, expressed in apparent meters.
 * **[Set Reorient HMD On Controller Recenter](/documentation/unreal/latest/concepts/unreal-blueprints-set-reorient-hmd-on-controller-recenter/)**  
 Sets the HMD recenter behavior.
+
+
 **Guardian Blueprints**
 
 * **[Get Guardian Dimensions](/documentation/unreal/latest/concepts/unreal-blueprints-get-guardian-dimensions/)**  
@@ -53,16 +60,22 @@ Returns the intersection result between the Oculus Guardian boundary and a speci
 Returns a boolean result that indicates whether or not the Outer Boundary Guardian is being displayed.
 * **[Set Guardian Visibility](/documentation/unreal/latest/concepts/unreal-blueprints-set-guardian-visibility/)**  
 Specifies whether or not the runtime should render the Guardian.
+
+
 **Dash Blueprints**
 
 * **[Has Input Focus](/documentation/unreal/latest/concepts/unreal-blueprints-has-input-focus/)**  
 Determines whether or not the application has input focus.
 * **[Has System Overlay Present - DEPRECATED](/documentation/unreal/latest/concepts/unreal-blueprints-has-system-overlay-present/)**  
 
+
+
 **Mixed Reality Blueprints**
 
 * **[Get All Tracked Cameras](/documentation/unreal/latest/concepts/unreal-blueprints-get-all-tracked-camera/)**  
 Retrieves an array of all calibrated and tracked cameras, which were calibrated through the camera tool.
+
+
 **Performance Optimization Blueprints**
 
 * **[Get Available Display Frequencies](/documentation/unreal/latest/concepts/unreal-blueprints-get-available-display-frequencies/)**  
@@ -81,3 +94,4 @@ Sets the clock rates for the CPU and GPU on mobile devices.
 Sets the display frequency (frame rate) for Oculus Go to either 60 Hz or 72 Hz.
 * **[Set Tiled Multires Level](/documentation/unreal/latest/concepts/unreal-blueprints-set-tiled-multires-level/)**  
 Sets the multi-resolution level for fixed foveated rendering.
+

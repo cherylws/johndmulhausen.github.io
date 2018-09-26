@@ -1,6 +1,7 @@
 ---
 title: Audio SDK Developer Reference
 ---
+
 The Oculus Audio SDK Developer Reference contains the detailed information about the data structures and files included with the SDK.
 
 For the latest reference, see [Oculus Audio SDK Reference Manual 1.29](/doc/1.29-audio/).
@@ -26,4 +27,3 @@ For the Audio SDK 1.16 reference, see [Oculus Audio SDK Reference Manual 1.16](/
 For the Audio SDK 1.1 reference, see [Oculus Audio SDK Reference Manual 1.1](/doc/1.1-audio/).
 
 For the Audio SDK 1.0 reference, see [Oculus Audio SDK Reference Manual 1.0](/doc/1.0-audio/).
-

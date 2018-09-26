@@ -1,16 +1,20 @@
 ---
 title: Get Device Name
 ---
+
 Returns the current device's name.
 
 ## Overview
 
-Returns the human-readable name for the currently connected device, such as "Oculus Go", "Galaxy Note 8", or "Rift ES08".## Blueprint
+## Blueprint
 
-![](/images/documentation-unreal-latest-concepts-unreal-blueprints-get-device-name-0.png)  
+![](/images/documentationunreallatestconceptsunreal-blueprints-get-device-name-0.png)
+
 ## Arguments
 
 * No arguments.
+
+
 ## Output
 
 The following list is a snapshot of the device names. This list is expanded each time new devices are supported, and may not contain all of the current device names:
@@ -42,3 +46,4 @@ The following list is a snapshot of the device names. This list is expanded each
 * Oculus Rift MARV2
 * None
 * Unknown
+

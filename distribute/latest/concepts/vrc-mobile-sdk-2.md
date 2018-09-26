@@ -1,6 +1,7 @@
 ---
 title: VRC.Mobile.SDK.2
 ---
+
 You must use Oculus Mobile SDK version 1.0 or later, but version 1.5 or greater is recommended.
 
 **Required** - Yes
@@ -16,4 +17,3 @@ SDK version is reported in the Android log on app launch. Additionally, this is 
 ## Expected Result
 
 Mobile SDK version is 1.0 or later.
-

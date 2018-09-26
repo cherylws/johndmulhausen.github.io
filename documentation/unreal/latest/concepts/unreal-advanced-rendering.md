@@ -1,6 +1,7 @@
 ---
 title: Rendering
 ---
+
 This section describes important rendering options and tools that can significantly improve your application.
 
 ## Overview
@@ -10,6 +11,8 @@ In order to create the best VR experience for your users, your application shoul
 * Oculus Rift: 90 Hz
 * Samsung Gear VR: 60 Hz
 * Oculus Go: Configurable on a frame-by-frame basis to 60 Hz or 72 Hz
+
+
 If your application does not hit frame rate, it may exhibit judder, flickering black areas on the peripheries, or other performance-related problems. Reducing the graphical richness of the experience may cut down on the render time, but can result in a less realistic or less immersive user experience. 
 
 This section covers several techniques that can be used on Oculus headsets to improve the quality of the rendered images, while reducing render time. Most of these techniques are specific to one or two of the Oculus headsets.
@@ -30,3 +33,4 @@ Unreal Engine provides a forward shading renderer optimized for VR. We recommend
 Adaptive Pixel Density allows applications to scale down the application viewport as GPU resources exceed 85% utilization, and to scale up as they become more available. This feature is currently available for Rift development only. 
 * **[All Headsets: VR Compositor Layers](/documentation/unreal/latest/concepts/unreal-overlay/)**  
 With Unreal, you may add transparent or opaque quadrilateral, cubemap, or cylindrical overlays to your level as compositor layers.
+

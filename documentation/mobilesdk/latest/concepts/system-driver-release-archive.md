@@ -1,9 +1,10 @@
 ---
 title: System Driver Release Notes
 ---
+
 This section describes changes to System Driver (previously named VrApi).
 
-* **[1.18.x Release Notes](/documentation/mobilesdk/latest/concepts/system-driver-release-1.18/)**  
+
 
 * **[1.17.x Release Notes](/documentation/mobilesdk/latest/concepts/system-driver-release-1.17/)**  
 
@@ -32,4 +33,5 @@ This section describes changes to System Driver (previously named VrApi).
 * **[1.5.x Release Notes](/documentation/mobilesdk/latest/concepts/system-driver-release-1.5/)**  
 
 * **[1.0.x Release Notes](/documentation/mobilesdk/latest/concepts/system-driver-release/)**  
+
 

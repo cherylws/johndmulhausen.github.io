@@ -1,9 +1,12 @@
 ---
 title: Is Loading Icon Enabled
 ---
+
+
+
 ## Overview
 
-This blueprint is equivalent to [Is Auto-Loading Splash Screen Enabled](/documentation/unreal/latest/concepts/unreal-blueprints-is-auto-loading-splash-screen-enabled/ "Determines whether or not splash screens are automatically displayed when the user transitions to a new level."), which is the preferred name. Please see that blueprint for more information.
+This blueprint is equivalent to [Is Auto-Loading Splash Screen Enabled](/documentation/unreal/latest/concepts/unreal-blueprints-is-auto-loading-splash-screen-enabled/), which is the preferred name. Please see that blueprint for more information.
 
 For more information about splash screens, see:
 
@@ -16,6 +19,8 @@ For more information about splash screens, see:
 * [Is Loading Icon Enabled](/documentation/unreal/latest/concepts/unreal-blueprints-is-loading-icon-enabled/)
 * [Show Loading Icon](/documentation/unreal/latest/concepts/unreal-blueprints-show-loading-icon/ "Immediately displays a specified defined texture as a splash screen.")
 * [Show Loading Splash Screen](/documentation/unreal/latest/concepts/unreal-blueprints-show-loading-splash-screen/ "Immediately displays the currently defined splash screen.")
+
+
 ## Blueprint
 
-![](/images/documentation-unreal-latest-concepts-unreal-blueprints-is-loading-icon-enabled-0.png)  
+![](/images/documentationunreallatestconceptsunreal-blueprints-is-loading-icon-enabled-0.png)

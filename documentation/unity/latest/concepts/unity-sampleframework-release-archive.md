@@ -1,6 +1,7 @@
 ---
 title: Unity Sample Framework Release Notes
 ---
+
 This section describes changes for each version release of the Unity Sample Framework Unity Project.
 
 * **[1.25 Unity Sample Framework](/documentation/unity/latest/concepts/unity-sampleframework-release-1-25/)**  
@@ -30,4 +31,5 @@ This section describes changes for each version release of the Unity Sample Fram
 * **[1.5 Unity Sample Framework](/documentation/unity/latest/concepts/unity-sampleframework-release-1-5/)**  
 
 * **[1.3 Unity Sample Framework](/documentation/unity/latest/concepts/unity-sampleframework-release-1-3/)**  
+
 

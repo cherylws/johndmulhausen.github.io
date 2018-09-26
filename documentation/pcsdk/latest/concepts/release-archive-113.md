@@ -1,6 +1,9 @@
 ---
 title: Changes in Version 1.13.x
 ---
+
+
+
 ## Overview of Release 1.13.x
 
 This release introduces the compositor mirror development tool.
@@ -10,6 +13,8 @@ This release introduces the compositor mirror development tool.
 * Compositor mirror, an experimental tool for viewing exactly what appears in the headset. For more information, see [Compositor Mirror](/documentation/pcsdk/latest/concepts/dg-compositor-mirror/ "The Compositor Mirror tool displays the content that appears within the Rift headset on your computer monitor. It has several display options that are useful for development, troubleshooting, and presentations.").
 * Performance improvements to Asynchronous SpaceWarp (ASW).
 * Various performance improvements and minor updates.
+
+
 ## API Changes for 1.13.x
 
 There are no breaking changes to version 1.13.x. 
@@ -29,3 +34,4 @@ The following are known issues:
 * Bandwidth-intensive USB devices, such as web cams and high-end audio interfaces, might not work when using the Rift. To work around this issue, install the device on another USB host controller or a separate computer.
 * For dual-boot systems using DK2 or CB1 HMDs, the OS selection screen might appear on the HMD instead of the monitor. To work around this, try plugging the HMD into a different port or unplug the HMD while booting.
 * If you are running your application from the Unity Editor and you press the controller's home button to return to Oculus Home, you will be prompted to close the application. If you select OK, Unity might remain in a state where it is running, but will never get focus. To work around this, restart Unity.
+

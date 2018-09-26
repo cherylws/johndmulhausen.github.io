@@ -1,9 +1,10 @@
 ---
 title: Developer Guide
 ---
+
 Welcome to the Platform SDK Developer Guide. This guide describes how to integrate and use the features of the Platform SDK.
 
-Before using the features in this Developer Guide, please review the on-boarding and setup in the [Getting Started Guide](/documentation/platform/latest/concepts/book-pgsg/ "The Getting Started Guide will review the onboarding and basic integration process for the Platform SDK, how to configure your development environment, and how to implement the required components of the SDK."). That guide will review the process to get started with the SDK and introduce you to other Platform SDK concepts. 
+Before using the features in this Developer Guide, please review the on-boarding and setup in the [Getting Started Guide](/documentation/platform/latest/concepts/book-pgsg/). That guide will review the process to get started with the SDK and introduce you to other Platform SDK concepts. 
 
 The Oculus Platform features work together to create engaging VR experiences. For example, using Voice Chat, Peer-to-Peer Networking, and Rooms allows you to place users together in a virtual experience where they can interact, using avatars, in real-time. Or you can offer items for sale in VR with in-app purchases that drive additional revenue for you and additional experiences for your players. 
 
@@ -49,3 +50,4 @@ Users, friends, and relationships manages information about each user's unique p
 User Verification validates the identity of each user accessing your application.
 * **[Voice Chat (VoIP)](/documentation/platform/latest/concepts/dg-cc-voip/)**  
 Use the Platform VoIP service to add voice chat to your app. 
+

@@ -1,6 +1,7 @@
 ---
 title: VRC.Mobile.Android.1
 ---
+
 The application manifest must conform to the release manifest requirements.
 
 **Required** - Yes
@@ -18,4 +19,3 @@ This is also checked immediately after you upload each build, and the upload wil
 ## Expected Result
 
 The manifest meets all requirements.
-

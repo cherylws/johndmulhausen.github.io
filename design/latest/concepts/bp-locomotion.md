@@ -1,6 +1,7 @@
 ---
 title: Locomotion
 ---
+
 This section offers tips about how to move the user through the virtual world.
 
 Implementing locomotion in VR is one of the most difficult things to do, and one of the most important to get right. Poorly designed or improperly implemented locomotion can easily make even seasoned VR users uncomfortable or sick.
@@ -61,5 +62,4 @@ A variation of tunnel vision is to introduce a static world when the user is mov
 
 **Move the environment**, not the user. This one is tough to effectively implement, but done properly users can comfortably “grab” and pull the scene towards them. Here we are creating the illusion that the user isn’t moving, instead the world is moving under the user. The user is pulling or manipulating the world underneath them as if it were mobile.
 
-There are numerous other experimental locomotion methods that you may wish to consider. We recommend that you see the OculusRoomTiny\_Advanced sample app that ships with the [PC SDK](/documentation/pcsdk/latest/concepts/pcsdk-intro/) for demos of some of the experimental methods described. 
-
+There are numerous other experimental locomotion methods that you may wish to consider. We recommend that you see the OculusRoomTiny_Advanced sample app that ships with the [PC SDK](/documentation/pcsdk/latest/concepts/pcsdk-intro/) for demos of some of the experimental methods described. 

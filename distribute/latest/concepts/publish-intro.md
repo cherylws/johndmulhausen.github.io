@@ -1,6 +1,7 @@
 ---
 title: App Distribution
 ---
+
 This guide answers common questions about publishing and distributing apps and describes the operation of the Oculus Store.
 
 The information presented in this guide applies to both Rift and Gear VR unless otherwise noted. There are differences between them, but our approach to the Oculus Store and platform is the same for both.
@@ -19,3 +20,4 @@ This guide will review the process to upload and submit an app to the Oculus Das
 Release channels let you distribute early versions of your builds to limited audiences for testing or other purposes. You can invite different groups of people to different channels. When you are confident your app is ready for release, you can copy your build to the Store channel and then submit it for Oculus Store review. 
 * **[Updating Published Apps](/distribute/latest/concepts/publish-content-updating/#publish-content-updating)**  
 You can upload new versions of your app and update its product details at any time after your app is published to the Oculus Store.
+

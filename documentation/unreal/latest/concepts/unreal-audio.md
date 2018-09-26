@@ -1,6 +1,7 @@
 ---
 title: Audio
 ---
+
 Audio is critical for creating a persuasive VR experience and can contribute strongly to the user's sense of immersion.
 
 ## Audio Basics (Oculus Rift)
@@ -20,4 +21,3 @@ FMOD supports Oculus Go, Oculus Rift, and Gear VR development. Wwise supports Oc
 We recommend using FMOD or Wwise with the appropriate OSP, which will provide access to our full spatialization feature set as well as the full functionality of the audio tools themselves. Epic also offers built-in audio spatialization for Rift with HRTF-spatialization only. Epic offers support for Oculus Go and Gear VR which does not support some features such as ducking and filtering. For an example of how to implement it, see AmbientSound Spatialize in the Unreal [Audio Content Example](https://docs.unrealengine.com/latest/INT/Resources/ContentExamples/Audio/index.html).
 
 For more information on our plugins, and for general information about audio design for VR, please see our [Audio SDK Developer Guide](/documentation/audiosdk/latest/). 
-

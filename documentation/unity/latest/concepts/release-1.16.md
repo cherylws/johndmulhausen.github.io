@@ -1,6 +1,9 @@
 ---
 title: 1.16-beta Oculus Utilities for Unity 5 Release Notes
 ---
+
+
+
 ## Oculus Utilities for Unity 5 version 1.16.0-beta
 
 ## Overview of 1.16-beta
@@ -22,15 +25,19 @@ The Oculus Integration, available from the Unity Asset Store [here](https://www.
 * Added support for mixed reality capture (Rift only). For more information, see Unity Mixed Reality Capture. For more information, see [Unity Mixed Reality Capture](/documentation/unity/latest/concepts/unity-mrc/ "This guide describes how to add and configure mixed reality capture support for your Unity application. Mixed reality capture is supported for Rift applications only.").
 * Added cylinder layer support to OVROverlay on Rift.
 * Added R16G16B16A16\_FP / R11G11B10\_FP support to OVRManager, which can remove banding from dark colors. To enable, use OVRManager.eyeTextureFormat = R11G11B10\_FP. Note: if you need alpha channel in your frame buffer, you must use OVRManager.eyeTextureFormat = R16G16B16A16\_FP.
+
+
 ## Bug Fixes
 
 * Fixed a crash on Windows when another application toggles exclusive full-screen mode.
 * Fixed bug with Unity 5.6 where Gear VR would report the wrong field of view for the first frame after launch.
 * Fixed pose race condition when OVRCameraRig.useFixedUpdateForTracking is true.
+
+
 ## Known Issues
 
 * Unity 2017
-	+  When using the Utilities package, you may encounter the following error when adding scripts to your project: "Assets/OVR/Scripts/OVROverlay.cs(385,20): error CS1501: No overload for method `CreateExternalTexture' takes `6' arguments". As a workaround, open OVROverlay.cs in you script editor and change et = Cubemap.CreateExternalTexture(size.w, size.h, txFormat, mipLevels > 1, isSrgb, externalTex); to et = Cubemap.CreateExternalTexture(size.w, txFormat, mipLevels > 1, externalTex);.
+	+  When using the Utilities package, you may encounter the following error when adding scripts to your project: "Assets/OVR/Scripts/OVROverlay.cs(385,20): error CS1501: No overload for method `CreateExternalTexture' takes `6' arguments". As a workaround, open OVROverlay.cs in you script editor and change et = Cubemap.CreateExternalTexture(size.w, size.h, txFormat, mipLevels &gt; 1, isSrgb, externalTex); to et = Cubemap.CreateExternalTexture(size.w, txFormat, mipLevels &gt; 1, externalTex);.
 	
 * 1.16-beta issues
 	+ Due to a black screen issue, we do not recommend using this version for mobile development.
@@ -65,3 +72,4 @@ The Oculus Integration, available from the Unity Asset Store [here](https://www.
 * Mobile App Submission to Oculus Store 
 	+ All mobile applications using Utilities 1.9 and 1.10 will fail Oculus Store submission due to a bug affecting reserved interaction handling for the Universal Menu. Please remove previously-imported project files as described in [Importing the Oculus Utilities Package](/documentation/unity/latest/concepts/unity-import/ "Oculus Utilities for Unity is an optional Unity Package that includes scripts, prefabs, and other resources to assist with development.") and import the latest Utilities version, and update your Unity editor to a [compatible version](/documentation/unity/latest/concepts/unity-req/ "This guide describes Unity Editor version recommendations and system requirements.") if necessary. 
 	
+

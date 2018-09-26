@@ -1,6 +1,7 @@
 ---
 title: VRC.Mobile.SDK.3
 ---
+
 Unity apps must be built with a supported version.
 
 **Required** - Yes
@@ -18,4 +19,3 @@ This is also checked immediately after you upload each build, and the upload wil
 ## Expected Result
 
 App is using a supported version of Unity.
-

@@ -1,7 +1,10 @@
 ---
 title: Unity 4.x Legacy Integration Developer Guide
 ---
+
 The Unity Legacy Integration Developer Guide is designed to get you started with creating great VR experiences in Unity 4.
+
+
 
 * **[Introduction](/documentation/unity/latest/concepts/unity-integration-intro/)**  
 This guide covers developing Unity 4 games and applications for the Oculus Rift and Samsung Gear VR. 
@@ -27,3 +30,4 @@ This section provides simple guidelines to help your Unity app perform well with
 This section describes the steps necessary to build, load, and run a simple Unity 3D application on the Oculus Rift or Samsung Gear VR.
 * **[Getting Started FAQ](/documentation/unity/latest/concepts/unity-integration-faq/)**  
 If you’re new to Oculus development with Unity, this FAQ can answer the most common beginner questions. 
+

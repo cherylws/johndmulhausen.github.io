@@ -1,6 +1,7 @@
 ---
 title: Introduction
 ---
+
 This guide covers developing Unity 4 games and applications for the Oculus Rift and Samsung Gear VR. 
 
 The legacy integration provides VR support for development with **Unity 4.x** Professional and Free editions. It also includes Unity prefabs, C# scripts, sample scenes, and more to assist with development. 
@@ -20,6 +21,8 @@ This guide covers:
 * Getting Started Frequently Asked Questions
 * Debugging and Performance Analysis
 * Getting Started Tutorial (build a simple VR game)
+
+
 Most information in this guide applies to the use of the Utilities package for either Rift or Mobile development. Any exceptions are clearly indicated where they occur.
 
 For a complete API reference, see our [Unity Developer Reference](/documentation/game-engines/latest/concepts/book-unity-reference/).
@@ -34,3 +37,4 @@ When developing for both Rift and mobile platforms, keep in mind that the requir
 
 * **[Preparing for Development: Mobile](/documentation/unity/latest/concepts/unity-integration-mobileprep/)**  
 This guide describes setup requirements for Oculus mobile VR development with Unity.
+

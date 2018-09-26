@@ -1,6 +1,7 @@
 ---
 title: Manage Your Financial Account
 ---
+
 If you have an active application in the Oculus Store, Oculus provides tools that enable you to submit your banking and tax information and to view application financial metrics.
 
 Submitting your banking and tax information Oculus is required if you have a paid app. If your apps are free, you do not need to submit this information.
@@ -11,12 +12,14 @@ Currently, you can associate one user ID with one account. To get access to thes
 
 This information enables Oculus to get in contact with you and to ensure you get paid.
 
-1. Go to [https://developer.oculus.com/organizations/](/organizations/).
+1. Go to &lt;https://developer.oculus.com/organizations/&gt;.
 2. Enter basic information about your organization in the Organization Address section.
 3. Enter information about key contacts in the Contact Information section.
 4. Enter tax ID information in the Tax Information section, if you will charge for any of your apps.
 5. Enter banking information in the Banking Details section, if you will charge for any of your apps.
 6. When you are finished, click Submit.
+
+
 ## Payments and Taxes
 
 Once your banking and account information has been set up, we’ll start collecting taxes and sending you payments for app sales in the Oculus Store.
@@ -47,7 +50,7 @@ When each developer onboards with Oculus, we ask for a W-8 or W-9 form to report
 
 Oculus provides several metrics that help you monitor the performance of individual apps on the Oculus Store.
 
-To review the analytics, go to <https://dashboard.oculus.com/app/analytics/>. Select the app for which you want to view information from the list box. The initial page displays general app metrics over a variable time scale as well as some lifetime metrics about the app.
+To review the analytics, go to [https://dashboard.oculus.com/app/analytics/](https://dashboard.oculus.com/app/analytics/). Select the app for which you want to view information from the list box. The initial page displays general app metrics over a variable time scale as well as some lifetime metrics about the app.
 
 The children pages provide additional information about how the app is performing, recent user reviews, and more.
 
@@ -58,4 +61,3 @@ The Oculus Platform generates financial reports that provide both an overview of
 To access the reports, navigate to [https://developer.oculus.com/organizations/](/organizations/), open the **Settings** tab, and select **Financial Reports**.
 
 The Monthly Financial Report provides a summary, and history, of the purchases and IAP transactions over the previous month. The Monthly Remittance Report provides an overview of the monthly payment remitted by Oculus. The Monthly CSV Report provides a detailed transaction register of every purchase. Information about fields of the CSV report can be found on the [Facebook Reports](https://developers.facebook.com/docs/games_payments/reports) page. 
-

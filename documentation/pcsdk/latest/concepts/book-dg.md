@@ -1,6 +1,7 @@
 ---
 title: PC SDK Developer Guide
 ---
+
 Welcome to the PC SDK Developer Guide.
 
 This guide describes how to use the PC SDK and covers the following topics:
@@ -10,6 +11,8 @@ This guide describes how to use the PC SDK and covers the following topics:
 * VR focus management
 * Spatialized audio
 * Oculus Touch
+
+
 Additionally, it contains information on the SDK samples, the Oculus Debug Tool, and the Performance HUD.
 
 * **[LibOVR Integration](/documentation/pcsdk/latest/concepts/dg-libovr/#dg_libovr)**  
@@ -44,3 +47,4 @@ Asynchronous Spacewarp (ASW) is a frame-rate smoothing technique that almost hal
 Mixed reality capture places real-world people and objects in VR. This guide will review how to add support for mixed reality capture in your native Rift app. 
 * **[VRC Validator](/documentation/pcsdk/latest/concepts/dg-vrcvalidator/)**  
 The Virtual Reality Check (VRC) Validator utility runs automated tests to determine if your Rift app is ready for Oculus Store technical review. The VRC Validator can reveal shortcomings that need to be addressed before your app can pass the Oculus Store review process. The VRC Validator has a command line interface as well as a GUI interface. 
+
